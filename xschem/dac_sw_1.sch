@@ -1,5 +1,4 @@
-v {xschem version=3.4.6RC file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -65,7 +64,7 @@ C {sky130_fd_pr/pfet_01v8.sym} 380 -330 0 0 {name=M1
 W=1.5
 L=0.5
 nf=1
-mult=1
+mult=8
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -79,7 +78,7 @@ C {sky130_fd_pr/pfet_01v8.sym} 380 -250 0 0 {name=M2
 W=1.5
 L=0.5
 nf=1
-mult=1
+mult=8
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -93,7 +92,7 @@ C {sky130_fd_pr/nfet_01v8.sym} 380 -170 0 0 {name=M3
 W=0.5
 L=0.5
 nf=1 
-mult=1
+mult=8
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -107,7 +106,7 @@ C {sky130_fd_pr/nfet_01v8.sym} 380 -90 0 0 {name=M4
 W=0.5
 L=0.5
 nf=1 
-mult=1
+mult=8
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 

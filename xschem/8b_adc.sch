@@ -26,8 +26,8 @@ C {devices/lab_wire.sym} 370 -210 0 0 {name=p6 sig_type=std_logic lab=VINP}
 C {devices/lab_wire.sym} 370 -190 0 0 {name=p8 sig_type=std_logic lab=VINN}
 C {devices/lab_wire.sym} 670 -290 0 1 {name=p10 sig_type=std_logic lab=VCP}
 C {devices/lab_wire.sym} 670 -270 0 1 {name=p11 sig_type=std_logic lab=VCN}
-C {devices/lab_wire.sym} 370 -380 0 0 {name=p14 sig_type=std_logic lab=VCP}
-C {devices/lab_wire.sym} 370 -360 0 0 {name=p15 sig_type=std_logic lab=VCN}
+C {devices/lab_wire.sym} 370 -360 0 0 {name=p14 sig_type=std_logic lab=VCP}
+C {devices/lab_wire.sym} 370 -340 0 0 {name=p15 sig_type=std_logic lab=VCN}
 C {devices/lab_wire.sym} 670 -570 0 1 {name=p16 sig_type=std_logic lab=VCP}
 C {devices/lab_wire.sym} 670 -550 0 1 {name=p17 sig_type=std_logic lab=VCN}
 C {devices/lab_wire.sym} 370 -490 0 0 {name=p18 sig_type=std_logic lab=SWP[0:7]}
@@ -35,9 +35,9 @@ C {devices/lab_wire.sym} 370 -470 0 0 {name=p19 sig_type=std_logic lab=SWN[0:7]}
 C {devices/lab_wire.sym} 370 -510 0 0 {name=p21 sig_type=std_logic lab=CF[0:7]}
 C {devices/lab_wire.sym} 370 -290 0 0 {name=p25 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 370 -270 0 0 {name=p26 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 370 -420 0 0 {name=p27 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 370 -400 0 0 {name=p30 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 370 -340 0 0 {name=p31 sig_type=std_logic lab=CLK}
+C {devices/lab_wire.sym} 370 -400 0 0 {name=p27 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 370 -380 0 0 {name=p30 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 370 -420 0 0 {name=p31 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 370 -570 0 0 {name=p32 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 370 -550 0 0 {name=p33 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 370 -530 0 0 {name=p36 sig_type=std_logic lab=VCM}
@@ -52,6 +52,6 @@ C {devices/lab_wire.sym} 670 -100 0 1 {name=p45 sig_type=std_logic lab=CF[0:7]}
 C {devices/ipin.sym} 120 -480 0 0 {name=p37 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 370 -20 0 0 {name=p34 sig_type=std_logic lab=EN}
 C {devices/ipin.sym} 120 -460 0 0 {name=p35 sig_type=std_logic lab=EN}
-C {cmp.sym} 520 -380 0 0 {name=x5}
 C {devices/lab_wire.sym} 670 -380 0 1 {name=p46 sig_type=std_logic lab=RDY}
 C {devices/lab_wire.sym} 370 -100 0 0 {name=p47 sig_type=std_logic lab=CLK}
+C {tdc.sym} 520 -380 0 0 {name=x1}

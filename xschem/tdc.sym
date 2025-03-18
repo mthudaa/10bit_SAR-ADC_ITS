@@ -30,3 +30,6 @@ T {OUTP} 125 -44 0 1 0.2 0.2 {}
 B 5 147.5 -22.5 152.5 -17.5 {name=OUTN sig_type=std_logic dir=out}
 L 4 130 -20 150 -20 {}
 T {OUTN} 125 -24 0 1 0.2 0.2 {}
+B 5 147.5 -2.5 152.5 2.5 {name=RDY sig_type=std_logic dir=out}
+L 4 130 0 150 0 {}
+T {RDY} 125 -4 0 1 0.2 0.2 {}

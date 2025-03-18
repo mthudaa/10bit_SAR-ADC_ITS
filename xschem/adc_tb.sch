@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2e-05
+x1=9.3165759e-06
+x2=2.8051076e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -41,8 +41,8 @@ ypos2=2.4030971
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2e-05
+x1=9.3165759e-06
+x2=2.8051076e-05
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -75,11 +75,11 @@ lab=#net1}
 C {devices/vsource.sym} 540 -130 0 0 {name=VS value=0 savecurrent=false}
 C {devices/vsource.sym} 540 -250 0 0 {name=VDA value=1.8 savecurrent=false}
 C {devices/gnd.sym} 540 -100 0 0 {name=l1 lab=GND}
-C {devices/lab_wire.sym} 540 -160 0 0 {name=p1 sig_type=std_logic lab=VSSA}
-C {devices/lab_wire.sym} 540 -220 2 1 {name=p2 sig_type=std_logic lab=VSSA}
-C {devices/lab_wire.sym} 570 -500 0 0 {name=p6 sig_type=std_logic lab=VSSA}
-C {devices/lab_wire.sym} 540 -280 0 0 {name=p7 sig_type=std_logic lab=VDDA}
-C {devices/lab_wire.sym} 570 -520 0 0 {name=p8 sig_type=std_logic lab=VDDA}
+C {devices/lab_wire.sym} 540 -160 0 0 {name=p1 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 540 -220 2 1 {name=p2 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 570 -500 0 0 {name=p6 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 540 -280 0 0 {name=p7 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 570 -520 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 570 -480 0 0 {name=p12 sig_type=std_logic lab=CLK}
 C {devices/vsource.sym} 200 -260 0 0 {name=VSS1 value="SIN(0 -0.9 56640.625)" savecurrent=false}
 C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 0.9 56640.625)" savecurrent=false}
@@ -109,7 +109,7 @@ global netlist_dir .
 set wr_singlescale  
 save x1.vcp x1.vcn vip vin clk vcm cko
 + dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7
-tran 1n 20u  ; Mengubah start time menjadi 10n 
+tran 100p 20u  ; Mengubah start time menjadi 10n 
 remzerovec  
 write adc8b_tb.raw  
 wrdata adc8b_tb.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7
@@ -118,7 +118,7 @@ quit 1
 "}
 C {devices/vsource.sym} 640 -250 0 0 {name=VCLK value="PULSE(0 1.8 10n 50p 50p 50n 100n)" savecurrent=false}
 C {devices/lab_wire.sym} 640 -280 0 0 {name=p23 sig_type=std_logic lab=CLK}
-C {devices/lab_wire.sym} 640 -220 2 1 {name=p24 sig_type=std_logic lab=VSSA}
+C {devices/lab_wire.sym} 640 -220 2 1 {name=p24 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/corner.sym} 40 -570 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {devices/launcher.sym} 1060 -520 0 0 {name=h5
 descr="load waves" 
@@ -135,12 +135,12 @@ footprint=1206
 device=resistor
 m=1}
 C {8b_adc.sym} 720 -460 0 0 {name=x1}
-C {devices/lab_wire.sym} 260 -150 2 1 {name=p3 sig_type=std_logic lab=VSSA}
+C {devices/lab_wire.sym} 260 -150 2 1 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 570 -420 0 0 {name=p4 sig_type=std_logic lab=VCM}
 C {devices/vsource.sym} 640 -130 0 0 {name=VDA1 value=0.9 savecurrent=false}
-C {devices/lab_wire.sym} 640 -100 2 1 {name=p5 sig_type=std_logic lab=VSSA}
+C {devices/lab_wire.sym} 640 -100 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 640 -160 0 0 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 570 -400 0 0 {name=p10 sig_type=std_logic lab=EN}
 C {devices/vsource.sym} 740 -130 0 0 {name=VDA2 value=0.9 savecurrent=false}
-C {devices/lab_wire.sym} 740 -100 2 1 {name=p11 sig_type=std_logic lab=VSSA}
+C {devices/lab_wire.sym} 740 -100 2 1 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 740 -160 0 0 {name=p13 sig_type=std_logic lab=EN}
