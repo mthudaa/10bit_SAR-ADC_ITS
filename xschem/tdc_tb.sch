@@ -52,7 +52,7 @@ logy=0
 }
 C {devices/vsource.sym} 80 -200 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/vsource.sym} 180 -200 0 0 {name=V2 value=1.8 savecurrent=false}
-C {devices/vsource.sym} 280 -200 0 0 {name=V3 value="PULSE(0 1.8 10n 50p 50p 0.5u 1u)" savecurrent=false}
+C {devices/vsource.sym} 280 -200 0 0 {name=V3 value="PULSE(0 1.8 1n 50p 50p 100n 200n)" savecurrent=false}
 C {devices/vsource.sym} 80 -80 0 0 {name=V4 value=0.9 savecurrent=false}
 C {devices/gnd.sym} 80 -170 0 0 {name=l1 lab=GND}
 C {devices/lab_wire.sym} 80 -230 0 0 {name=p1 sig_type=std_logic lab=VSS}
@@ -62,8 +62,8 @@ C {devices/lab_wire.sym} 280 -170 2 1 {name=p4 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 80 -50 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 280 -230 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 80 -110 0 0 {name=p7 sig_type=std_logic lab=VCM}
-C {devices/vsource.sym} 180 -80 0 0 {name=V5 value="PWL(0 0.9, 1m -0.9)" savecurrent=false}
-C {devices/vsource.sym} 360 -80 0 0 {name=V6 value="PWL(0 -0.9, 1m 0.9)" savecurrent=false}
+C {devices/vsource.sym} 180 -80 0 0 {name=V5 value="PWL(0 0.9, 0.2m -0.9)" savecurrent=false}
+C {devices/vsource.sym} 360 -80 0 0 {name=V6 value="PWL(0 -0.9, 0.2m 0.9)" savecurrent=false}
 C {devices/lab_wire.sym} 180 -50 2 1 {name=p8 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 360 -50 2 1 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 180 -110 0 0 {name=p13 sig_type=std_logic lab=VINP}
@@ -78,7 +78,7 @@ value="* .measure tran trise
 **** interactive sim
 .control
   save IN COMP_P COMP_N VINP VINN RDY
-  tran 10p 1m
+  tran 100p 1m
   write tdc_tb.raw
   quit 0
 .endc
