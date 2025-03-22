@@ -7,9 +7,9 @@ E {}
 C {devices/lab_wire.sym} 540 -220 0 1 {name=p27 sig_type=std_logic lab=OUTN}
 C {devices/lab_wire.sym} 540 -240 0 1 {name=p28 sig_type=std_logic lab=OUTP}
 C {delay_gate.sym} 390 -470 0 0 {name=x9}
-C {devices/lab_wire.sym} 620 -510 0 1 {name=p19 sig_type=std_logic lab=INP}
+C {devices/lab_wire.sym} 540 -510 0 1 {name=p19 sig_type=std_logic lab=INP}
 C {delay_gate.sym} 390 -330 0 0 {name=x10}
-C {devices/lab_wire.sym} 620 -370 0 1 {name=p20 sig_type=std_logic lab=INN}
+C {devices/lab_wire.sym} 540 -370 0 1 {name=p20 sig_type=std_logic lab=INN}
 C {devices/lab_wire.sym} 240 -490 0 0 {name=p23 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 240 -350 0 0 {name=p24 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 240 -470 0 0 {name=p25 sig_type=std_logic lab=VSS}
@@ -27,8 +27,6 @@ C {devices/ipin.sym} 110 -400 0 0 {name=p38 sig_type=std_logic lab=VINN}
 C {devices/ipin.sym} 110 -480 0 0 {name=p39 sig_type=std_logic lab=CLK}
 C {devices/opin.sym} 90 -370 0 0 {name=p40 sig_type=std_logic lab=OUTP}
 C {devices/opin.sym} 90 -350 0 0 {name=p41 sig_type=std_logic lab=OUTN}
-C {sky130_stdcells/buf_4.sym} 580 -510 0 0 {name=x4 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/buf_4.sym} 580 -370 0 0 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {phase_detector.sym} 390 -210 0 0 {name=x1}
 C {devices/lab_wire.sym} 240 -240 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 240 -220 0 0 {name=p2 sig_type=std_logic lab=VSS}

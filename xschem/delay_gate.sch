@@ -122,7 +122,7 @@ C {devices/ipin.sym} 200 -340 0 0 {name=p11 lab=VDD}
 C {devices/opin.sym} 180 -210 0 0 {name=p12 lab=OUT}
 C {devices/lab_wire.sym} 460 -540 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 460 -80 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {sky130_stdcells/buf_16.sym} 680 -260 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_4.sym} 680 -260 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {sky130_fd_pr/pfet3_01v8.sym} 340 -510 0 0 {name=M7
 L=1
 W=9

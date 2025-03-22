@@ -226,9 +226,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 510 -270 0 0 {name=C1 model=cap_mim_m3_1 W=2 L=2 MF=4 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 510 -270 0 0 {name=C1 model=cap_mim_m3_1 W=4 L=4 MF=4 spiceprefix=X}
 C {sky130_fd_pr/nfet_01v8.sym} 900 -190 1 0 {name=M10
-L=0.5
+L=0.15
 W=8
 nf=1 
 mult=1

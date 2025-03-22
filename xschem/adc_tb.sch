@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 1000 -480 1800 -80 {flags=graph
-y1=-0.72342938
-y2=1.9662497
+y1=-0.45926488
+y2=1.913845
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=9.3165759e-06
-x2=2.8051076e-05
+x1=-1.7700129e-06
+x2=0.00015013276
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -41,13 +41,14 @@ ypos2=2.4030971
 divy=5
 subdivy=1
 unity=1
-x1=9.3165759e-06
-x2=2.8051076e-05
+x1=-1.7700129e-06
+x2=0.00015013276
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
 node="cko
+clk
 BUS_NAME;dout0,dout1,dout2,dout3,dout4,dout5,dout6,dout7
 dout7
 dout6
@@ -57,7 +58,7 @@ dout3
 dout2
 dout1
 dout0"
-color="4 4 4 4 4 4 4 4 4 4"
+color="4 4 4 4 4 4 4 4 4 4 4"
 dataset=-1
 unitx=1
 logx=0
@@ -66,12 +67,12 @@ hilight_wave=0
 digital=1
 sim_type=tran
 autoload=0}
-N 200 -230 200 -210 {
-lab=#net1}
 N 200 -210 320 -210 {
 lab=#net1}
 N 320 -230 320 -210 {
 lab=#net1}
+N 60 -240 60 -210 {lab=#net1}
+N 60 -210 200 -210 {lab=#net1}
 C {devices/vsource.sym} 540 -130 0 0 {name=VS value=0 savecurrent=false}
 C {devices/vsource.sym} 540 -250 0 0 {name=VDA value=1.8 savecurrent=false}
 C {devices/gnd.sym} 540 -100 0 0 {name=l1 lab=GND}
@@ -81,11 +82,11 @@ C {devices/lab_wire.sym} 570 -500 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 540 -280 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 570 -520 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 570 -480 0 0 {name=p12 sig_type=std_logic lab=CLK}
-C {devices/vsource.sym} 200 -260 0 0 {name=VSS1 value="SIN(0 -0.9 56640.625)" savecurrent=false}
-C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 0.9 56640.625)" savecurrent=false}
-C {devices/vsource.sym} 260 -180 0 0 {name=VSS3 value=0.9 savecurrent=false}
+C {devices/vsource.sym} 60 -270 0 0 {name=VSS1 value="SIN(0 -0.9 40487.66583984375)" savecurrent=false}
+C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 0.9 40487.66583984375)" savecurrent=false}
+C {devices/vsource.sym} 180 -180 0 0 {name=VSS3 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 320 -350 0 0 {name=p15 sig_type=std_logic lab=VIP}
-C {devices/lab_wire.sym} 200 -350 0 0 {name=p16 sig_type=std_logic lab=VIN}
+C {devices/lab_wire.sym} 60 -360 0 0 {name=p16 sig_type=std_logic lab=VIN}
 C {devices/lab_wire.sym} 570 -460 0 0 {name=p18 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 570 -440 0 0 {name=p19 sig_type=std_logic lab=VIN}
 C {devices/lab_wire.sym} 870 -520 0 1 {name=p21 sig_type=std_logic lab=DOUT[0..7]}
@@ -107,9 +108,9 @@ C {devices/code.sym} 345 -565 0 0 {name=s2 only_toplevel=false value="
 .control  
 global netlist_dir .  
 set wr_singlescale  
-save x1.vcp x1.vcn vip vin clk vcm cko
+save x1.vcp x1.vcn vip vin clk vcm cko x1.cks
 + dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7
-tran 100p 20u  ; Mengubah start time menjadi 10n 
+tran 100p 620u uic ; Mengubah start time menjadi 10n 
 remzerovec  
 write adc8b_tb.raw  
 wrdata adc8b_tb.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7
@@ -124,7 +125,7 @@ C {devices/launcher.sym} 1060 -520 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/adc8b_tb.raw tran"
 }
-C {devices/res.sym} 200 -320 0 0 {name=R1
+C {devices/res.sym} 60 -330 0 0 {name=R1
 value=50
 footprint=1206
 device=resistor
@@ -135,7 +136,7 @@ footprint=1206
 device=resistor
 m=1}
 C {8b_adc.sym} 720 -460 0 0 {name=x1}
-C {devices/lab_wire.sym} 260 -150 2 1 {name=p3 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 180 -150 2 1 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 570 -420 0 0 {name=p4 sig_type=std_logic lab=VCM}
 C {devices/vsource.sym} 640 -130 0 0 {name=VDA1 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 640 -100 2 1 {name=p5 sig_type=std_logic lab=VSS}
