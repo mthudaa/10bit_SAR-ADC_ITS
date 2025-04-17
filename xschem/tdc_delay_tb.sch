@@ -6,7 +6,7 @@ S {}
 E {}
 C {devices/vsource.sym} 80 -200 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/vsource.sym} 180 -200 0 0 {name=V2 value=1.8 savecurrent=false}
-C {devices/vsource.sym} 280 -200 0 0 {name=V3 value="PULSE(0 1.8 1n 50p 50p 50n 100n)" savecurrent=false}
+C {devices/vsource.sym} 280 -200 0 0 {name=V3 value="PWL(0 0, 25n 0, 25.05n 1.8)" savecurrent=false}
 C {devices/vsource.sym} 80 -80 0 0 {name=V4 value=0.9 savecurrent=false}
 C {devices/gnd.sym} 80 -170 0 0 {name=l1 lab=GND}
 C {devices/lab_wire.sym} 80 -230 0 0 {name=p1 sig_type=std_logic lab=VSS}
@@ -16,13 +16,13 @@ C {devices/lab_wire.sym} 280 -170 2 1 {name=p4 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 80 -50 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 280 -230 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 80 -110 0 0 {name=p7 sig_type=std_logic lab=VCM}
-C {devices/vsource.sym} 180 -80 0 0 {name=V5 value="PWL(0 0.01, 10u -0.01)" savecurrent=false}
-C {devices/vsource.sym} 360 -80 0 0 {name=V6 value="PWL(0 -0.01, 10u 0.01)" savecurrent=false}
+C {devices/vsource.sym} 180 -80 0 0 {name=V5 value=0.0017578125 savecurrent=false}
+C {devices/vsource.sym} 360 -80 0 0 {name=V6 value=-0.0017578125 savecurrent=false}
 C {devices/lab_wire.sym} 180 -50 2 1 {name=p8 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 360 -50 2 1 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 180 -110 0 0 {name=p13 sig_type=std_logic lab=VINP}
 C {devices/lab_wire.sym} 360 -110 0 0 {name=p14 sig_type=std_logic lab=VINN}
-C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=mc}
+C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=ff}
 C {devices/simulator_commands_shown.sym} 840 -420 0 0 {name=COMMANDS2
 simulator=ngspice
 only_toplevel=false 
@@ -31,18 +31,14 @@ value=".option wnflag=0 bypass=1
 .options solver=klu nomod
 .control
   set num_threads=36
-  * Loop 100 iterasi
-  let iter = 1
-  while iter <= 100
-    reset
-    save VINP VINN IN COMP_P COMP_N
-    * Jalankan simulasi transien
-    tran 10p 10u 0 100p uic
-    * Simpan data sementara ke file iterasi
-    wrdata /home/$USER/vlsi/8bit_SAR-ADC_ITS/xschem/tdc_monte/tdc_monte_\{$&iter\}.txt VINP VINN IN COMP_P COMP_N
-    let iter = iter + 1
-  end
-  quit 1
+  save VINP VINN IN COMP_P COMP_N RDY
+  tran 10p 150n 0 100p uic
+  * Hitung delay antara rising edge IN dan RDY (contoh: threshold 50% VDD)
+  meas tran del 
+  + TRIG v(IN) TD=5n VAL=0.9 RISE=1
+  + TARG v(RDY) TD=5n VAL=0.9 RISE=1
+  echo \\"Corner: | Delay: $&del\\"  >> /home/$USER/vlsi/8bit_SAR-ADC_ITS/xschem/tdc_delay_corner/tdc_delay_corner.txt
+  plot IN RDY
 .endc
 "}
 C {devices/code.sym} 40 -420 0 0 {name=TT_MODELS

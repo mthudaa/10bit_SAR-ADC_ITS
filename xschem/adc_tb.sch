@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2e-05
+x1=-1.3252753e-06
+x2=2.8690288e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,13 +36,13 @@ vcm"}
 B 2 1820 -480 2620 -80 {flags=graph
 y1=0
 y2=2
-ypos1=0.14230119
-ypos2=2.4030971
+ypos1=0.59446044
+ypos2=2.8552563
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=2e-05
+x1=-1.3252753e-06
+x2=2.8690288e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -57,8 +57,10 @@ dout4
 dout3
 dout2
 dout1
-dout0"
-color="4 4 4 4 4 4 4 4 4 4 4"
+dout0
+x1.cks
+x1.cksb"
+color="4 4 4 4 4 4 4 4 4 4 4 4 4"
 dataset=-1
 unitx=1
 logx=0
@@ -89,7 +91,7 @@ C {devices/lab_wire.sym} 320 -350 0 0 {name=p15 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 60 -360 0 0 {name=p16 sig_type=std_logic lab=VIN}
 C {devices/lab_wire.sym} 570 -460 0 0 {name=p18 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 570 -440 0 0 {name=p19 sig_type=std_logic lab=VIN}
-C {devices/lab_wire.sym} 870 -520 0 1 {name=p21 sig_type=std_logic lab=DOUT[0..7]}
+C {devices/lab_wire.sym} 870 -520 0 1 {name=p21 sig_type=std_logic lab=DOUT[0..9]}
 C {devices/lab_wire.sym} 870 -500 0 1 {name=p22 sig_type=std_logic lab=CKO}
 C {devices/code.sym} 185 -565 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -101,16 +103,15 @@ value="
 "
 spice_ignore=false}
 C {devices/code.sym} 345 -565 0 0 {name=s2 only_toplevel=false value="
-.option wnflag=0  
-.option savecurrents  
-.options method=trapezoid  
-.options solver=iterative  
+.option wnflag=0 bypass=1
+.options method=gear reltol=1e-3 rawfile=binary
+.options solver=klu nomod  
 .control  
 global netlist_dir .  
 set wr_singlescale  
-save x1.vcp x1.vcn vip vin clk vcm cko x1.cks
-+ dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7
-tran 100p 620u uic ; Mengubah start time menjadi 10n 
+save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb
++ dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9
+tran 100p 32u 0 100p uic ; Mengubah start time menjadi 10n 
 remzerovec  
 write adc8b_tb.raw  
 wrdata adc8b_tb.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7
@@ -142,6 +143,6 @@ C {devices/vsource.sym} 640 -130 0 0 {name=VDA1 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 640 -100 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 640 -160 0 0 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 570 -400 0 0 {name=p10 sig_type=std_logic lab=EN}
-C {devices/vsource.sym} 740 -130 0 0 {name=VDA2 value=0.9 savecurrent=false}
+C {devices/vsource.sym} 740 -130 0 0 {name=VDA2 value="PWL(0 0 10n 1.8)" savecurrent=false}
 C {devices/lab_wire.sym} 740 -100 2 1 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 740 -160 0 0 {name=p13 sig_type=std_logic lab=EN}

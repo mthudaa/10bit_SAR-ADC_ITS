@@ -16,35 +16,7 @@ C {devices/lab_wire.sym} 280 -170 2 1 {name=p4 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 80 -50 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 280 -230 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 80 -110 0 0 {name=p7 sig_type=std_logic lab=VCM}
-C {devices/vsource.sym} 180 -80 0 0 {name=V5 value="PWL(0 0.01, 10u -0.01)" savecurrent=false}
-C {devices/vsource.sym} 360 -80 0 0 {name=V6 value="PWL(0 -0.01, 10u 0.01)" savecurrent=false}
-C {devices/lab_wire.sym} 180 -50 2 1 {name=p8 sig_type=std_logic lab=VCM}
-C {devices/lab_wire.sym} 360 -50 2 1 {name=p9 sig_type=std_logic lab=VCM}
-C {devices/lab_wire.sym} 180 -110 0 0 {name=p13 sig_type=std_logic lab=VINP}
-C {devices/lab_wire.sym} 360 -110 0 0 {name=p14 sig_type=std_logic lab=VINN}
-C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=mc}
-C {devices/simulator_commands_shown.sym} 840 -420 0 0 {name=COMMANDS2
-simulator=ngspice
-only_toplevel=false 
-value=".option wnflag=0 bypass=1
-.options method=gear reltol=1e-5 rawfile=binary
-.options solver=klu nomod
-.control
-  set num_threads=36
-  * Loop 100 iterasi
-  let iter = 1
-  while iter <= 100
-    reset
-    save VINP VINN IN COMP_P COMP_N
-    * Jalankan simulasi transien
-    tran 10p 10u 0 100p uic
-    * Simpan data sementara ke file iterasi
-    wrdata /home/$USER/vlsi/8bit_SAR-ADC_ITS/xschem/tdc_monte/tdc_monte_\{$&iter\}.txt VINP VINN IN COMP_P COMP_N
-    let iter = iter + 1
-  end
-  quit 1
-.endc
-"}
+C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/code.sym} 40 -420 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval(@value )"
@@ -63,3 +35,22 @@ C {devices/lab_wire.sym} 740 -430 0 1 {name=p19 sig_type=std_logic lab=RDY}
 C {devices/noconn.sym} 740 -470 1 0 {name=l2}
 C {devices/noconn.sym} 740 -450 1 0 {name=l3}
 C {devices/noconn.sym} 740 -430 1 0 {name=l4}
+C {devices/simulator_commands_shown.sym} 760 -320 0 0 {name=COMMANDS2
+simulator=ngspice
+only_toplevel=false 
+value=".option wnflag=0 bypass=1
+.options method=gear reltol=1e-5 rawfile=binary
+.options solver=klu nomod
+.control
+  set num_threads=36
+  save VINP VINN IN COMP_P COMP_N RDY
+  tran 10p 10u 0 100p uic
+  plot VINP VINN COMP_P
+.endc
+"}
+C {devices/vsource.sym} 180 -80 0 0 {name=V7 value=0.0017578125 savecurrent=false}
+C {devices/vsource.sym} 360 -80 0 0 {name=V8 value=-0.0017578125 savecurrent=false}
+C {devices/lab_wire.sym} 180 -50 2 1 {name=p20 sig_type=std_logic lab=VCM}
+C {devices/lab_wire.sym} 360 -50 2 1 {name=p21 sig_type=std_logic lab=VCM}
+C {devices/lab_wire.sym} 180 -110 0 0 {name=p22 sig_type=std_logic lab=VINP}
+C {devices/lab_wire.sym} 360 -110 0 0 {name=p23 sig_type=std_logic lab=VINN}

@@ -22,7 +22,7 @@ N 460 -260 540 -260 {lab=#net1}
 N 580 -260 640 -260 {lab=#net2}
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 560 -410 0 0 {name=M1
 L=1
-W=9
+W=3
 body=VDD
 nf=1
 mult=1
@@ -37,7 +37,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 560 -310 0 0 {name=M2
 L=1
-W=9
+W=3
 body=VDD
 nf=1
 mult=1
@@ -52,7 +52,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet3_01v8_lvt.sym} 560 -210 0 0 {name=M3
 L=1
-W=3
+W=1
 body=VSS
 nf=1
 mult=1
@@ -67,7 +67,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8_lvt.sym} 340 -410 0 0 {name=M4
 L=1
-W=9
+W=3
 body=VDD
 nf=1
 mult=1
@@ -82,7 +82,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet3_01v8_lvt.sym} 340 -310 0 0 {name=M5
 L=1
-W=3
+W=1
 body=VSS
 nf=1
 mult=1
@@ -97,7 +97,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet3_01v8_lvt.sym} 340 -210 0 0 {name=M6
 L=1
-W=3
+W=1
 body=VSS
 nf=1
 mult=1
@@ -125,7 +125,7 @@ C {devices/lab_wire.sym} 460 -80 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {sky130_stdcells/buf_4.sym} 680 -260 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {sky130_fd_pr/pfet3_01v8.sym} 340 -510 0 0 {name=M7
 L=1
-W=9
+W=3
 body=VDD
 nf=1
 mult=1
@@ -140,7 +140,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet3_01v8.sym} 560 -110 0 0 {name=M8
 L=1
-W=3
+W=1
 body=VSS
 nf=1
 mult=1
@@ -155,7 +155,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet3_01v8.sym} 340 -110 0 0 {name=M9
 L=1
-W=3
+W=1
 body=VSS
 nf=1
 mult=1
@@ -170,7 +170,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet3_01v8.sym} 560 -510 0 0 {name=M10
 L=1
-W=9
+W=3
 body=VDD
 nf=1
 mult=1

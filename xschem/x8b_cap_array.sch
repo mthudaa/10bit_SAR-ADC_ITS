@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 C {devices/lab_wire.sym} 420 -90 2 0 {name=p1 sig_type=std_logic lab=vcm}
-C {devices/lab_wire.sym} 420 -190 2 0 {name=p3 sig_type=std_logic lab=sw[7]}
-C {devices/lab_wire.sym} 420 -300 2 0 {name=p5 sig_type=std_logic lab=sw[6]}
-C {devices/lab_wire.sym} 420 -410 2 0 {name=p7 sig_type=std_logic lab=sw[5]}
-C {devices/lab_wire.sym} 420 -520 2 0 {name=p9 sig_type=std_logic lab=sw[4]}
-C {devices/lab_wire.sym} 420 -630 2 0 {name=p11 sig_type=std_logic lab=sw[3]}
-C {devices/lab_wire.sym} 420 -740 2 0 {name=p13 sig_type=std_logic lab=sw[2]}
-C {devices/lab_wire.sym} 420 -850 2 0 {name=p15 sig_type=std_logic lab=sw[1]}
-C {devices/lab_wire.sym} 420 -960 2 0 {name=p17 sig_type=std_logic lab=sw[0]}
-C {devices/ipin.sym} 230 -680 0 0 {name=p53 lab=sw[0:7]}
+C {devices/lab_wire.sym} 420 -190 2 0 {name=p3 sig_type=std_logic lab=sw[9]}
+C {devices/lab_wire.sym} 420 -300 2 0 {name=p5 sig_type=std_logic lab=sw[8]}
+C {devices/lab_wire.sym} 420 -410 2 0 {name=p7 sig_type=std_logic lab=sw[7]}
+C {devices/lab_wire.sym} 420 -520 2 0 {name=p9 sig_type=std_logic lab=sw[6]}
+C {devices/lab_wire.sym} 420 -630 2 0 {name=p11 sig_type=std_logic lab=sw[5]}
+C {devices/lab_wire.sym} 420 -740 2 0 {name=p13 sig_type=std_logic lab=sw[4]}
+C {devices/lab_wire.sym} 420 -850 2 0 {name=p15 sig_type=std_logic lab=sw[3]}
+C {devices/lab_wire.sym} 420 -960 2 0 {name=p17 sig_type=std_logic lab=sw[2]}
+C {devices/ipin.sym} 230 -680 0 0 {name=p53 lab=sw[0:9]}
 C {devices/ipin.sym} 230 -700 0 0 {name=p54 lab=vcm}
 C {devices/iopin.sym} 210 -660 0 0 {name=p56 lab=vc
 
@@ -36,3 +36,9 @@ C {devices/lab_wire.sym} 420 -250 0 1 {name=p39 sig_type=std_logic lab=vc}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 420 -220 0 0 {name=C10 model=cap_mim_m3_1 W=4 L=4 MF=1 spiceprefix=X}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 420 -120 0 0 {name=C11 model=cap_mim_m3_1 W=4 L=4 MF=1 spiceprefix=X}
 C {devices/lab_wire.sym} 420 -150 0 1 {name=p71 sig_type=std_logic lab=vc}
+C {devices/lab_wire.sym} 420 -1070 2 0 {name=p2 sig_type=std_logic lab=sw[1]}
+C {devices/lab_wire.sym} 420 -1180 2 0 {name=p4 sig_type=std_logic lab=sw[0]}
+C {devices/lab_wire.sym} 420 -1240 0 1 {name=p6 sig_type=std_logic lab=vc}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 420 -1210 0 0 {name=C1 model=cap_mim_m3_1 W=4 L=4 MF=512 spiceprefix=X}
+C {devices/lab_wire.sym} 420 -1130 0 1 {name=p8 sig_type=std_logic lab=vc}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 420 -1100 0 0 {name=C2 model=cap_mim_m3_1 W=4 L=4 MF=256 spiceprefix=X}
