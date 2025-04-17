@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-4.1009216e-08
-x2=3.6909292e-07
+x1=5.3699884e-07
+x2=3.6920773e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,7 +26,7 @@ logx=0
 logy=0
 
 
-hilight_wave=0
+hilight_wave=1
 color="18 6 11 7 8"
 node="x1.vcn
 x1.vcp
@@ -36,13 +36,13 @@ vcm"}
 B 2 1460 -430 2260 -30 {flags=graph
 y1=0
 y2=2
-ypos1=0.59446044
-ypos2=2.8552563
+ypos1=0.36838086
+ypos2=2.6291767
 divy=5
 subdivy=1
 unity=1
-x1=-4.1009216e-08
-x2=3.6909292e-07
+x1=5.3699884e-07
+x2=3.6920773e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -100,7 +100,7 @@ save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb
 tran 100p 822.4u 0 100p uic ; Mengubah start time menjadi 10n
 remzerovec
 write adc8b_tb_open_static.raw
-wrdata adc8b_tb_open_static.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7
+wrdata adc8b_tb_open_static.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 vip vin
 quit 1
 .endc
 
