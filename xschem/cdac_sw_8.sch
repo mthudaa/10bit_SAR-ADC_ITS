@@ -13,8 +13,8 @@ lab=dac_out}
 N 120 40 200 40 {
 lab=dac_out}
 C {nooverlap_clk.sym} -30 -170 0 0 {name=x1}
-C {tg_sw_1.sym} -30 -50 0 0 {name=x2}
-C {dac_sw_1.sym} -30 80 0 0 {name=x3}
+C {tg_sw_8.sym} -30 -50 0 0 {name=x2}
+C {dac_sw_8.sym} -30 80 0 0 {name=x3}
 C {devices/lab_wire.sym} -180 -200 0 0 {name=p1 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} -180 -80 0 0 {name=p2 sig_type=std_logic lab=vdda}
 C {devices/lab_wire.sym} -180 40 0 0 {name=p3 sig_type=std_logic lab=vdda}
