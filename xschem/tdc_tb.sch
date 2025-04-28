@@ -16,8 +16,8 @@ C {devices/lab_wire.sym} 280 -170 2 1 {name=p4 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 80 -50 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 280 -230 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 80 -110 0 0 {name=p7 sig_type=std_logic lab=VCM}
-C {devices/vsource.sym} 180 -80 0 0 {name=V5 value="PWL(0 0.9, 100u -0.9)" savecurrent=false}
-C {devices/vsource.sym} 360 -80 0 0 {name=V6 value="PWL(0 -0.9, 100u 0.9)" savecurrent=false}
+C {devices/vsource.sym} 180 -80 0 0 {name=V5 value="PWL(0 0.025, 10u -0.025)" savecurrent=false}
+C {devices/vsource.sym} 360 -80 0 0 {name=V6 value="PWL(0 -0.025, 10u 0.025)" savecurrent=false}
 C {devices/lab_wire.sym} 180 -50 2 1 {name=p8 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 360 -50 2 1 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 180 -110 0 0 {name=p13 sig_type=std_logic lab=VINP}
@@ -37,7 +37,7 @@ value=".option wnflag=0 bypass=1
     reset
     save VINP VINN IN COMP_P COMP_N
     * Jalankan simulasi transien
-    tran 100p 100u 0 100p uic
+    tran 100p 10u 0 100p uic
     * Simpan data sementara ke file iterasi
     wrdata /home/$USER/vlsi/8bit_SAR-ADC_ITS/xschem/tdc_monte/tdc_monte_\{$&iter\}.txt VINP VINN IN COMP_P COMP_N
     let iter = iter + 1

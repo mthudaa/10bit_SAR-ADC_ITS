@@ -10,9 +10,9 @@ N 400 -260 400 -220 {lab=#net1}
 N 400 -360 400 -320 {lab=#net2}
 N 640 -360 640 -320 {lab=OUT}
 N 640 -260 640 -220 {lab=#net3}
-N 320 -390 360 -390 {lab=RST}
-N 320 -190 360 -190 {lab=RST}
-N 320 -390 320 -190 {lab=RST}
+N 320 -390 360 -390 {lab=D}
+N 320 -190 360 -190 {lab=D}
+N 320 -390 320 -190 {lab=D}
 N 540 -390 600 -390 {lab=#net1}
 N 540 -390 540 -190 {lab=#net1}
 N 540 -190 600 -190 {lab=#net1}
@@ -109,12 +109,12 @@ spiceprefix=X
 }
 C {devices/lab_wire.sym} 360 -290 0 0 {name=p1 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 600 -290 0 0 {name=p2 sig_type=std_logic lab=CLK}
-C {devices/lab_wire.sym} 320 -390 0 0 {name=p3 sig_type=std_logic lab=RST}
+C {devices/lab_wire.sym} 320 -390 0 0 {name=p3 sig_type=std_logic lab=D}
 C {devices/lab_wire.sym} 640 -330 0 1 {name=p4 sig_type=std_logic lab=OUT}
 C {devices/lab_wire.sym} 540 -420 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 540 -160 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 200 -400 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {devices/ipin.sym} 200 -380 0 0 {name=p8 sig_type=std_logic lab=VSS}
-C {devices/ipin.sym} 200 -360 0 0 {name=p9 sig_type=std_logic lab=RST}
+C {devices/ipin.sym} 200 -360 0 0 {name=p9 sig_type=std_logic lab=D}
 C {devices/ipin.sym} 200 -340 0 0 {name=p10 sig_type=std_logic lab=CLK}
 C {devices/opin.sym} 200 -320 0 0 {name=p11 sig_type=std_logic lab=OUT}

@@ -6,9 +6,9 @@ S {}
 E {}
 C {devices/lab_wire.sym} 540 -220 0 1 {name=p27 sig_type=std_logic lab=OUTN}
 C {devices/lab_wire.sym} 540 -240 0 1 {name=p28 sig_type=std_logic lab=OUTP}
-C {delay_gate.sym} 390 -470 0 0 {name=x9}
+C {delay_gate_ori.sym} 390 -470 0 0 {name=x9}
 C {devices/lab_wire.sym} 540 -510 0 1 {name=p19 sig_type=std_logic lab=INP}
-C {delay_gate.sym} 390 -330 0 0 {name=x10}
+C {delay_gate_ori.sym} 390 -330 0 0 {name=x10}
 C {devices/lab_wire.sym} 540 -370 0 1 {name=p20 sig_type=std_logic lab=INN}
 C {devices/lab_wire.sym} 240 -490 0 0 {name=p23 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 240 -350 0 0 {name=p24 sig_type=std_logic lab=VDD}
@@ -32,8 +32,5 @@ C {devices/lab_wire.sym} 240 -240 0 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 240 -220 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 240 -200 0 0 {name=p3 sig_type=std_logic lab=INP}
 C {devices/lab_wire.sym} 240 -180 0 0 {name=p4 sig_type=std_logic lab=INN}
-C {sky130_stdcells/or2_1.sym} 370 -90 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {devices/lab_wire.sym} 310 -110 0 0 {name=p5 sig_type=std_logic lab=INP}
-C {devices/lab_wire.sym} 310 -70 0 0 {name=p6 sig_type=std_logic lab=INN}
-C {devices/lab_wire.sym} 430 -90 0 1 {name=p7 sig_type=std_logic lab=RDY}
 C {devices/opin.sym} 90 -330 0 0 {name=p8 sig_type=std_logic lab=RDY}
+C {devices/lab_wire.sym} 540 -200 0 1 {name=p9 sig_type=std_logic lab=RDY}

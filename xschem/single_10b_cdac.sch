@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-C {x8b_cap_array.sym} 570 -260 0 0 {name=x2}
+C {x10b_cap_array.sym} 570 -260 0 0 {name=x2}
 C {devices/lab_wire.sym} 420 -270 0 0 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 720 -270 0 1 {name=p16 sig_type=std_logic lab=VC}
 C {devices/ipin.sym} 180 -580 0 0 {name=p18 lab=VDD}

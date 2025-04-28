@@ -71,12 +71,12 @@ hilight_wave=0
 digital=1
 sim_type=tran
 autoload=0}
-N 180 -150 300 -150 {
+N 240 -160 360 -160 {
 lab=#net1}
-N 300 -170 300 -150 {
+N 360 -180 360 -160 {
 lab=#net1}
-N 40 -180 40 -150 {lab=#net1}
-N 40 -150 180 -150 {lab=#net1}
+N 100 -190 100 -160 {lab=#net1}
+N 100 -160 240 -160 {lab=#net1}
 C {devices/vsource.sym} 650 -150 0 0 {name=VS value=0 savecurrent=false}
 C {devices/vsource.sym} 650 -270 0 0 {name=VD value=1.8 savecurrent=false}
 C {devices/gnd.sym} 650 -120 0 0 {name=l1 lab=GND}
@@ -86,11 +86,6 @@ C {devices/lab_wire.sym} 570 -500 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 650 -300 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 570 -520 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 570 -480 0 0 {name=p12 sig_type=std_logic lab=CLK}
-C {devices/vsource.sym} 40 -210 0 0 {name=VSS1 value="PWL(0 0.9 2.6u 0.9 2662.4u -0.9 2665u -0.9)" savecurrent=false}
-C {devices/vsource.sym} 300 -200 0 0 {name=VSS2 value="PWL(0 -0.9 1.6u -0.9 2662.4u 0.9 2665u 0.9)" savecurrent=false}
-C {devices/vsource.sym} 160 -120 0 0 {name=VSS3 value=0.9 savecurrent=false}
-C {devices/lab_wire.sym} 300 -290 0 0 {name=p15 sig_type=std_logic lab=VIP}
-C {devices/lab_wire.sym} 40 -300 0 0 {name=p16 sig_type=std_logic lab=VIN}
 C {devices/lab_wire.sym} 570 -460 0 0 {name=p18 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 570 -440 0 0 {name=p19 sig_type=std_logic lab=VIN}
 C {devices/lab_wire.sym} 870 -520 0 1 {name=p21 sig_type=std_logic lab=DOUT[0..9]}
@@ -113,36 +108,22 @@ global netlist_dir .
 set wr_singlescale
 save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb vdd i(vd)
 + dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9
-tran 100p 2.666m 0 100p uic ; Mengubah start time menjadi 10n
+tran 100p 535u 0 100p uic ; Mengubah start time menjadi 10n
 let pow = -i(vd)*vdd
-meas tran inst_pow MAX pow from=10n to=2.666m
-meas tran avg_pow  AVG pow from=10n to=2.666m
+meas tran inst_pow MAX pow from=1n to=535u
+meas tran avg_pow  AVG pow from=1n to=535u
 remzerovec  
 write adc10b_tb_static.raw  
 wrdata adc10b_tb_static.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9 pow
 quit 1
 .endc
 "}
-C {devices/vsource.sym} 750 -270 0 0 {name=VCLK value="PULSE(0 1.8 10n 50p 50p 50n 100n)" savecurrent=false}
-C {devices/lab_wire.sym} 750 -300 0 0 {name=p23 sig_type=std_logic lab=CLK}
-C {devices/lab_wire.sym} 750 -240 2 1 {name=p24 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/corner.sym} 40 -570 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {devices/launcher.sym} 1060 -520 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/adc10b_tb_static.raw tran"
 }
-C {devices/res.sym} 40 -270 0 0 {name=R1
-value=50
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} 300 -260 0 0 {name=R2
-value=50
-footprint=1206
-device=resistor
-m=1}
 C {8b_adc.sym} 720 -460 0 0 {name=x1}
-C {devices/lab_wire.sym} 160 -90 2 1 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 570 -420 0 0 {name=p4 sig_type=std_logic lab=VCM}
 C {devices/vsource.sym} 750 -150 0 0 {name=VC value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 750 -120 2 1 {name=p5 sig_type=std_logic lab=VSS}
@@ -151,3 +132,22 @@ C {devices/lab_wire.sym} 570 -400 0 0 {name=p10 sig_type=std_logic lab=EN}
 C {devices/vsource.sym} 850 -150 0 0 {name=VDA2 value="PWL(0 0 10n 1.8)" savecurrent=false}
 C {devices/lab_wire.sym} 850 -120 2 1 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 850 -180 0 0 {name=p13 sig_type=std_logic lab=EN}
+C {devices/vsource.sym} 100 -220 0 0 {name=VSS1 value="SIN(0 -0.9 193434.4951923077)" savecurrent=false}
+C {devices/vsource.sym} 360 -210 0 0 {name=VSS2 value="SIN(0 0.9 193434.4951923077)" savecurrent=false}
+C {devices/vsource.sym} 220 -130 0 0 {name=VSS3 value=0.9 savecurrent=false}
+C {devices/lab_wire.sym} 360 -300 0 0 {name=p15 sig_type=std_logic lab=VIP}
+C {devices/lab_wire.sym} 100 -310 0 0 {name=p16 sig_type=std_logic lab=VIN}
+C {devices/res.sym} 100 -280 0 0 {name=R1
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 360 -270 0 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_wire.sym} 220 -100 2 1 {name=p3 sig_type=std_logic lab=VSS}
+C {devices/vsource.sym} 750 -270 0 0 {name=VCLK value="PULSE(0 1.8 1n 1p 1p 10n 20n)" savecurrent=false}
+C {devices/lab_wire.sym} 750 -300 0 0 {name=p23 sig_type=std_logic lab=CLK}
+C {devices/lab_wire.sym} 750 -240 2 1 {name=p24 sig_type=std_logic lab=VSS}

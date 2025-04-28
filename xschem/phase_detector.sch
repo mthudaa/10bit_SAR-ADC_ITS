@@ -9,29 +9,29 @@ lab=#net1}
 N 1020 -740 1020 -680 {
 lab=#net2}
 N 380 -420 380 -380 {
-lab=#net3}
+lab=A}
 N 380 -320 380 -280 {
-lab=#net4}
+lab=#net3}
 N 420 -450 420 -350 {
-lab=#net5}
+lab=B}
 N 280 -620 280 -400 {
-lab=#net3}
+lab=A}
 N 280 -400 380 -400 {
-lab=#net3}
+lab=A}
 N 240 -650 240 -250 {
 lab=INP}
 N 240 -250 340 -250 {
 lab=INP}
 N 920 -420 920 -380 {
-lab=#net5}
+lab=B}
 N 920 -320 920 -280 {
-lab=#net6}
+lab=#net4}
 N 1020 -620 1020 -400 {
-lab=#net5}
+lab=B}
 N 920 -400 1020 -400 {
-lab=#net5}
+lab=B}
 N 880 -450 880 -350 {
-lab=#net3}
+lab=A}
 N 280 -800 1020 -800 {
 lab=VDD}
 N 380 -800 380 -480 {
@@ -39,13 +39,13 @@ lab=VDD}
 N 920 -800 920 -480 {
 lab=VDD}
 N 280 -520 500 -520 {
-lab=#net3}
+lab=A}
 N 800 -520 1020 -520 {
-lab=#net5}
+lab=B}
 N 500 -520 880 -400 {
-lab=#net3}
+lab=A}
 N 420 -400 800 -520 {
-lab=#net5}
+lab=B}
 N 380 -220 920 -220 {
 lab=VSS}
 N 960 -250 1040 -250 {
@@ -231,3 +231,10 @@ C {sky130_stdcells/nand2_1.sym} 520 -580 1 1 {name=x1 VGND=VSS VNB=VSS VPB=VDD V
 C {sky130_stdcells/nand2_1.sym} 780 -580 1 1 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {devices/lab_wire.sym} 780 -640 0 0 {name=p21 sig_type=std_logic lab=OUTP}
 C {devices/lab_wire.sym} 520 -640 0 0 {name=p22 sig_type=std_logic lab=OUTN}
+C {devices/lab_wire.sym} 450 -520 0 0 {name=p11 sig_type=std_logic lab=A}
+C {devices/lab_wire.sym} 880 -520 0 0 {name=p12 sig_type=std_logic lab=B}
+C {sky130_stdcells/xor2_1.sym} 650 -700 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {devices/lab_wire.sym} 590 -720 0 0 {name=p23 sig_type=std_logic lab=A}
+C {devices/lab_wire.sym} 590 -680 0 0 {name=p24 sig_type=std_logic lab=B}
+C {devices/lab_wire.sym} 710 -700 0 1 {name=p25 sig_type=std_logic lab=RDY}
+C {devices/opin.sym} 100 -560 0 0 {name=p26 sig_type=std_logic lab=RDY}

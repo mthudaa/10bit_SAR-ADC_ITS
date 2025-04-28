@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 1000 -480 1800 -80 {flags=graph
-y1=-0.45926488
-y2=1.913845
+y1=-0.23844586
+y2=2.6321893
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.8496018e-07
-x2=1.7223797e-06
+x1=4.159795e-08
+x2=1.1912278e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,13 +36,13 @@ vcm"}
 B 2 1820 -480 2620 -80 {flags=graph
 y1=0
 y2=2
-ypos1=-0.083778302
-ypos2=2.1770175
+ypos1=1.0466196
+ypos2=3.3074155
 divy=5
 subdivy=1
 unity=1
-x1=3.8496018e-07
-x2=1.7223797e-06
+x1=4.159795e-08
+x2=1.1912278e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -86,8 +86,8 @@ C {devices/lab_wire.sym} 570 -500 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 540 -280 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 570 -520 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 570 -480 0 0 {name=p12 sig_type=std_logic lab=CLK}
-C {devices/vsource.sym} 60 -270 0 0 {name=VSS1 value="SIN(0 -0.9 38686.89903846154)" savecurrent=false}
-C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 0.9 38686.89903846154)" savecurrent=false}
+C {devices/vsource.sym} 60 -270 0 0 {name=VSS1 value="SIN(0 -0.9 193434.4951923077)" savecurrent=false}
+C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 0.9 193434.4951923077)" savecurrent=false}
 C {devices/vsource.sym} 180 -180 0 0 {name=VSS3 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 320 -350 0 0 {name=p15 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 60 -360 0 0 {name=p16 sig_type=std_logic lab=VIN}
@@ -113,17 +113,17 @@ global netlist_dir .
 set wr_singlescale
 save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb vdd i(vd)
 + dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9
-tran 100p 2.666m 0 100p uic ; Mengubah start time menjadi 10n
+tran 100p 535u 0 100p uic ; Mengubah start time menjadi 10n
 let pow = -i(vd)*vdd
-meas tran inst_pow MAX pow from=10n to=2.666m
-meas tran avg_pow  AVG pow from=10n to=2.666m
+meas tran inst_pow MAX pow from=1n to=535u
+meas tran avg_pow  AVG pow from=1n to=535u
 remzerovec  
 write adc10b_tb_dynamic.raw  
 wrdata adc10b_tb_dynamic.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9 pow
 quit 1
 .endc
 "}
-C {devices/vsource.sym} 640 -250 0 0 {name=VCLK value="PULSE(0 1.8 10n 50p 50p 50n 100n)" savecurrent=false}
+C {devices/vsource.sym} 640 -250 0 0 {name=VCLK value="PULSE(0 1.8 1n 1p 1p 10n 20n)" savecurrent=false}
 C {devices/lab_wire.sym} 640 -280 0 0 {name=p23 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 640 -220 2 1 {name=p24 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/corner.sym} 40 -570 0 0 {name=CORNER only_toplevel=false corner=tt}

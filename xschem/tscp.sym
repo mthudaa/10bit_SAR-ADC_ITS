@@ -15,9 +15,9 @@ T {VDD} -125 -34 0 0 0.2 0.2 {}
 B 5 -152.5 -12.5 -147.5 -7.5 {name=VSS sig_type=std_logic dir=in}
 L 4 -150 -10 -130 -10 {}
 T {VSS} -125 -14 0 0 0.2 0.2 {}
-B 5 -152.5 7.5 -147.5 12.5 {name=RST sig_type=std_logic dir=in}
+B 5 -152.5 7.5 -147.5 12.5 {name=D sig_type=std_logic dir=in}
 L 4 -150 10 -130 10 {}
-T {RST} -125 6 0 0 0.2 0.2 {}
+T {D} -125 6 0 0 0.2 0.2 {}
 B 5 -152.5 27.5 -147.5 32.5 {name=CLK sig_type=std_logic dir=in}
 L 4 -150 30 -130 30 {}
 T {CLK} -125 26 0 0 0.2 0.2 {}
