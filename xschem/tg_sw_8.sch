@@ -23,17 +23,17 @@ lab=in}
 N 460 -240 520 -240 {
 lab=out}
 N 380 -200 380 -130 {
-lab=vssa}
+lab=vss}
 N 380 -350 380 -270 {
 lab=vdda}
-C {devices/lab_wire.sym} 380 -270 0 1 {name=p1 sig_type=std_logic lab=vdda}
-C {devices/lab_wire.sym} 380 -200 0 1 {name=p2 sig_type=std_logic lab=vssa}
+C {devices/lab_wire.sym} 380 -270 0 1 {name=p1 sig_type=std_logic lab=vdd}
+C {devices/lab_wire.sym} 380 -200 0 1 {name=p2 sig_type=std_logic lab=vss}
 C {devices/lab_wire.sym} 520 -240 0 1 {name=p3 sig_type=std_logic lab=out}
 C {devices/lab_wire.sym} 230 -240 0 0 {name=p4 sig_type=std_logic lab=in}
-C {devices/ipin.sym} 120 -360 0 0 {name=p5 lab=vdda}
+C {devices/ipin.sym} 120 -360 0 0 {name=p5 lab=vdd}
 C {devices/ipin.sym} 120 -330 0 0 {name=p6 lab=swp}
 C {devices/ipin.sym} 120 -300 0 0 {name=p7 lab=swn}
-C {devices/ipin.sym} 120 -270 0 0 {name=p8 lab=vssa}
+C {devices/ipin.sym} 120 -270 0 0 {name=p8 lab=vss}
 C {devices/iopin.sym} 100 -240 0 0 {name=p9 lab=in}
 C {devices/iopin.sym} 100 -210 0 0 {name=p10 lab=out}
 C {devices/lab_wire.sym} 380 -90 2 0 {name=p11 sig_type=std_logic lab=swn}
