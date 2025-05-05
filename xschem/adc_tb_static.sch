@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.8496018e-07
-x2=1.7223797e-06
+x1=-2.1687854e-07
+x2=1.1205407e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -41,8 +41,8 @@ ypos2=2.1770175
 divy=5
 subdivy=1
 unity=1
-x1=3.8496018e-07
-x2=1.7223797e-06
+x1=-2.1687854e-07
+x2=1.1205407e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -108,7 +108,7 @@ global netlist_dir .
 set wr_singlescale
 save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb vdd i(vd)
 + dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9
-tran 100p 535u 0 100p uic ; Mengubah start time menjadi 10n
+tran 1n 535u 0 1n uic ; Mengubah start time menjadi 10n
 let pow = -i(vd)*vdd
 meas tran inst_pow MAX pow from=1n to=535u
 meas tran avg_pow  AVG pow from=1n to=535u
@@ -132,8 +132,8 @@ C {devices/lab_wire.sym} 570 -400 0 0 {name=p10 sig_type=std_logic lab=EN}
 C {devices/vsource.sym} 850 -150 0 0 {name=VDA2 value="PWL(0 0 10n 1.8)" savecurrent=false}
 C {devices/lab_wire.sym} 850 -120 2 1 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 850 -180 0 0 {name=p13 sig_type=std_logic lab=EN}
-C {devices/vsource.sym} 100 -220 0 0 {name=VSS1 value="SIN(0 -0.9 193434.4951923077)" savecurrent=false}
-C {devices/vsource.sym} 360 -210 0 0 {name=VSS2 value="SIN(0 0.9 193434.4951923077)" savecurrent=false}
+C {devices/vsource.sym} 100 -220 0 0 {name=VSS1 value="PWL(0 0.9 0.26u 0.9 532.74u -0.9 533u -0.9)" savecurrent=false}
+C {devices/vsource.sym} 360 -210 0 0 {name=VSS2 value="PWL(0 -0.9 0.26u -0.9 532.74u 0.9 533u 0.9)" savecurrent=false}
 C {devices/vsource.sym} 220 -130 0 0 {name=VSS3 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 360 -300 0 0 {name=p15 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 100 -310 0 0 {name=p16 sig_type=std_logic lab=VIN}
@@ -148,6 +148,6 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/lab_wire.sym} 220 -100 2 1 {name=p3 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} 750 -270 0 0 {name=VCLK value="PULSE(0 1.8 1n 1p 1p 10n 20n)" savecurrent=false}
+C {devices/vsource.sym} 750 -270 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 10n 20n)" savecurrent=false}
 C {devices/lab_wire.sym} 750 -300 0 0 {name=p23 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 750 -240 2 1 {name=p24 sig_type=std_logic lab=VSS}

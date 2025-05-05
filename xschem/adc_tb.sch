@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=4.159795e-08
-x2=1.1912278e-06
+x1=1.0704307e-07
+x2=2.2477044e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -36,13 +36,13 @@ vcm"}
 B 2 1820 -480 2620 -80 {flags=graph
 y1=0
 y2=2
-ypos1=1.0466196
-ypos2=3.3074155
+ypos1=0.084216068
+ypos2=3.1138986
 divy=5
 subdivy=1
 unity=1
-x1=4.159795e-08
-x2=1.1912278e-06
+x1=1.0704307e-07
+x2=2.2477044e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -113,7 +113,7 @@ global netlist_dir .
 set wr_singlescale
 save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb vdd i(vd)
 + dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9
-tran 100p 535u 0 100p uic ; Mengubah start time menjadi 10n
+tran 1n 535u 0 1n uic ; Mengubah start time menjadi 10n
 let pow = -i(vd)*vdd
 meas tran inst_pow MAX pow from=1n to=535u
 meas tran avg_pow  AVG pow from=1n to=535u
@@ -123,7 +123,7 @@ wrdata adc10b_tb_dynamic.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7
 quit 1
 .endc
 "}
-C {devices/vsource.sym} 640 -250 0 0 {name=VCLK value="PULSE(0 1.8 1n 1p 1p 10n 20n)" savecurrent=false}
+C {devices/vsource.sym} 640 -250 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 10n 20n)" savecurrent=false}
 C {devices/lab_wire.sym} 640 -280 0 0 {name=p23 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 640 -220 2 1 {name=p24 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/corner.sym} 40 -570 0 0 {name=CORNER only_toplevel=false corner=tt}

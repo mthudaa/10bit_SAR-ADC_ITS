@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1746184409
+timestamp 1746381620
 << nwell >>
 rect -246 -2295 246 2295
 << pmos >>

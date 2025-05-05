@@ -15,7 +15,7 @@ lab=ckb}
 N 340 -170 360 -170 {
 lab=ck}
 N 400 -380 400 -360 {
-lab=vdda}
+lab=vdd}
 N 400 -300 400 -280 {
 lab=#net1}
 N 400 -220 400 -200 {
@@ -29,15 +29,15 @@ lab=out}
 N 220 -210 240 -210 {
 lab=in}
 N 400 -330 480 -330 {
-lab=vdda}
+lab=vdd}
 N 480 -330 480 -250 {
-lab=vdda}
+lab=vdd}
 N 400 -250 480 -250 {
-lab=vdda}
+lab=vdd}
 N 400 -360 480 -360 {
-lab=vdda}
+lab=vdd}
 N 480 -360 480 -330 {
-lab=vdda}
+lab=vdd}
 N 400 -170 480 -170 {
 lab=vssa}
 N 480 -170 480 -90 {
@@ -49,16 +49,16 @@ lab=vssa}
 N 400 -60 480 -60 {
 lab=vssa}
 C {devices/lab_wire.sym} 220 -210 0 0 {name=p1 sig_type=std_logic lab=in}
-C {devices/lab_wire.sym} 400 -380 0 0 {name=p2 sig_type=std_logic lab=vdda}
-C {devices/lab_wire.sym} 400 -40 0 0 {name=p3 sig_type=std_logic lab=vssa}
+C {devices/lab_wire.sym} 400 -380 0 0 {name=p2 sig_type=std_logic lab=vdd}
+C {devices/lab_wire.sym} 400 -40 0 0 {name=p3 sig_type=std_logic lab=vss}
 C {devices/lab_wire.sym} 520 -210 0 0 {name=p4 sig_type=std_logic lab=out}
 C {devices/lab_wire.sym} 340 -250 0 0 {name=p5 sig_type=std_logic lab=ckb}
 C {devices/lab_wire.sym} 340 -170 0 0 {name=p6 sig_type=std_logic lab=ck}
-C {devices/ipin.sym} 100 -320 0 0 {name=p7 lab=vdda}
+C {devices/ipin.sym} 100 -320 0 0 {name=p7 lab=vdd}
 C {devices/ipin.sym} 100 -280 0 0 {name=p8 lab=in}
 C {devices/ipin.sym} 100 -240 0 0 {name=p9 lab=ck}
 C {devices/ipin.sym} 100 -200 0 0 {name=p10 lab=ckb}
-C {devices/ipin.sym} 100 -160 0 0 {name=p11 lab=vssa}
+C {devices/ipin.sym} 100 -160 0 0 {name=p11 lab=vss}
 C {devices/opin.sym} 80 -120 0 0 {name=p12 lab=out}
 C {sky130_fd_pr/pfet_01v8.sym} 380 -330 0 0 {name=M1
 W=1.5
