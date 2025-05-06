@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-2.1687854e-07
-x2=1.1205407e-06
+x1=-3.3371852e-08
+x2=1.4327398e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,7 +26,7 @@ logx=0
 logy=0
 
 
-hilight_wave=0
+hilight_wave=3
 color="18 6 11 7 8"
 node="x1.vcn
 x1.vcp
@@ -36,13 +36,13 @@ vcm"}
 B 2 1820 -480 2620 -80 {flags=graph
 y1=0
 y2=2
-ypos1=-0.083778302
-ypos2=2.1770175
+ypos1=0.25534107
+ypos2=2.5161369
 divy=5
 subdivy=1
 unity=1
-x1=-2.1687854e-07
-x2=1.1205407e-06
+x1=-3.3371852e-08
+x2=1.4327398e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -101,15 +101,15 @@ value="
 spice_ignore=false}
 C {devices/code.sym} 345 -565 0 0 {name=s2 only_toplevel=false value="
 .option wnflag=0 bypass=1
-.options method=gear reltol=1e-5 rawfile=binary
+.options method=gear rawfile=binary
 .options solver=klu nomod  
 .control  
 global netlist_dir . 
-set num_threads=32
+set num_threads=36
 set wr_singlescale
 save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb vdd i(vd)
 + dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9
-tran 1n 535u 0 1n uic ; Mengubah start time menjadi 10n
+tran 1n 535u 0 0.1n uic ; Mengubah start time menjadi 10n
 rusage traniter trantime
 let pow = -i(vd)*vdd
 meas tran inst_pow MAX pow from=1n to=535u
