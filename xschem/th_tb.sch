@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 1150 -430 1950 -30 {flags=graph
-y1=1.1286202
-y2=1.1702179
+y1=1.7440128
+
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.0797412e-06
-x2=2.0815012e-06
+x1=3.6329355e-06
+x2=3.6524791e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -31,7 +31,8 @@ color="18 6 7 4"
 node="vcn
 vin
 vcp
-vip"}
+vip"
+y2=1.7534576}
 B 2 1150 -20 1950 380 {flags=graph
 y1=-2.1031396
 y2=5.064889
@@ -40,8 +41,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=2.0797412e-06
-x2=2.0815012e-06
+x1=3.6329355e-06
+x2=3.6524791e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -73,8 +74,8 @@ C {devices/lab_wire.sym} 580 -550 0 0 {name=p6 sig_type=std_logic lab=VSSA}
 C {devices/lab_wire.sym} 540 -280 0 0 {name=p7 sig_type=std_logic lab=VDDA}
 C {devices/lab_wire.sym} 580 -570 0 0 {name=p8 sig_type=std_logic lab=VDDA}
 C {devices/lab_wire.sym} 580 -530 0 0 {name=p12 sig_type=std_logic lab=CLK}
-C {devices/vsource.sym} 200 -260 0 0 {name=VSS1 value="SIN(0 0.9 940.880408k)" savecurrent=false}
-C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 -0.9 940.880408k)" savecurrent=false}
+C {devices/vsource.sym} 200 -260 0 0 {name=VSS1 value="SIN(0 0.9 191.556490k)" savecurrent=false}
+C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 -0.9 191.556490k)" savecurrent=false}
 C {devices/vsource.sym} 260 -180 0 0 {name=VSS3 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 320 -350 0 0 {name=p15 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 200 -350 0 0 {name=p16 sig_type=std_logic lab=VIN}
