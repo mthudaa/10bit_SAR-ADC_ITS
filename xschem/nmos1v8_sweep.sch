@@ -41,10 +41,10 @@ option numdgt=3
 set wr_singlescale
 set wr_vecnames
 
-compose l_vec  start=0.15 stop=0.45 step=0.15
-compose vg_vec start= 0 stop=1.5  step=25m
-compose vd_vec start= 0 stop=1.5  step=25m
-compose vb_vec values 0 0.4 0.8 1.2
+compose l_vec  start=0.15 stop=2 step=0.05
+compose vg_vec start= 0 stop=1.8  step=25m
+compose vd_vec start= 0 stop=1.8  step=25m
+compose vb_vec start=0 stop=1.8 step=0.1
 
 foreach var1 $&l_vec
   alterparam lx=$var1
@@ -80,7 +80,7 @@ write nmos1v8.raw
 C {devices/gnd.sym} 650 -110 0 0 {name=l1 lab=GND}
 C {devices/gnd.sym} 520 -110 0 0 {name=l2 lab=GND}
 C {devices/vsource.sym} 520 -160 0 0 {name=vg value="0.65 AC 1"}
-C {devices/vsource.sym} 780 -240 0 0 {name=vd value=0.75}
+C {devices/vsource.sym} 780 -240 0 0 {name=vd value=0.9}
 C {devices/gnd.sym} 780 -110 0 0 {name=l3 lab=GND}
 C {devices/gnd.sym} 720 -110 0 0 {name=l4 lab=GND}
 C {devices/title.sym} 160 -30 0 0 {name=l5 author="(c) 2024 H. Pretl, Apache-2.0 license (adapted from B. Murmann)"}

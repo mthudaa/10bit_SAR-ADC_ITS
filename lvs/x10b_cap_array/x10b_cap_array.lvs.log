@@ -1,0 +1,56 @@
+Netgen 1.5.287 compiled on Tue May  6 02:39:06 AM WIB 2025
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/x10b_cap_array/x10b_cap_array.ext.spc
+Call to undefined subcircuit sky130_fd_pr__cap_mim_m3_1
+Creating placeholder cell definition.
+Reading netlist file /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/x10b_cap_array/x10b_cap_array.sch.spc
+Call to undefined subcircuit sky130_fd_pr__cap_mim_m3_1
+Creating placeholder cell definition.
+
+Reading setup file /usr/local/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+No property area found for device sky130_fd_pr__cap_mim_m3_1
+No property value found for device sky130_fd_pr__cap_mim_m3_1
+No property mult found for device sky130_fd_pr__cap_mim_m3_1
+No property perim found for device sky130_fd_pr__cap_mim_m3_1
+No property mf found for device sky130_fd_pr__cap_mim_m3_1
+No property area found for device sky130_fd_pr__cap_mim_m3_1
+No property value found for device sky130_fd_pr__cap_mim_m3_1
+No property mult found for device sky130_fd_pr__cap_mim_m3_1
+No property perim found for device sky130_fd_pr__cap_mim_m3_1
+No property mf found for device sky130_fd_pr__cap_mim_m3_1
+Comparison output logged to file /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/x10b_cap_array/x10b_cap_array.lvs.out
+Logging to file "/home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/x10b_cap_array/x10b_cap_array.lvs.out" enabled
+Circuit sky130_fd_pr__cap_mim_m3_1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'x10b_cap_array'
+Circuit x10b_cap_array contains 1122 device instances.
+  Class: sky130_fd_pr__cap_mim_m3_1 instances: 1122
+Circuit contains 208 nets.
+Contents of circuit 2:  Circuit: 'x10b_cap_array'
+Circuit x10b_cap_array contains 12 device instances.
+  Class: sky130_fd_pr__cap_mim_m3_1 instances:  12
+Circuit contains 14 nets.
+
+Circuit was modified by parallel/series device merging.
+New circuit summary:
+
+Contents of circuit 1:  Circuit: 'x10b_cap_array'
+Circuit x10b_cap_array contains 12 device instances.
+  Class: sky130_fd_pr__cap_mim_m3_1 instances:  12
+Circuit contains 208 nets.
+Contents of circuit 2:  Circuit: 'x10b_cap_array'
+Circuit x10b_cap_array contains 12 device instances.
+  Class: sky130_fd_pr__cap_mim_m3_1 instances:  12
+Circuit contains 14 nets.
+
+Circuit 1 contains 12 devices, Circuit 2 contains 12 devices.
+Circuit 1 contains 14 nets,    Circuit 2 contains 14 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "/home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/x10b_cap_array/x10b_cap_array.lvs.out" disabled
+LVS Done.

@@ -58,7 +58,7 @@ descr="sid="}
 C {devices/ngspice_get_value.sym} 970 -130 0 1 {name=r11 node=v(@n.xm1.nsg13_lv_pmos[rg])
 descr="rg="}
 C {devices/gnd.sym} 580 -300 2 1 {name=l6 lab=GND}
-C {devices/vsource.sym} 730 -170 0 0 {name=vd value=0.75}
+C {devices/vsource.sym} 730 -170 0 0 {name=vd value=0.9}
 C {devices/vsource.sym} 670 -250 2 1 {name=vsb value=\{vbx\}}
 C {devices/vsource.sym} 470 -250 0 0 {name=vg value="0.65 AC 1"}
 C {devices/gnd.sym} 470 -300 2 1 {name=l7 lab=GND}
@@ -81,10 +81,10 @@ option numdgt=3
 set wr_singlescale
 set wr_vecnames
 
-compose l_vec  start=0.15 stop=0.45 step=0.15
-compose vg_vec start= 0 stop=1.5  step=25m
-compose vd_vec start= 0 stop=1.5  step=25m
-compose vb_vec values 0 0.4 0.8 1.2
+compose l_vec  start=0.15 stop=2 step=0.05
+compose vg_vec start= 0 stop=1.8  step=25m
+compose vd_vec start= 0 stop=1.8  step=25m
+compose vb_vec start=0 stop=1.8 step=0.1
 
 foreach var1 $&l_vec
   alterparam lx=$var1

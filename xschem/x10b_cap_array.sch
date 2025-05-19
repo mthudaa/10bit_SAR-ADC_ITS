@@ -42,3 +42,6 @@ C {devices/lab_wire.sym} 420 -1240 0 1 {name=p6 sig_type=std_logic lab=vc}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 420 -1210 0 0 {name=C1 model=cap_mim_m3_1 W=4 L=4 MF=512 spiceprefix=X}
 C {devices/lab_wire.sym} 420 -1130 0 1 {name=p8 sig_type=std_logic lab=vc}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 420 -1100 0 0 {name=C2 model=cap_mim_m3_1 W=4 L=4 MF=256 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 630 -120 0 0 {name=C12 model=cap_mim_m3_1 W=4 L=4 MF=98 spiceprefix=X}
+C {devices/noconn.sym} 630 -150 0 0 {name=l1}
+C {devices/noconn.sym} 630 -90 0 0 {name=l2}
