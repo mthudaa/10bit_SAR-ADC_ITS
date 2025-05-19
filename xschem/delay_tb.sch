@@ -65,9 +65,15 @@ value="* .measure tran trise
 .options solver=klu nomod
 .control
   save IN OUT OUTN VINP VINN
+  set appendwrite
+  set wr_singlescale
+  set wr_vecnames
+  op
   tran 10p 20u 0 100p
   write delay_tb.raw
-  quit 0
+  set altshow
+  show >> delay.lis
+  quit 1
 .endc
 "}
 C {devices/launcher.sym} 1070 -450 0 0 {name=h5
