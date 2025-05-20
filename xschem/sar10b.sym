@@ -3,7 +3,7 @@ G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=x1"
-spice_sym_def=".include /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/sar10b.spice"
+spice_sym_def=".include /home/huda/vlsi/8bit_SAR-ADC_ITS/xschem/sar10b.spice"
 }
 V {}
 S {}

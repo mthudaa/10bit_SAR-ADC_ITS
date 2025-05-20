@@ -101,7 +101,9 @@ format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
 * .lib $::SKYWATER_MODELS/sky130.lib.spice tt
-.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hdll/spice/sky130_fd_sc_hdll.spice
+.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
 C {devices/code.sym} 345 -565 0 0 {name=s2 only_toplevel=false value="

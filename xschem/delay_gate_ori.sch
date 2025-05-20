@@ -123,5 +123,6 @@ C {devices/ipin.sym} 200 -340 0 0 {name=p11 lab=VDD}
 C {devices/opin.sym} 180 -210 0 0 {name=p12 lab=OUT}
 C {devices/lab_wire.sym} 680 -480 0 0 {name=p5 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 680 -140 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {sky130_stdcells/and2_2.sym} 980 -240 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/and2_1.sym} 980 -240 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hs__ }
 C {devices/lab_wire.sym} 920 -220 0 0 {name=p22 sig_type=std_logic lab=IN}
+C {devices/code_shown.sym} 250 -90 0 0 {name=s1 only_toplevel=false value=".include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice"}

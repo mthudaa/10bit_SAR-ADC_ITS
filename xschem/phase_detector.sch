@@ -227,14 +227,15 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_wire.sym} 970 -450 0 1 {name=p20 sig_type=std_logic lab=VDD}
-C {sky130_stdcells/nand2_1.sym} 520 -580 1 1 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/nand2_1.sym} 780 -580 1 1 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/nand2_1.sym} 520 -580 1 1 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hs__ }
+C {sky130_stdcells/nand2_1.sym} 780 -580 1 1 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hs__ }
 C {devices/lab_wire.sym} 780 -640 0 0 {name=p21 sig_type=std_logic lab=OUTP}
 C {devices/lab_wire.sym} 520 -640 0 0 {name=p22 sig_type=std_logic lab=OUTN}
 C {devices/lab_wire.sym} 450 -520 0 0 {name=p11 sig_type=std_logic lab=A}
 C {devices/lab_wire.sym} 880 -520 0 0 {name=p12 sig_type=std_logic lab=B}
-C {sky130_stdcells/xor2_1.sym} 650 -700 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/xor2_1.sym} 650 -700 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hs__ }
 C {devices/lab_wire.sym} 590 -720 0 0 {name=p23 sig_type=std_logic lab=A}
 C {devices/lab_wire.sym} 590 -680 0 0 {name=p24 sig_type=std_logic lab=B}
 C {devices/lab_wire.sym} 710 -700 0 1 {name=p25 sig_type=std_logic lab=RDY}
 C {devices/opin.sym} 100 -560 0 0 {name=p26 sig_type=std_logic lab=RDY}
+C {devices/code_shown.sym} 220 -150 0 0 {name=s1 only_toplevel=false value=".include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice"}
