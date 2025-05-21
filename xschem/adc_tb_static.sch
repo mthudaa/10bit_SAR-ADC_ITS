@@ -109,7 +109,7 @@ set num_threads=36
 set wr_singlescale
 save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb vdd i(vd)
 + dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9
-tran 1n 535u 0 0.1n uic ; Mengubah start time menjadi 10n
+tran 1n 535u 0 0.1n ; Mengubah start time menjadi 10n
 rusage traniter trantime
 let pow = -i(vd)*vdd
 meas tran inst_pow MAX pow from=1n to=535u
