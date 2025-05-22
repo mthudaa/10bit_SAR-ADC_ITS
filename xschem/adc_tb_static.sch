@@ -4,16 +4,16 @@ K {}
 V {}
 S {}
 E {}
-B 2 1000 -480 1800 -80 {flags=graph
-y1=-0.45926488
-y2=1.913845
+B 2 2160 -470 2960 -70 {flags=graph
+y1=-0.13877085
+y2=2.731864
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-3.3371852e-08
-x2=1.4327398e-07
+x1=8.06867e-08
+x2=1.8086867e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,130 +26,152 @@ logx=0
 logy=0
 
 
-hilight_wave=3
-color="18 6 11 7 8"
-node="x1.vcn
-x1.vcp
-vip
-vin
-vcm"}
-B 2 1820 -480 2620 -80 {flags=graph
+hilight_wave=0
+
+color=4
+node=cko}
+B 2 1320 -470 2120 -70 {flags=graph
 y1=0
-y2=2
-ypos1=0.25534107
-ypos2=2.5161369
+
+ypos1=0.38718432
+ypos2=3.4168668
 divy=5
 subdivy=1
 unity=1
-x1=-3.3371852e-08
-x2=1.4327398e-07
+
+
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="cko
-clk
-BUS_NAME;dout0,dout1,dout2,dout3,dout4,dout5,dout6,dout7,dout8,dout9
-dout9
-dout8
-dout7
-dout6
-dout5
-dout4
-dout3
-dout2
-dout1
-dout0
-x1.cks
-x1.cksb"
-color="4 4 4 4 4 4 4 4 4 4 4 4 4 4 4"
+
+
 dataset=-1
 unitx=1
 logx=0
 logy=0
 hilight_wave=0
-digital=1
+digital=0
 sim_type=tran
-autoload=0}
-N 240 -160 360 -160 {
+autoload=0
+
+color=4
+node=out
+x1=8.06867e-08
+x2=1.8086867e-06
+y2=1050}
+N 180 -140 300 -140 {
 lab=#net1}
-N 360 -180 360 -160 {
+N 300 -160 300 -140 {
 lab=#net1}
-N 100 -190 100 -160 {lab=#net1}
-N 100 -160 240 -160 {lab=#net1}
-C {devices/vsource.sym} 650 -150 0 0 {name=VS value=0 savecurrent=false}
-C {devices/vsource.sym} 650 -270 0 0 {name=VD value=1.8 savecurrent=false}
-C {devices/gnd.sym} 650 -120 0 0 {name=l1 lab=GND}
-C {devices/lab_wire.sym} 650 -180 0 0 {name=p1 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 650 -240 2 1 {name=p2 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 570 -500 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 650 -300 0 0 {name=p7 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 570 -520 0 0 {name=p8 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 570 -480 0 0 {name=p12 sig_type=std_logic lab=CLK}
-C {devices/lab_wire.sym} 570 -460 0 0 {name=p18 sig_type=std_logic lab=VIP}
-C {devices/lab_wire.sym} 570 -440 0 0 {name=p19 sig_type=std_logic lab=VIN}
-C {devices/lab_wire.sym} 870 -520 0 1 {name=p21 sig_type=std_logic lab=DOUT[0..9]}
-C {devices/lab_wire.sym} 870 -500 0 1 {name=p22 sig_type=std_logic lab=CKO}
-C {devices/code.sym} 185 -565 0 0 {name=TT_MODELS
+N 40 -170 40 -140 {lab=#net1}
+N 40 -140 180 -140 {lab=#net1}
+C {devices/vsource.sym} 40 -200 0 0 {name=VSS1 value="PWL(0 0.9 0.26u 0.9 532.74u -0.9 533u -0.9)" savecurrent=false}
+C {devices/vsource.sym} 300 -190 0 0 {name=VSS2 value="PWL(0 -0.9 0.26u -0.9 532.74u 0.9 533u 0.9)" savecurrent=false}
+C {devices/vsource.sym} 160 -110 0 0 {name=VSS3 value=0.9 savecurrent=false}
+C {devices/lab_wire.sym} 300 -280 0 0 {name=p15 sig_type=std_logic lab=VIP}
+C {devices/lab_wire.sym} 40 -290 0 0 {name=p16 sig_type=std_logic lab=VIN}
+C {devices/res.sym} 40 -260 0 0 {name=R1
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} 300 -250 0 0 {name=R2
+value=50
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_wire.sym} 160 -80 2 1 {name=p3 sig_type=std_logic lab=VSS}
+C {devices/vsource.sym} 540 -120 0 0 {name=VS value=0 savecurrent=false}
+C {devices/vsource.sym} 540 -240 0 0 {name=VD value=1.8 savecurrent=false}
+C {devices/gnd.sym} 540 -90 0 0 {name=l1 lab=GND}
+C {devices/lab_wire.sym} 540 -150 0 0 {name=p1 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 540 -210 2 1 {name=p2 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 570 -490 0 0 {name=p6 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 540 -270 0 0 {name=p7 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 570 -510 0 0 {name=p8 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 570 -470 0 0 {name=p12 sig_type=std_logic lab=CLK}
+C {devices/lab_wire.sym} 570 -450 0 0 {name=p18 sig_type=std_logic lab=VIP}
+C {devices/lab_wire.sym} 570 -430 0 0 {name=p19 sig_type=std_logic lab=VIN}
+C {devices/lab_wire.sym} 1140 -480 0 1 {name=p21 sig_type=std_logic lab=DOUT0}
+C {devices/lab_wire.sym} 870 -490 0 1 {name=p22 sig_type=std_logic lab=CKO}
+C {devices/code.sym} 185 -555 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
 * .lib $::SKYWATER_MODELS/sky130.lib.spice tt
-.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hdll/spice/sky130_fd_sc_hdll.spice
+.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
-C {devices/code.sym} 345 -565 0 0 {name=s2 only_toplevel=false value="
+C {devices/code.sym} 345 -555 0 0 {name=s2 only_toplevel=false value="
 .option wnflag=0 bypass=1
 .options method=gear rawfile=binary
-.options solver=klu nomod  
+.options solver=klu nomod
+Eout out 0 VALUE = \{ ((V(dout0)*512 + V(dout1)*256 + V(dout2)*128 + V(dout3)*64 + V(dout4)*32 + V(dout5)*16 + V(dout6)*8 + V(dout7)*4 + V(dout8)*2 + V(dout9)*1)/3.3) - 512 \}
+Epow pow 0 VALUE = \{ V(vdd)*(-i(vd)) \}
+.model adc_buff adc_bridge(in_low=0.18 in_high=1.62 rise_delay=1p fall_delay=1p)
 .control  
-global netlist_dir . 
-set num_threads=36
-set wr_singlescale
-save x1.vcp x1.vcn vip vin clk vcm cko x1.cks x1.cksb vdd i(vd)
-+ dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9
-tran 1n 535u 0 0.1n ; Mengubah start time menjadi 10n
+global netlist_dir .  
+set num_threads=32
+save cko out pow vip vin
+tran 1n 535u 0 1u uic; Mengubah start time menjadi 10n
 rusage traniter trantime
 let pow = -i(vd)*vdd
 meas tran inst_pow MAX pow from=1n to=535u
 meas tran avg_pow  AVG pow from=1n to=535u
 remzerovec  
-write adc10b_tb_static.raw  
-wrdata adc10b_tb_static.txt cko dout0 dout1 dout2 dout3 dout4 dout5 dout6 dout7 dout8 dout9 pow
+write adc10b_tb_dynamic.raw  
+wrdata adc10b_tb_dynamic.txt time out cko pow
 quit 1
 .endc
 "}
-C {sky130_fd_pr/corner.sym} 40 -570 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {devices/launcher.sym} 1060 -520 0 0 {name=h5
+C {devices/vsource.sym} 640 -240 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 10n 20n)" savecurrent=false}
+C {devices/lab_wire.sym} 640 -270 0 0 {name=p23 sig_type=std_logic lab=CLK}
+C {devices/lab_wire.sym} 640 -210 2 1 {name=p24 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/corner.sym} 40 -560 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {devices/launcher.sym} 1380 -520 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/adc10b_tb_static.raw tran"
+tclcommand="xschem raw_read $netlist_dir/adc10b_tb_dynamic.raw tran"
 }
-C {8b_adc.sym} 720 -460 0 0 {name=x1}
-C {devices/lab_wire.sym} 570 -420 0 0 {name=p4 sig_type=std_logic lab=VCM}
-C {devices/vsource.sym} 750 -150 0 0 {name=VC value=0.9 savecurrent=false}
-C {devices/lab_wire.sym} 750 -120 2 1 {name=p5 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 750 -180 0 0 {name=p9 sig_type=std_logic lab=VCM}
-C {devices/lab_wire.sym} 570 -400 0 0 {name=p10 sig_type=std_logic lab=EN}
-C {devices/vsource.sym} 850 -150 0 0 {name=VDA2 value="PWL(0 0 10n 1.8)" savecurrent=false}
-C {devices/lab_wire.sym} 850 -120 2 1 {name=p11 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 850 -180 0 0 {name=p13 sig_type=std_logic lab=EN}
-C {devices/vsource.sym} 100 -220 0 0 {name=VSS1 value="PWL(0 0.9 0.26u 0.9 532.74u -0.9 533u -0.9)" savecurrent=false}
-C {devices/vsource.sym} 360 -210 0 0 {name=VSS2 value="PWL(0 -0.9 0.26u -0.9 532.74u 0.9 533u 0.9)" savecurrent=false}
-C {devices/vsource.sym} 220 -130 0 0 {name=VSS3 value=0.9 savecurrent=false}
-C {devices/lab_wire.sym} 360 -300 0 0 {name=p15 sig_type=std_logic lab=VIP}
-C {devices/lab_wire.sym} 100 -310 0 0 {name=p16 sig_type=std_logic lab=VIN}
-C {devices/res.sym} 100 -280 0 0 {name=R1
-value=50
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} 360 -270 0 0 {name=R2
-value=50
-footprint=1206
-device=resistor
-m=1}
-C {devices/lab_wire.sym} 220 -100 2 1 {name=p3 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} 750 -270 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 10n 20n)" savecurrent=false}
-C {devices/lab_wire.sym} 750 -300 0 0 {name=p23 sig_type=std_logic lab=CLK}
-C {devices/lab_wire.sym} 750 -240 2 1 {name=p24 sig_type=std_logic lab=VSS}
+C {8b_adc.sym} 720 -450 0 0 {name=x1}
+C {devices/lab_wire.sym} 570 -410 0 0 {name=p10 sig_type=std_logic lab=VCM}
+C {devices/vsource.sym} 640 -120 0 0 {name=VC value=0.9 savecurrent=false}
+C {devices/lab_wire.sym} 640 -90 2 1 {name=p11 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 640 -150 0 0 {name=p13 sig_type=std_logic lab=VCM}
+C {devices/lab_wire.sym} 570 -390 0 0 {name=p14 sig_type=std_logic lab=EN}
+C {devices/vsource.sym} 740 -120 0 0 {name=VDA2 value="PWL(0 0 10n 1.8)" savecurrent=false}
+C {devices/lab_wire.sym} 740 -90 2 1 {name=p17 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 740 -150 0 0 {name=p20 sig_type=std_logic lab=EN}
+C {devices/adc_bridge.sym} 1110 -480 0 0 {name=A1 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -440 0 0 {name=A2 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -400 0 0 {name=A3 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -360 0 0 {name=A4 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -320 0 0 {name=A5 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -280 0 0 {name=A6 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -240 0 0 {name=A7 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -200 0 0 {name=A8 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -160 0 0 {name=A9 adc_bridge_model= adc_buff}
+C {devices/adc_bridge.sym} 1110 -120 0 0 {name=A10 adc_bridge_model= adc_buff}
+C {devices/lab_wire.sym} 1140 -440 0 1 {name=p25 sig_type=std_logic lab=DOUT1}
+C {devices/lab_wire.sym} 1140 -400 0 1 {name=p26 sig_type=std_logic lab=DOUT2}
+C {devices/lab_wire.sym} 1140 -360 0 1 {name=p27 sig_type=std_logic lab=DOUT3}
+C {devices/lab_wire.sym} 1140 -320 0 1 {name=p28 sig_type=std_logic lab=DOUT4}
+C {devices/lab_wire.sym} 1140 -280 0 1 {name=p29 sig_type=std_logic lab=DOUT5}
+C {devices/lab_wire.sym} 1140 -240 0 1 {name=p30 sig_type=std_logic lab=DOUT6}
+C {devices/lab_wire.sym} 1140 -200 0 1 {name=p31 sig_type=std_logic lab=DOUT7}
+C {devices/lab_wire.sym} 1140 -160 0 1 {name=p32 sig_type=std_logic lab=DOUT8}
+C {devices/lab_wire.sym} 1140 -120 0 1 {name=p33 sig_type=std_logic lab=DOUT9}
+C {devices/lab_wire.sym} 1080 -480 0 0 {name=p34 sig_type=std_logic lab=bDOUT0}
+C {devices/lab_wire.sym} 1080 -440 0 0 {name=p35 sig_type=std_logic lab=bDOUT1}
+C {devices/lab_wire.sym} 1080 -400 0 0 {name=p36 sig_type=std_logic lab=bDOUT2}
+C {devices/lab_wire.sym} 1080 -360 0 0 {name=p37 sig_type=std_logic lab=bDOUT3}
+C {devices/lab_wire.sym} 1080 -320 0 0 {name=p38 sig_type=std_logic lab=bDOUT4}
+C {devices/lab_wire.sym} 1080 -280 0 0 {name=p39 sig_type=std_logic lab=bDOUT5}
+C {devices/lab_wire.sym} 1080 -240 0 0 {name=p40 sig_type=std_logic lab=bDOUT6}
+C {devices/lab_wire.sym} 1080 -200 0 0 {name=p41 sig_type=std_logic lab=bDOUT7}
+C {devices/lab_wire.sym} 1080 -160 0 0 {name=p42 sig_type=std_logic lab=bDOUT8}
+C {devices/lab_wire.sym} 1080 -120 0 0 {name=p43 sig_type=std_logic lab=bDOUT9}
+C {devices/lab_wire.sym} 870 -510 0 1 {name=p44 sig_type=std_logic lab=bDOUT[0..9]}
