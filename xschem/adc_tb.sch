@@ -113,7 +113,7 @@ meas tran inst_pow MAX pow from=1n to=535u
 meas tran avg_pow  AVG pow from=1n to=535u
 remzerovec  
 write adc10b_tb_dynamic.raw  
-wrdata adc10b_tb_dynamic.txt time out cko pow
+wrdata adc10b_tb_dynamic.txt out cko pow
 quit 1
 .endc
 "}
