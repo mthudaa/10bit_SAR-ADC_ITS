@@ -12,8 +12,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.06867e-08
-x2=1.8086867e-06
+x1=-4.952308e-07
+x2=4.7784026e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -31,7 +31,7 @@ hilight_wave=0
 color=4
 node=cko}
 B 2 1320 -470 2120 -70 {flags=graph
-y1=0
+
 
 ypos1=0.38718432
 ypos2=3.4168668
@@ -55,11 +55,16 @@ digital=0
 sim_type=tran
 autoload=0
 
+
+
+x1=-4.952308e-07
+x2=4.7784026e-06
+
+
 color=4
 node=out
-x1=8.06867e-08
-x2=1.8086867e-06
-y2=1050}
+y2=520
+y1=-520}
 N 180 -140 300 -140 {
 lab=#net1}
 N 300 -160 300 -140 {
@@ -108,22 +113,21 @@ value="
 spice_ignore=false}
 C {devices/code.sym} 345 -555 0 0 {name=s2 only_toplevel=false value="
 .option wnflag=0 bypass=1
-.options method=gear rawfile=binary
+.options method=trap rawfile=binary
 .options solver=klu nomod
 Eout out 0 VALUE = \{ ((V(dout0)*512 + V(dout1)*256 + V(dout2)*128 + V(dout3)*64 + V(dout4)*32 + V(dout5)*16 + V(dout6)*8 + V(dout7)*4 + V(dout8)*2 + V(dout9)*1)/3.3) - 512 \}
 Epow pow 0 VALUE = \{ V(vdd)*(-i(vd)) \}
-.model adc_buff adc_bridge(in_low=0.18 in_high=1.62 rise_delay=1p fall_delay=1p)
+.model adc_buff adc_bridge(in_low=0.18 in_high=1.62 rise_delay=100p fall_delay=100p)
 .control  
 global netlist_dir .  
-set num_threads=32
+set num_threads=8
 save cko out pow vip vin
-tran 1n 535u 0 1u uic; Mengubah start time menjadi 10n
+tran 1n 535u 0 ; Mengubah start time menjadi 10n
 rusage traniter trantime
-let pow = -i(vd)*vdd
 meas tran inst_pow MAX pow from=1n to=535u
 meas tran avg_pow  AVG pow from=1n to=535u
 remzerovec  
-write adc10b_tb_dynamic.raw  
+write adc10b_tb_static.raw  
 wrdata adc10b_tb_dynamic.txt out cko pow
 quit 1
 .endc
@@ -134,7 +138,7 @@ C {devices/lab_wire.sym} 640 -210 2 1 {name=p24 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/corner.sym} 40 -560 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {devices/launcher.sym} 1380 -520 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/adc10b_tb_dynamic.raw tran"
+tclcommand="xschem raw_read $netlist_dir/adc10b_tb_static.raw tran"
 }
 C {8b_adc.sym} 720 -450 0 0 {name=x1}
 C {devices/lab_wire.sym} 570 -410 0 0 {name=p10 sig_type=std_logic lab=VCM}
