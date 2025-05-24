@@ -106,7 +106,7 @@ Epow pow 0 VALUE = \{ V(vdd)*(-i(vd)) \}
 .model adc_buff adc_bridge(in_low=0.18 in_high=1.62 rise_delay=100p fall_delay=100p)
 .control  
 global netlist_dir .  
-set num_threads=8
+set num_threads=16
 save cko out pow vip vin
 tran 1n 535u 0 ; Mengubah start time menjadi 10n
 rusage traniter trantime
