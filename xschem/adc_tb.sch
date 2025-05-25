@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 2160 -480 2960 -80 {flags=graph
-y1=-0.13877085
-y2=2.731864
+y1=-0.64931716
+y2=2.3892362
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=8.0686704e-08
-x2=1.8086867e-06
+x1=-1.008597e-06
+x2=3.580514e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -28,8 +28,10 @@ logy=0
 
 hilight_wave=0
 
-color=4
-node=cko}
+
+color="7 4"
+node="x1.vcn
+x1.vcp"}
 B 2 1320 -480 2120 -80 {flags=graph
 
 
@@ -57,8 +59,8 @@ autoload=0
 
 color=4
 node=out
-x1=8.0686704e-08
-x2=1.8086867e-06
+x1=-1.008597e-06
+x2=3.580514e-06
 
 y1=-520
 y2=520}
@@ -107,7 +109,7 @@ Epow pow 0 VALUE = \{ V(vdd)*(-i(vd)) \}
 .control  
 global netlist_dir .  
 set num_threads=16
-save cko out pow vip vin
+save cko out pow vip vin x1.vcp x1.vcn
 tran 1n 535u 0 ; Mengubah start time menjadi 10n
 rusage traniter trantime
 meas tran inst_pow MAX pow from=1n to=535u

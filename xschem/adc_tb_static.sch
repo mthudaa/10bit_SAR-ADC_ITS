@@ -121,7 +121,7 @@ Epow pow 0 VALUE = \{ V(vdd)*(-i(vd)) \}
 .control  
 global netlist_dir .  
 set num_threads=16
-save cko out pow vip vin
+save cko out pow vip vin x1.vcp x1.vcn
 tran 1n 535u 0 ; Mengubah start time menjadi 10n
 rusage traniter trantime
 meas tran inst_pow MAX pow from=1n to=535u

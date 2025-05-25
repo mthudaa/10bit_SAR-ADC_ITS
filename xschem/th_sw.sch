@@ -96,7 +96,7 @@ C {devices/ipin.sym} 80 -300 0 0 {name=p15 sig_type=std_logic lab=IN}
 C {devices/opin.sym} 80 -260 0 0 {name=p16 sig_type=std_logic lab=OUT}
 C {sky130_fd_pr/pfet_01v8.sym} 310 -340 0 0 {name=M1
 L=0.15
-W=3
+W=0.75
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -110,7 +110,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 530 -500 0 1 {name=M2
 L=0.15
-W=1
+W=4
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -124,7 +124,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 660 -350 3 0 {name=M3
 L=0.15
-W=1
+W=2
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -138,7 +138,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 310 -240 0 0 {name=M4
 L=0.15
-W=1
+W=0.5
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -152,7 +152,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 490 -100 0 0 {name=M5
 L=0.15
-W=1
+W=2
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -166,7 +166,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 680 -240 0 1 {name=M6
 L=0.15
-W=1
+W=4
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -180,7 +180,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 780 -190 1 0 {name=M7
 L=0.15
-W=1
+W=4
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -194,7 +194,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 860 -520 3 1 {name=M8
 L=0.15
-W=1
+W=7.5
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -208,7 +208,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 960 -520 3 1 {name=M9
 L=0.15
-W=1
+W=7.5
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -220,10 +220,10 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 510 -270 0 0 {name=C1 model=cap_mim_m3_1 W=4 L=4 MF=16 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 510 -270 0 0 {name=C1 model=cap_mim_m3_1 W=4 L=4 MF=32 spiceprefix=X}
 C {sky130_fd_pr/nfet_01v8.sym} 1230 -340 1 0 {name=M10
 L=0.15
-W=16
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -254,7 +254,7 @@ C {devices/lab_wire.sym} 1230 -360 0 1 {name=p23 sig_type=std_logic lab=VGS}
 C {devices/lab_wire.sym} 780 -380 0 1 {name=p24 sig_type=std_logic lab=VGS}
 C {sky130_fd_pr/nfet_01v8.sym} 1100 -340 1 0 {name=M11
 L=0.15
-W=16
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -271,7 +271,7 @@ C {devices/lab_wire.sym} 1100 -360 0 1 {name=p28 sig_type=std_logic lab=CK}
 C {devices/lab_wire.sym} 1070 -320 2 1 {name=p29 sig_type=std_logic lab=IN}
 C {sky130_fd_pr/nfet_01v8.sym} 1360 -340 1 0 {name=M12
 L=0.15
-W=16
+W=15
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 1150 -430 1950 -30 {flags=graph
-y1=1.7440128
+y1=-0.1822076
 
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=3.6329355e-06
-x2=3.6524791e-06
+x1=5.4999175e-05
+x2=0.0001361187
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -32,33 +32,7 @@ node="vcn
 vin
 vcp
 vip"
-y2=1.7534576}
-B 2 1150 -20 1950 380 {flags=graph
-y1=-2.1031396
-y2=5.064889
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=3.6329355e-06
-x2=3.6524791e-06
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-
-
-hilight_wave=0
-
-color=4
-node=clk}
+y2=2.040191}
 N 200 -230 200 -210 {
 lab=#net1}
 N 200 -210 320 -210 {
@@ -94,20 +68,20 @@ value="
 spice_ignore=false}
 C {devices/code.sym} 345 -565 0 0 {name=s2 only_toplevel=false value="
 .option wnflag=0 bypass=1
-.options method=gear rawfile=binary
+.options method=trap rawfile=binary
 .options solver=klu nomod 
 .control  
 set num_threads=6
 save CLK CLKB VIP VIN VCP VCN
 global netlist_dir .  
 set wr_singlescale  
-tran 100p 535u  ; Mengubah start time menjadi 1n  
+tran 1n 535u  ; Mengubah start time menjadi 1n  
 remzerovec 
 write th_tb.raw
 wrdata th_tb.txt CLK CLKB VIP VIN VCP VCN 
 quit 0
 .endc  "}
-C {devices/vsource.sym} 640 -250 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 260n 520n)" savecurrent=false}
+C {devices/vsource.sym} 640 -250 0 0 {name=VCLK value="PULSE(0 1.8 0 50p 50p 260n 520n)" savecurrent=false}
 C {devices/lab_wire.sym} 640 -280 0 1 {name=p23 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 640 -220 2 1 {name=p24 sig_type=std_logic lab=VSSA}
 C {sky130_fd_pr/corner.sym} 40 -570 0 0 {name=CORNER only_toplevel=false corner=tt}
@@ -122,7 +96,7 @@ footprint=1206
 device=resistor
 m=1}
 C {devices/lab_wire.sym} 260 -150 2 1 {name=p3 sig_type=std_logic lab=VSSA}
-C {devices/vsource.sym} 640 -130 0 0 {name=VDA1 value="PULSE(1.8 0 0 0 0 260n 520n)" savecurrent=false}
+C {devices/vsource.sym} 640 -130 0 0 {name=VDA1 value="PULSE(1.8 0 0 50p 50p 260n 520n)" savecurrent=false}
 C {devices/lab_wire.sym} 640 -100 2 1 {name=p5 sig_type=std_logic lab=VSSA}
 C {devices/lab_wire.sym} 640 -160 0 1 {name=p9 sig_type=std_logic lab=CLKB}
 C {th_dif_sw.sym} 730 -520 0 0 {name=x1}
@@ -138,5 +112,5 @@ tclcommand="xschem raw_read $netlist_dir/th_tb.raw tran"
 C {devices/vsource.sym} 890 50 0 0 {name=VDA2 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 890 80 2 1 {name=p17 sig_type=std_logic lab=VSSA}
 C {devices/lab_wire.sym} 890 20 0 0 {name=p20 sig_type=std_logic lab=VCM}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 570 70 0 0 {name=C3 model=cap_mim_m3_1 W=4 L=4 MF=1024 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 730 70 0 0 {name=C1 model=cap_mim_m3_1 W=4 L=4 MF=1024 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 570 70 0 0 {name=C3 model=cap_mim_m3_1 W=1 L=1 MF=1024 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 730 70 0 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1024 spiceprefix=X}
