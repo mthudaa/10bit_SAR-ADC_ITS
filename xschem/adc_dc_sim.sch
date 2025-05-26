@@ -71,8 +71,8 @@ N 300 -160 300 -140 {
 lab=#net1}
 N 40 -170 40 -140 {lab=#net1}
 N 40 -140 180 -140 {lab=#net1}
-C {devices/vsource.sym} 40 -200 0 0 {name=VSS1 value="PWL(0 0.9 0.26u 0.9 1065.22u -0.9 1065.48u -0.9)" savecurrent=false}
-C {devices/vsource.sym} 300 -190 0 0 {name=VSS2 value="PWL(0 -0.9 0.26u -0.9 1065.22u 0.9 1065.48u 0.9)" savecurrent=false}
+C {devices/vsource.sym} 40 -200 0 0 {name=BVIN value="V = -(vd_node)" savecurrent=false}
+C {devices/vsource.sym} 300 -190 0 0 {name=BVIP value="V = vd_node" savecurrent=false}
 C {devices/vsource.sym} 160 -110 0 0 {name=VSS3 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 300 -280 0 0 {name=p15 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 40 -290 0 0 {name=p16 sig_type=std_logic lab=VIN}
@@ -117,13 +117,22 @@ C {devices/code.sym} 345 -555 0 0 {name=s2 only_toplevel=false value="
 .options solver=klu nomod
 Eout out 0 VALUE = \{ ((V(dout0)*512 + V(dout1)*256 + V(dout2)*128 + V(dout3)*64 + V(dout4)*32 + V(dout5)*16 + V(dout6)*8 + V(dout7)*4 + V(dout8)*2 + V(dout9)*1)/3.3) - 512 \}
 Epow pow 0 VALUE = \{ V(vdd)*(-i(vd)) \}
+
 .model adc_buff adc_bridge(in_low=0.18 in_high=1.62 rise_delay=100p fall_delay=100p)
 .control  
 global netlist_dir .  
 set num_threads=16
 save cko out pow vip vin x1.vcp x1.vcn
-tran 1n 1066u 0 ; Mengubah start time menjadi 10n
-rusage traniter trantime
+let V_in_start = -0.9     ; Tegangan input DC awal (misal, 0V)
+let V_in_stop = 0.9       ; Tegangan input DC akhir (misal, VREF atau VDD)
+let V_in_step = 0.00017 ; Langkah tegangan DC (harus sangat kecil, < 0.1 LSB idealnya)
+
+echo \\"Memulai DC Sweep untuk analisis statik ADC...\\"
+dc VD_SWEEP V_in_start V_in_stop V_in_step
+
+echo \\"Simulasi DC selesai.\\"
+
+rusage dciter dcsolvetime
 meas tran inst_pow MAX pow from=1n to=535u
 meas tran avg_pow  AVG pow from=1n to=535u
 remzerovec  
@@ -179,3 +188,6 @@ C {devices/lab_wire.sym} 1080 -200 0 0 {name=p41 sig_type=std_logic lab=bDOUT7}
 C {devices/lab_wire.sym} 1080 -160 0 0 {name=p42 sig_type=std_logic lab=bDOUT8}
 C {devices/lab_wire.sym} 1080 -120 0 0 {name=p43 sig_type=std_logic lab=bDOUT9}
 C {devices/lab_wire.sym} 870 -510 0 1 {name=p44 sig_type=std_logic lab=bDOUT[0..9]}
+C {devices/vsource.sym} 540 10 0 0 {name=VD_SWEEP value="0 DC" savecurrent=false}
+C {devices/lab_wire.sym} 540 40 2 1 {name=p4 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 540 -20 0 0 {name=p5 sig_type=std_logic lab=vd_node}

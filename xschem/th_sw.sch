@@ -223,7 +223,7 @@ spiceprefix=X
 C {sky130_fd_pr/cap_mim_m3_1.sym} 510 -270 0 0 {name=C1 model=cap_mim_m3_1 W=4 L=4 MF=32 spiceprefix=X}
 C {sky130_fd_pr/nfet_01v8.sym} 1230 -340 1 0 {name=M10
 L=0.15
-W=15
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -254,7 +254,7 @@ C {devices/lab_wire.sym} 1230 -360 0 1 {name=p23 sig_type=std_logic lab=VGS}
 C {devices/lab_wire.sym} 780 -380 0 1 {name=p24 sig_type=std_logic lab=VGS}
 C {sky130_fd_pr/nfet_01v8.sym} 1100 -340 1 0 {name=M11
 L=0.15
-W=15
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -271,7 +271,7 @@ C {devices/lab_wire.sym} 1100 -360 0 1 {name=p28 sig_type=std_logic lab=CK}
 C {devices/lab_wire.sym} 1070 -320 2 1 {name=p29 sig_type=std_logic lab=IN}
 C {sky130_fd_pr/nfet_01v8.sym} 1360 -340 1 0 {name=M12
 L=0.15
-W=15
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
