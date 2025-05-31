@@ -112,5 +112,5 @@ tclcommand="xschem raw_read $netlist_dir/th_tb.raw tran"
 C {devices/vsource.sym} 890 50 0 0 {name=VDA2 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 890 80 2 1 {name=p17 sig_type=std_logic lab=VSSA}
 C {devices/lab_wire.sym} 890 20 0 0 {name=p20 sig_type=std_logic lab=VCM}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 570 70 0 0 {name=C3 model=cap_mim_m3_1 W=2 L=2 MF=1024 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 730 70 0 0 {name=C1 model=cap_mim_m3_1 W=2 L=2 MF=1024 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 570 70 0 0 {name=C3 model=cap_mim_m3_1 W=4 L=4 MF=1024 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 730 70 0 0 {name=C1 model=cap_mim_m3_1 W=4 L=4 MF=1024 spiceprefix=X}

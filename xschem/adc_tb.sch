@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 2160 -480 2960 -80 {flags=graph
-y1=-0.64931716
-y2=2.3892362
+y1=-0.29196163
+y2=2.0990292
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-1.008597e-06
-x2=3.580514e-06
+x1=-2.5967299e-06
+x2=3.1699016e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -59,8 +59,8 @@ autoload=0
 
 color=4
 node=out
-x1=-1.008597e-06
-x2=3.580514e-06
+x1=-2.5967299e-06
+x2=3.1699016e-06
 
 y1=-520
 y2=520}
@@ -116,7 +116,7 @@ meas tran inst_pow MAX pow from=1n to=535u
 meas tran avg_pow  AVG pow from=1n to=535u
 remzerovec 
 write adc10b_tb_dynamic.raw  
-wrdata adc10b_tb_dynamic.txt out cko pow
+wrdata adc10b_tb_dynamic.txt out cko pow vip vin
 quit 1
 .endc
 "}

@@ -12,6 +12,8 @@ N 160 -60 200 -60 {
 lab=dac_out}
 N 120 40 200 40 {
 lab=dac_out}
+N 640 -80 640 -60 {lab=vcm}
+N 1040 -80 1040 -60 {lab=#net1}
 C {nooverlap_clk.sym} -30 -170 0 0 {name=x1}
 C {tg_sw_4.sym} -30 -50 0 0 {name=x2}
 C {dac_sw_4.sym} -30 80 0 0 {name=x3}
@@ -39,3 +41,15 @@ C {devices/ipin.sym} -320 -90 0 0 {name=p21 lab=vcm}
 C {devices/lab_wire.sym} 200 -60 0 1 {name=p22 sig_type=std_logic lab=dac_out}
 C {devices/ipin.sym} -320 -50 0 0 {name=p23 lab=vssa}
 C {devices/opin.sym} -340 -10 0 0 {name=p24 lab=dac_out}
+C {tg_sw_4.sym} 490 -50 0 0 {name=x4}
+C {devices/lab_wire.sym} 340 -80 0 0 {name=p25 sig_type=std_logic lab=vdda}
+C {devices/lab_wire.sym} 340 -20 0 0 {name=p26 sig_type=std_logic lab=vssa}
+C {devices/lab_wire.sym} 340 -60 0 0 {name=p27 sig_type=std_logic lab=clk1}
+C {devices/lab_wire.sym} 340 -40 0 0 {name=p28 sig_type=std_logic lab=clkb1}
+C {devices/lab_wire.sym} 640 -80 0 1 {name=p29 sig_type=std_logic lab=vcm}
+C {tg_sw_4.sym} 890 -50 0 0 {name=x5}
+C {devices/lab_wire.sym} 740 -80 0 0 {name=p30 sig_type=std_logic lab=vdda}
+C {devices/lab_wire.sym} 740 -20 0 0 {name=p31 sig_type=std_logic lab=vssa}
+C {devices/lab_wire.sym} 740 -60 0 0 {name=p32 sig_type=std_logic lab=clk1}
+C {devices/lab_wire.sym} 740 -40 0 0 {name=p33 sig_type=std_logic lab=clkb1}
+C {devices/lab_wire.sym} 1040 -80 0 1 {name=p35 sig_type=std_logic lab=dac_out}

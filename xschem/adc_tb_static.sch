@@ -124,11 +124,11 @@ set num_threads=16
 save cko out pow vip vin x1.vcp x1.vcn
 tran 1n 1066u 0 ; Mengubah start time menjadi 10n
 rusage traniter trantime
-meas tran inst_pow MAX pow from=1n to=535u
-meas tran avg_pow  AVG pow from=1n to=535u
+meas tran inst_pow MAX pow from=1n to=1066u
+meas tran avg_pow  AVG pow from=1n to=1066u
 remzerovec  
 write adc10b_tb_static.raw  
-wrdata adc10b_tb_static.txt out cko pow
+wrdata adc10b_tb_static.txt out cko pow vip vin
 quit 1
 .endc
 "}
