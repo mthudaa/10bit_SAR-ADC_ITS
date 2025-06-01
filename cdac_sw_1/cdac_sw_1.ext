@@ -1,0 +1,87 @@
+timestamp 1748716415
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use tg_sw_1 tg_sw_1_2 -1 0 13310 0 1 -3209
+use tg_sw_1 tg_sw_1_1 1 0 36 0 -1 -2331
+use tg_sw_1 tg_sw_1_0 -1 0 13310 0 1 -2225
+use nooverlap_clk nooverlap_clk_0 -1 0 3010 0 1 1188
+use dac_sw_1 dac_sw_1_0 1 0 -124 0 -1 -189
+port "CKI" 2 -1618 1030 -1518 1164 m2
+port "VCM" 4 -1418 1030 -1318 1164 m2
+port "BI" 11 -1818 -1490 -1718 1164 m2
+port "DAC_OUT" 6 13244 -973 13344 -839 m1
+port "VDDA" 25 -396 -3032 -352 -2992 m2
+port "VSSA" 23 -188 -3032 -144 -2992 m2
+port "VSS" 9 -218 66 -118 1058 m2
+node "CKI" 0 0 -1618 1030 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_4476_n3146#" 0 0 4476 -3146 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VCM" 0 0 -1418 1030 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_4476_n2162#" 0 0 4476 -2162 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "BI" 0 0 -1818 -1490 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "DAC_OUT" 0 0 13244 -973 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_n1028_n2570#" 0 0 -1028 -2570 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_n1228_387#" 0 0 -1228 387 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDDA" 0 0 -396 -3032 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_n828_n1204#" 0 0 -828 -1204 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_n628_n712#" 0 0 -628 -712 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSSA" 0 0 -188 -3032 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+equiv "VSSA" "VSS"
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "dac_sw_1_0/OUT" "tg_sw_1_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "tg_sw_1_0/OUT" "tg_sw_1_1/OUT"
+merge "tg_sw_1_1/OUT" "DAC_OUT"
+merge "DAC_OUT" "tg_sw_1_0/IN"
+merge "tg_sw_1_0/IN" "m1_4476_n2162#"
+merge "nooverlap_clk_0/VSUBS" "dac_sw_1_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "dac_sw_1_0/VSUBS" "tg_sw_1_0/VSUBS"
+merge "tg_sw_1_0/VSUBS" "tg_sw_1_1/VSUBS"
+merge "tg_sw_1_1/VSUBS" "tg_sw_1_2/VSUBS"
+merge "tg_sw_1_2/VSUBS" "VSUBS"
+merge "nooverlap_clk_0/x12/VGND" "nooverlap_clk_0/sky130_fd_sc_hd__tapvpwrvgnd_1_1/VGND" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nooverlap_clk_0/sky130_fd_sc_hd__tapvpwrvgnd_1_1/VGND" "dac_sw_1_0/VSS"
+merge "dac_sw_1_0/VSS" "nooverlap_clk_0/x2/VGND"
+merge "nooverlap_clk_0/x2/VGND" "nooverlap_clk_0/x3/VGND"
+merge "nooverlap_clk_0/x3/VGND" "nooverlap_clk_0/x5/VGND"
+merge "nooverlap_clk_0/x5/VGND" "nooverlap_clk_0/sky130_fd_sc_hd__tapvpwrvgnd_1_3/VGND"
+merge "nooverlap_clk_0/sky130_fd_sc_hd__tapvpwrvgnd_1_3/VGND" "nooverlap_clk_0/x7/VGND"
+merge "nooverlap_clk_0/x7/VGND" "nooverlap_clk_0/x9/VGND"
+merge "nooverlap_clk_0/x9/VGND" "nooverlap_clk_0/VSS"
+merge "nooverlap_clk_0/VSS" "nooverlap_clk_0/x11/VGND"
+merge "nooverlap_clk_0/x11/VGND" "nooverlap_clk_0/x13/VGND"
+merge "nooverlap_clk_0/x13/VGND" "nooverlap_clk_0/sky130_fd_sc_hd__tapvpwrvgnd_1_2/VGND"
+merge "nooverlap_clk_0/sky130_fd_sc_hd__tapvpwrvgnd_1_2/VGND" "tg_sw_1_0/VSS"
+merge "tg_sw_1_0/VSS" "tg_sw_1_1/VSS"
+merge "tg_sw_1_1/VSS" "tg_sw_1_2/VSS"
+merge "tg_sw_1_2/VSS" "VSSA"
+merge "nooverlap_clk_0/x12/VPWR" "nooverlap_clk_0/x13/VPWR" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nooverlap_clk_0/x13/VPWR" "nooverlap_clk_0/sky130_fd_sc_hd__tapvpwrvgnd_1_1/VPWR"
+merge "nooverlap_clk_0/sky130_fd_sc_hd__tapvpwrvgnd_1_1/VPWR" "dac_sw_1_0/XM1/w_n246_n4435#"
+merge "dac_sw_1_0/XM1/w_n246_n4435#" "dac_sw_1_0/VDD"
+merge "dac_sw_1_0/VDD" "tg_sw_1_0/VDD"
+merge "tg_sw_1_0/VDD" "tg_sw_1_0/sky130_fd_pr__pfet_01v8_C9QZQZ_0/w_n246_n4435#"
+merge "tg_sw_1_0/sky130_fd_pr__pfet_01v8_C9QZQZ_0/w_n246_n4435#" "tg_sw_1_1/sky130_fd_pr__pfet_01v8_C9QZQZ_0/w_n246_n4435#"
+merge "tg_sw_1_1/sky130_fd_pr__pfet_01v8_C9QZQZ_0/w_n246_n4435#" "tg_sw_1_2/sky130_fd_pr__pfet_01v8_C9QZQZ_0/w_n246_n4435#"
+merge "tg_sw_1_2/sky130_fd_pr__pfet_01v8_C9QZQZ_0/w_n246_n4435#" "tg_sw_1_1/VDD"
+merge "tg_sw_1_1/VDD" "tg_sw_1_2/VDD"
+merge "tg_sw_1_2/VDD" "VDDA"
+merge "nooverlap_clk_0/CLKB0" "dac_sw_1_0/CKB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "dac_sw_1_0/CKB" "m1_n828_n1204#"
+merge "nooverlap_clk_0/CLK1" "tg_sw_1_0/SWN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "tg_sw_1_0/SWN" "tg_sw_1_1/SWP"
+merge "tg_sw_1_1/SWP" "tg_sw_1_2/SWN"
+merge "tg_sw_1_2/SWN" "m1_n1028_n2570#"
+merge "dac_sw_1_0/IN" "BI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nooverlap_clk_0/CLKB1" "tg_sw_1_0/SWP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "tg_sw_1_0/SWP" "tg_sw_1_1/SWN"
+merge "tg_sw_1_1/SWN" "tg_sw_1_2/SWP"
+merge "tg_sw_1_2/SWP" "m1_n1228_387#"
+merge "tg_sw_1_1/IN" "tg_sw_1_2/IN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "tg_sw_1_2/IN" "m1_4476_n3146#"
+merge "m1_4476_n3146#" "tg_sw_1_2/OUT"
+merge "tg_sw_1_2/OUT" "VCM"
+merge "nooverlap_clk_0/CLK0" "dac_sw_1_0/CK" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "dac_sw_1_0/CK" "m1_n628_n712#"
+merge "nooverlap_clk_0/IN" "CKI" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

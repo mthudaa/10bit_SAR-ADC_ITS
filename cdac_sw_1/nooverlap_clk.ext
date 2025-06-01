@@ -1,0 +1,144 @@
+timestamp 1748683470
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_sc_hd__tapvpwrvgnd_1 sky130_fd_sc_hd__tapvpwrvgnd_1_3 1 0 452 0 1 -1170
+use sky130_fd_sc_hd__nand2_1 x1 -1 0 176 0 -1 -82
+use sky130_fd_sc_hd__nand2_1 x2 1 0 -100 0 1 -1170
+use sky130_fd_sc_hd__inv_1 x3 1 0 -376 0 1 -1170
+use sky130_fd_sc_hd__inv_1 x4 1 0 176 0 -1 -82
+use sky130_fd_sc_hd__inv_1 x5 1 0 176 0 1 -1170
+use sky130_fd_sc_hd__inv_1 x6 1 0 452 0 -1 -82
+use sky130_fd_sc_hd__tapvpwrvgnd_1 sky130_fd_sc_hd__tapvpwrvgnd_1_0 -1 0 820 0 -1 -82
+use sky130_fd_sc_hd__inv_1 x7 1 0 544 0 1 -1170
+use sky130_fd_sc_hd__inv_4 x8 1 0 820 0 -1 -82
+use sky130_fd_sc_hd__inv_4 x9 1 0 820 0 1 -1170
+use sky130_fd_sc_hd__inv_8 x10 1 0 1280 0 -1 -82
+use sky130_fd_sc_hd__inv_8 x11 1 0 1280 0 1 -1170
+use sky130_fd_sc_hd__tapvpwrvgnd_1 sky130_fd_sc_hd__tapvpwrvgnd_1_1 -1 0 2200 0 -1 -82
+use sky130_fd_sc_hd__tapvpwrvgnd_1 sky130_fd_sc_hd__tapvpwrvgnd_1_2 1 0 2108 0 1 -1170
+use sky130_fd_sc_hd__inv_8 x12 1 0 2200 0 -1 -82
+use sky130_fd_sc_hd__inv_8 x13 1 0 2200 0 1 -1170
+port "VSS" 7 941 -1187 975 -1153 m1
+port "VDD" 5 941 -643 975 -609 m1
+port "CLK1" 10 2947 -967 3011 -909 v0
+port "CLKB1" 4 2041 -955 2091 -905 v0
+port "CLK0" 8 2947 -343 3011 -285 v0
+port "CLKB0" 3 2033 -347 2083 -297 v0
+port "IN" 0 -311 -353 -252 -291 v
+node "VSS" 0 0 941 -1187 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 941 -643 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_1299_n1187#" 0 0 1299 -1187 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CLK1" 0 0 2947 -967 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CLKB1" 0 0 2041 -955 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_1204_n955#" 0 0 1204 -955 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_717_n955#" 0 0 717 -955 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_386_n955#" 0 0 386 -955 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_107_n1077#" 0 0 107 -1077 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n178_n955#" 0 0 -178 -955 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_88_n958#" 0 0 88 -958 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CLK0" 0 0 2947 -343 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CLKB0" 0 0 2033 -347 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_1204_n347#" 0 0 1204 -347 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_662_n347#" 0 0 662 -347 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_386_n345#" 0 0 386 -345 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_92_n331#" 0 0 92 -331 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IN" 0 0 -311 -353 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n65_n209#" 0 0 -65 -209 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_924_n656#" 0 0 924 -656 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x13/VNB" "x13/VGND" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x13/VGND" "x12/VNB"
+merge "x12/VNB" "x12/VGND"
+merge "x12/VGND" "sky130_fd_sc_hd__tapvpwrvgnd_1_2/VGND"
+merge "sky130_fd_sc_hd__tapvpwrvgnd_1_2/VGND" "sky130_fd_sc_hd__tapvpwrvgnd_1_1/VGND"
+merge "sky130_fd_sc_hd__tapvpwrvgnd_1_1/VGND" "x11/VNB"
+merge "x11/VNB" "x11/VGND"
+merge "x11/VGND" "x10/VNB"
+merge "x10/VNB" "x10/VGND"
+merge "x10/VGND" "m1_1299_n1187#"
+merge "m1_1299_n1187#" "x9/VNB"
+merge "x9/VNB" "x9/VGND"
+merge "x9/VGND" "VSS"
+merge "VSS" "x8/VNB"
+merge "x8/VNB" "x8/VGND"
+merge "x8/VGND" "x7/VNB"
+merge "x7/VNB" "x7/VGND"
+merge "x7/VGND" "sky130_fd_sc_hd__tapvpwrvgnd_1_0/VGND"
+merge "sky130_fd_sc_hd__tapvpwrvgnd_1_0/VGND" "x6/VGND"
+merge "x6/VGND" "x4/VGND"
+merge "x4/VGND" "x1/VGND"
+merge "x1/VGND" "x6/VNB"
+merge "x6/VNB" "x5/VNB"
+merge "x5/VNB" "x5/VGND"
+merge "x5/VGND" "x3/VGND"
+merge "x3/VGND" "x2/VGND"
+merge "x2/VGND" "x4/VNB"
+merge "x4/VNB" "x3/VNB"
+merge "x3/VNB" "x2/VNB"
+merge "x2/VNB" "x1/VNB"
+merge "x1/VNB" "sky130_fd_sc_hd__tapvpwrvgnd_1_3/VGND"
+merge "sky130_fd_sc_hd__tapvpwrvgnd_1_3/VGND" "VSUBS"
+merge "x13/VPWR" "x13/VPB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x13/VPB" "x12/VPWR"
+merge "x12/VPWR" "x12/VPB"
+merge "x12/VPB" "sky130_fd_sc_hd__tapvpwrvgnd_1_2/VPWR"
+merge "sky130_fd_sc_hd__tapvpwrvgnd_1_2/VPWR" "sky130_fd_sc_hd__tapvpwrvgnd_1_1/VPWR"
+merge "sky130_fd_sc_hd__tapvpwrvgnd_1_1/VPWR" "x11/VPWR"
+merge "x11/VPWR" "x11/VPB"
+merge "x11/VPB" "x10/VPWR"
+merge "x10/VPWR" "x10/VPB"
+merge "x10/VPB" "x9/VPWR"
+merge "x9/VPWR" "x9/VPB"
+merge "x9/VPB" "x8/VPWR"
+merge "x8/VPWR" "VDD"
+merge "VDD" "x8/VPB"
+merge "x8/VPB" "w_924_n656#"
+merge "w_924_n656#" "x7/VPWR"
+merge "x7/VPWR" "x7/VPB"
+merge "x7/VPB" "sky130_fd_sc_hd__tapvpwrvgnd_1_0/VPWR"
+merge "sky130_fd_sc_hd__tapvpwrvgnd_1_0/VPWR" "x6/VPWR"
+merge "x6/VPWR" "x6/VPB"
+merge "x6/VPB" "x5/VPWR"
+merge "x5/VPWR" "x5/VPB"
+merge "x5/VPB" "x4/VPWR"
+merge "x4/VPWR" "x3/VPWR"
+merge "x3/VPWR" "x2/VPWR"
+merge "x2/VPWR" "x1/VPWR"
+merge "x1/VPWR" "x4/VPB"
+merge "x4/VPB" "sky130_fd_sc_hd__tapvpwrvgnd_1_3/VPWR"
+merge "sky130_fd_sc_hd__tapvpwrvgnd_1_3/VPWR" "x3/VPB"
+merge "x3/VPB" "x2/VPB"
+merge "x2/VPB" "x1/VPB"
+merge "x4/A" "x1/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x1/Y" "li_n65_n209#"
+merge "x8/A" "x6/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x6/Y" "li_662_n347#"
+merge "li_662_n347#" "x2/A"
+merge "x2/A" "li_88_n958#"
+merge "x3/Y" "x2/B" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x2/B" "li_n178_n955#"
+merge "x7/A" "x5/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x5/Y" "li_386_n955#"
+merge "x12/A" "x10/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x10/Y" "CLKB0"
+merge "x3/A" "x1/A" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x1/A" "IN"
+merge "x11/A" "x9/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x9/Y" "li_1204_n955#"
+merge "x10/A" "x8/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x8/Y" "li_1204_n347#"
+merge "x13/Y" "CLK1" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x9/A" "x7/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x7/Y" "li_717_n955#"
+merge "li_717_n955#" "x1/B"
+merge "x1/B" "li_92_n331#"
+merge "x5/A" "x2/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x2/Y" "li_107_n1077#"
+merge "x13/A" "x11/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x11/Y" "CLKB1"
+merge "x6/A" "x4/Y" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "x4/Y" "li_386_n345#"
+merge "x12/Y" "CLK0" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

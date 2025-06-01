@@ -1,0 +1,708 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_sc_hd__nand2_1 in circuit nooverlap_clk (0)(2 instances)
+Flattening unmatched subcell sky130_fd_sc_hd__inv_1 in circuit nooverlap_clk (0)(5 instances)
+Flattening unmatched subcell sky130_fd_sc_hd__inv_4 in circuit nooverlap_clk (0)(2 instances)
+Flattening unmatched subcell sky130_fd_sc_hd__inv_8 in circuit nooverlap_clk (0)(4 instances)
+Flattening unmatched subcell sky130_fd_sc_hs__nand2_1 in circuit nooverlap_clk (1)(2 instances)
+Flattening unmatched subcell sky130_fd_sc_hs__inv_1 in circuit nooverlap_clk (1)(5 instances)
+Flattening unmatched subcell sky130_fd_sc_hs__inv_4 in circuit nooverlap_clk (1)(2 instances)
+Flattening unmatched subcell sky130_fd_sc_hs__inv_8 in circuit nooverlap_clk (1)(4 instances)
+
+Class nooverlap_clk (0):  Merged 68 parallel devices.
+Class nooverlap_clk (1):  Merged 68 parallel devices.
+Subcircuit summary:
+Circuit 1: nooverlap_clk                   |Circuit 2: nooverlap_clk                   
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8_hvt (49->15)       |(no matching element)                      
+sky130_fd_pr__nfet_01v8 (49->15)           |(no matching element)                      
+(no matching element)                      |sky130_fd_pr__pfet_01v8 (49->15)           
+(no matching element)                      |sky130_fd_pr__nfet_01v8_lvt (49->15)       
+Number of devices: 30                      |Number of devices: 30                      
+Number of nets: 18                         |Number of nets: 18                         
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: nooverlap_clk                   |Circuit 2: nooverlap_clk                   
+
+---------------------------------------------------------------------------------------
+Net: sky130_fd_sc_hd__nand2_1:x2/a_113_47# |Net: sky130_fd_sc_hs__nand2_1:2/a_117_74#  
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 2    
+                                           |                                           
+Net: sky130_fd_sc_hd__nand2_1:x1/a_113_47# |Net: sky130_fd_sc_hs__nand2_1:1/a_117_74#  
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 2    
+                                           |                                           
+Net: CLK1                                  |Net: CLK1                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+                                           |                                           
+Net: CLK0                                  |Net: CLK0                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: x5/A                                  |Net: net2                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 2    |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: x4/A                                  |Net: net5                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 2    |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VDD                                   |Net: VDD                                   
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 15   |  sky130_fd_pr__pfet_01v8/(1|3) = 15       
+  sky130_fd_pr__pfet_01v8_hvt/4 = 15       |  sky130_fd_pr__pfet_01v8/4 = 15           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VSS                                   |Net: VSS                                   
+  sky130_fd_pr__nfet_01v8/4 = 15           |  sky130_fd_pr__nfet_01v8_lvt/4 = 15       
+  sky130_fd_pr__nfet_01v8/(1|3) = 13       |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 13   
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: x8/A                                  |Net: b                                     
+  sky130_fd_pr__pfet_01v8_hvt/2 = 2        |  sky130_fd_pr__pfet_01v8/2 = 2            
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8_lvt/2 = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+                                           |                                           
+Net: x9/A                                  |Net: a                                     
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__pfet_01v8/2 = 2            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 2        |  sky130_fd_pr__nfet_01v8_lvt/2 = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: CLKB1                                 |Net: CLKB1                                 
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: CLKB0                                 |Net: CLKB0                                 
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: x9/Y                                  |Net: net7                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: x8/Y                                  |Net: net6                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: x7/A                                  |Net: net3                                  
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: x6/A                                  |Net: net4                                  
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: x3/Y                                  |Net: net1                                  
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+                                           |                                           
+Net: IN                                    |Net: IN                                    
+  sky130_fd_pr__pfet_01v8_hvt/2 = 2        |  sky130_fd_pr__pfet_01v8/2 = 2            
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8_lvt/2 = 2        
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: nooverlap_clk                   |Circuit 2: nooverlap_clk                   
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_sc_hd__nand2_1:x1/sky1 |Instance: sky130_fd_sc_hs__nand2_1:1/sky13 
+  (1,3) = (30,5)                           |  (1,3) = (30,5)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__nand2_1:x2/sky1 |Instance: sky130_fd_sc_hs__nand2_1:2/sky13 
+  (1,3) = (30,5)                           |  (1,3) = (30,5)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__nand2_1:x1/sky1 |Instance: sky130_fd_sc_hs__nand2_1:1/sky13 
+  (1,3) = (30,5)                           |  (1,3) = (30,5)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__nand2_1:x2/sky1 |Instance: sky130_fd_sc_hs__nand2_1:2/sky13 
+  (1,3) = (30,5)                           |  (1,3) = (30,5)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x3/sky130 |Instance: sky130_fd_sc_hs__inv_1:3/sky130_ 
+  (1,3) = (30,4)                           |  (1,3) = (30,4)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_8:x10/sky13 |Instance: sky130_fd_sc_hs__inv_8:10/sky130 
+  (1,3) = (30,4)                           |  (1,3) = (30,4)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_8:x11/sky13 |Instance: sky130_fd_sc_hs__inv_8:11/sky130 
+  (1,3) = (30,4)                           |  (1,3) = (30,4)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x4/sky130 |Instance: sky130_fd_sc_hs__inv_1:4/sky130_ 
+  (1,3) = (30,4)                           |  (1,3) = (30,4)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x5/sky130 |Instance: sky130_fd_sc_hs__inv_1:5/sky130_ 
+  (1,3) = (30,4)                           |  (1,3) = (30,4)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x6/sky130 |Instance: sky130_fd_sc_hs__inv_1:6/sky130_ 
+  (1,3) = (30,6)                           |  (1,3) = (30,6)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x7/sky130 |Instance: sky130_fd_sc_hs__inv_1:7/sky130_ 
+  (1,3) = (30,6)                           |  (1,3) = (30,6)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_4:x8/sky130 |Instance: sky130_fd_sc_hs__inv_4:8/sky130_ 
+  (1,3) = (30,4)                           |  (1,3) = (30,4)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_4:x9/sky130 |Instance: sky130_fd_sc_hs__inv_4:9/sky130_ 
+  (1,3) = (30,4)                           |  (1,3) = (30,4)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_8:x12/sky13 |Instance: sky130_fd_sc_hs__inv_8:12/sky130 
+  (1,3) = (30,2)                           |  (1,3) = (30,2)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_8:x13/sky13 |Instance: sky130_fd_sc_hs__inv_8:13/sky130 
+  (1,3) = (30,2)                           |  (1,3) = (30,2)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 30                                   |  4 = 30                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__nand2_1:x1/sky1 |Instance: sky130_fd_sc_hs__nand2_1:1/sky13 
+  (1,3) = (5,2)                            |  (1,3) = (5,2)                            
+  2 = 4                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__nand2_1:x1/sky1 |Instance: sky130_fd_sc_hs__nand2_1:1/sky13 
+  (1,3) = (28,2)                           |  (1,3) = (28,2)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x3/sky130 |Instance: sky130_fd_sc_hs__nand2_1:2/sky13 
+  (1,3) = (28,4)                           |  (1,3) = (5,2)                            
+  2 = 4                                    |  2 = 6                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_8:x10/sky13 |Instance: sky130_fd_sc_hs__nand2_1:2/sky13 
+  (1,3) = (28,4)                           |  (1,3) = (28,2)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_8:x11/sky13 |Instance: sky130_fd_sc_hs__inv_8:12/sky130 
+  (1,3) = (28,4)                           |  (1,3) = (28,2)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__nand2_1:x2/sky1 |Instance: sky130_fd_sc_hs__inv_8:13/sky130 
+  (1,3) = (5,2)                            |  (1,3) = (28,2)                           
+  2 = 6                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__nand2_1:x2/sky1 |Instance: sky130_fd_sc_hs__inv_1:3/sky130_ 
+  (1,3) = (28,2)                           |  (1,3) = (28,4)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_8:x12/sky13 |Instance: sky130_fd_sc_hs__inv_8:10/sky130 
+  (1,3) = (28,2)                           |  (1,3) = (28,4)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_8:x13/sky13 |Instance: sky130_fd_sc_hs__inv_8:11/sky130 
+  (1,3) = (28,2)                           |  (1,3) = (28,4)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x4/sky130 |Instance: sky130_fd_sc_hs__inv_1:4/sky130_ 
+  (1,3) = (28,4)                           |  (1,3) = (28,4)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x5/sky130 |Instance: sky130_fd_sc_hs__inv_1:5/sky130_ 
+  (1,3) = (28,4)                           |  (1,3) = (28,4)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x6/sky130 |Instance: sky130_fd_sc_hs__inv_1:6/sky130_ 
+  (1,3) = (28,6)                           |  (1,3) = (28,6)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_1:x7/sky130 |Instance: sky130_fd_sc_hs__inv_1:7/sky130_ 
+  (1,3) = (28,6)                           |  (1,3) = (28,6)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_4:x8/sky130 |Instance: sky130_fd_sc_hs__inv_4:8/sky130_ 
+  (1,3) = (28,4)                           |  (1,3) = (28,4)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 28                                   |  4 = 28                                   
+                                           |                                           
+Instance: sky130_fd_sc_hd__inv_4:x9/sky130 |Instance: sky130_fd_sc_hs__inv_4:9/sky130_ 
+  (1,3) = (28,4)                           |  (1,3) = (28,4)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 28                                   |  4 = 28                                   
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+  Flattening non-matched subcircuits nooverlap_clk nooverlap_clk
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_MKNP2D in circuit tg_sw_1 (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_C9QZQZ in circuit tg_sw_1 (0)(1 instance)
+
+Class tg_sw_1 (0):  Merged 38 parallel devices.
+Subcircuit summary:
+Circuit 1: tg_sw_1                         |Circuit 2: tg_sw_1                         
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (20->1)            |sky130_fd_pr__nfet_01v8 (20->1)            
+sky130_fd_pr__pfet_01v8 (20->1)            |sky130_fd_pr__pfet_01v8 (20->1)            
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: tg_sw_1                         |Circuit 2: tg_sw_1                         
+-------------------------------------------|-------------------------------------------
+SWP                                        |swp                                        
+VDD                                        |vdd                                        
+SWN                                        |swn                                        
+VSS                                        |vss                                        
+OUT                                        |out                                        
+IN                                         |in                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes tg_sw_1 and tg_sw_1 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_C9QZQZ in circuit dac_sw_1 (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_MKNP2D in circuit dac_sw_1 (0)(2 instances)
+
+Class dac_sw_1 (0):  Merged 76 parallel devices.
+Subcircuit summary:
+Circuit 1: dac_sw_1                        |Circuit 2: dac_sw_1                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (40->2)            |sky130_fd_pr__pfet_01v8 (40->2)            
+sky130_fd_pr__nfet_01v8 (40->2)            |sky130_fd_pr__nfet_01v8 (40->2)            
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: dac_sw_1                        |Circuit 2: dac_sw_1                        
+-------------------------------------------|-------------------------------------------
+CKB                                        |ckb                                        
+CK                                         |ck                                         
+IN                                         |in                                         
+OUT                                        |out                                        
+VDD                                        |vdd                                        
+VSS                                        |vss                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes dac_sw_1 and dac_sw_1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: cdac_sw_1                       |Circuit 2: cdac_sw_1                       
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8_hvt (49->15)       |(no matching element)                      
+sky130_fd_pr__nfet_01v8 (49->15)           |(no matching element)                      
+tg_sw_1 (3)                                |tg_sw_1 (3)                                
+dac_sw_1 (1)                               |dac_sw_1 (1)                               
+(no matching element)                      |sky130_fd_pr__pfet_01v8 (49->15)           
+(no matching element)                      |sky130_fd_pr__nfet_01v8_lvt (49->15)       
+Number of devices: 34                      |Number of devices: 34                      
+Number of nets: 21                         |Number of nets: 21                         
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: cdac_sw_1                       |Circuit 2: cdac_sw_1                       
+
+---------------------------------------------------------------------------------------
+Net: /nooverlap_clk_0/sky130_fd_sc_hd__nan |Net: nooverlap_clk:1/sky130_fd_sc_hs__nand 
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 2    
+                                           |                                           
+Net: /nooverlap_clk_0/sky130_fd_sc_hd__nan |Net: nooverlap_clk:1/sky130_fd_sc_hs__nand 
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 2    
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: /nooverlap_clk_0/x8/A                 |Net: nooverlap_clk:1/b                     
+  sky130_fd_pr__pfet_01v8_hvt/2 = 2        |  sky130_fd_pr__pfet_01v8/2 = 2            
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8_lvt/2 = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+                                           |                                           
+Net: /nooverlap_clk_0/x9/A                 |Net: nooverlap_clk:1/a                     
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__pfet_01v8/2 = 2            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 2        |  sky130_fd_pr__nfet_01v8_lvt/2 = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VSSA                                  |Net: vssa                                  
+  sky130_fd_pr__nfet_01v8/4 = 15           |  sky130_fd_pr__nfet_01v8_lvt/4 = 15       
+  sky130_fd_pr__nfet_01v8/(1|3) = 13       |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 13   
+  tg_sw_1/VSS = 3                          |  tg_sw_1/vss = 3                          
+  dac_sw_1/VSS = 1                         |  dac_sw_1/vss = 1                         
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VDDA                                  |Net: vdda                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 15   |  sky130_fd_pr__pfet_01v8/(1|3) = 15       
+  sky130_fd_pr__pfet_01v8_hvt/4 = 15       |  sky130_fd_pr__pfet_01v8/4 = 15           
+  tg_sw_1/VDD = 3                          |  tg_sw_1/vdd = 3                          
+  dac_sw_1/VDD = 1                         |  dac_sw_1/vdd = 1                         
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: VCM                                   |Net: vcm                                   
+  tg_sw_1/IN = 2                           |  tg_sw_1/in = 2                           
+  tg_sw_1/OUT = 1                          |  tg_sw_1/out = 1                          
+                                           |                                           
+Net: dac_sw_1_0/CK                         |Net: clk0                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  dac_sw_1/CK = 1                          |  dac_sw_1/ck = 1                          
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: tg_sw_1_2/SWP                         |Net: clkb1                                 
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+  tg_sw_1/SWP = 2                          |  tg_sw_1/swp = 1                          
+  tg_sw_1/SWN = 1                          |  tg_sw_1/swn = 2                          
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: /nooverlap_clk_0/x5/A                 |Net: nooverlap_clk:1/net2                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 2    |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: /nooverlap_clk_0/x4/A                 |Net: nooverlap_clk:1/net5                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 2    |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: tg_sw_1_2/SWN                         |Net: clk1                                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  tg_sw_1/SWN = 2                          |  tg_sw_1/swn = 1                          
+  tg_sw_1/SWP = 1                          |  tg_sw_1/swp = 2                          
+                                           |                                           
+Net: dac_sw_1_0/CKB                        |Net: clkb0                                 
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+  dac_sw_1/CKB = 1                         |  dac_sw_1/ckb = 1                         
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: /nooverlap_clk_0/x9/Y                 |Net: nooverlap_clk:1/net7                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: /nooverlap_clk_0/x8/Y                 |Net: nooverlap_clk:1/net6                  
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: /nooverlap_clk_0/x7/A                 |Net: nooverlap_clk:1/net3                  
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: /nooverlap_clk_0/x6/A                 |Net: nooverlap_clk:1/net4                  
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+                                           |                                           
+Net: /nooverlap_clk_0/x3/Y                 |Net: nooverlap_clk:1/net1                  
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__pfet_01v8_hvt/(1|3) = 1    |  sky130_fd_pr__nfet_01v8_lvt/2 = 1        
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8_hvt/2 = 1        |  sky130_fd_pr__nfet_01v8_lvt/(1|3) = 1    
+                                           |                                           
+Net: DAC_OUT                               |Net: dac_out                               
+  tg_sw_1/IN = 1                           |  tg_sw_1/in = 1                           
+  tg_sw_1/OUT = 2                          |  tg_sw_1/out = 2                          
+  dac_sw_1/OUT = 1                         |  dac_sw_1/out = 1                         
+                                           |                                           
+Net: CKI                                   |Net: cki                                   
+  sky130_fd_pr__pfet_01v8_hvt/2 = 2        |  sky130_fd_pr__pfet_01v8/2 = 2            
+  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8_lvt/2 = 2        
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: cdac_sw_1                       |Circuit 2: cdac_sw_1                       
+
+---------------------------------------------------------------------------------------
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,5)                           |  (1,3) = (34,5)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,5)                           |  (1,3) = (34,5)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,5)                           |  (1,3) = (34,5)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,5)                           |  (1,3) = (34,5)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,5)                           |  (1,3) = (34,5)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,4)                           |  (1,3) = (34,4)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,4)                           |  (1,3) = (34,4)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,4)                           |  (1,3) = (34,4)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,6)                           |  (1,3) = (34,6)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,6)                           |  (1,3) = (34,6)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,4)                           |  (1,3) = (34,4)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,4)                           |  (1,3) = (34,4)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,7)                           |  (1,3) = (34,7)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,3)                           |  (1,3) = (34,3)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (34,5)                           |  (1,3) = (34,5)                           
+  2 = 7                                    |  2 = 7                                    
+  4 = 34                                   |  4 = 34                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (5,2)                            |  (1,3) = (5,2)                            
+  2 = 4                                    |  2 = 4                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,2)                           |  (1,3) = (32,2)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,4)                           |  (1,3) = (5,2)                            
+  2 = 4                                    |  2 = 6                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (5,2)                            |  (1,3) = (32,2)                           
+  2 = 6                                    |  2 = 4                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,2)                           |  (1,3) = (32,4)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,4)                           |  (1,3) = (32,4)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,4)                           |  (1,3) = (32,4)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,6)                           |  (1,3) = (32,6)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,6)                           |  (1,3) = (32,6)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,4)                           |  (1,3) = (32,4)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,4)                           |  (1,3) = (32,4)                           
+  2 = 6                                    |  2 = 6                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,5)                           |  (1,3) = (32,5)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,7)                           |  (1,3) = (32,7)                           
+  2 = 4                                    |  2 = 4                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,3)                           |  (1,3) = (32,3)                           
+  2 = 5                                    |  2 = 5                                    
+  4 = 32                                   |  4 = 32                                   
+                                           |                                           
+Instance: nooverlap_clk_0/sky130_fd_sc_hd_ |Instance: nooverlap_clk:1/sky130_fd_sc_hs_ 
+  (1,3) = (32,5)                           |  (1,3) = (32,5)                           
+  2 = 7                                    |  2 = 7                                    
+  4 = 32                                   |  4 = 32                                   
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: tg_sw_1_2                        |Instance: tg_sw_1:5                        
+  VDD = 34                                 |  vdd = 34                                 
+  VSS = 32                                 |  vss = 32                                 
+  SWP = 7                                  |  swp = 5                                  
+  IN = 3                                   |  in = 4                                   
+  SWN = 5                                  |  swn = 7                                  
+  OUT = 3                                  |  out = 4                                  
+                                           |                                           
+Instance: tg_sw_1_1                        |Instance: tg_sw_1:4                        
+  VDD = 34                                 |  vdd = 34                                 
+  VSS = 32                                 |  vss = 32                                 
+  SWP = 5                                  |  swp = 5                                  
+  IN = 3                                   |  in = 3                                   
+  SWN = 7                                  |  swn = 7                                  
+  OUT = 4                                  |  out = 3                                  
+                                           |                                           
+Instance: tg_sw_1_0                        |Instance: tg_sw_1:2                        
+  VDD = 34                                 |  vdd = 34                                 
+  VSS = 32                                 |  vss = 32                                 
+  SWP = 7                                  |  swp = 7                                  
+  IN = 4                                   |  in = 3                                   
+  SWN = 5                                  |  swn = 5                                  
+  OUT = 4                                  |  out = 4                                  
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: cdac_sw_1                       |Circuit 2: cdac_sw_1                       
+-------------------------------------------|-------------------------------------------
+BI                                         |bi                                         
+VSSA                                       |vssa                                       
+VDDA                                       |vdda                                       
+VCM                                        |vcm                                        
+DAC_OUT                                    |dac_out                                    
+CKI                                        |cki                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes cdac_sw_1 and cdac_sw_1 are equivalent.
+
+Final result: Netlists do not match.
+Port matching may fail to disambiguate symmetries.

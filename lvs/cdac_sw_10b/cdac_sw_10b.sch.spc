@@ -1,0 +1,348 @@
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_10b.sch
+.subckt cdac_sw_10b VDD CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] SW_IN[0] SW_IN[1] SW_IN[2] SW_IN[3] SW_IN[4]
++ SW_IN[5] SW_IN[6] SW_IN[7] SW_IN[8] SW_IN[9] VCM VSS SWN[0] SWN[1] SWN[2] SWN[3] SWN[4] SWN[5] SWN[6] SWN[7] SWN[8] SWN[9]
+*.PININFO VDD:I CF[0:9]:I SW_IN[0:9]:I VCM:I VSS:I SWN[0:9]:B
+x1 VDD CF[0] SW_IN[0] VCM VSS SWN[0] cdac_sw_1
+x3 VDD CF[2] SW_IN[2] VCM VSS SWN[2] cdac_sw_3
+x4 VDD CF[4] SW_IN[4] VCM VSS SWN[4] cdac_sw_5
+x5 VDD CF[6] SW_IN[6] VCM VSS SWN[6] cdac_sw_7
+x6 VDD CF[8] SW_IN[8] VCM VSS SWN[8] cdac_sw_9
+x7 VDD CF[1] SW_IN[1] VCM VSS SWN[1] cdac_sw_2
+x8 VDD CF[3] SW_IN[3] VCM VSS SWN[3] cdac_sw_4
+x9 VDD CF[5] SW_IN[5] VCM VSS SWN[5] cdac_sw_6
+x10 VDD CF[7] SW_IN[7] VCM VSS SWN[7] cdac_sw_8
+x11 VDD CF[9] SW_IN[9] VCM VSS SWN[9] cdac_sw_10
+.ends
+
+* expanding   symbol:  cdac_sw_1.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_1.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_1.sch
+.subckt cdac_sw_1 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_1
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_1
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_1
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_1
+.ends
+
+
+* expanding   symbol:  cdac_sw_3.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_3.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_3.sch
+.subckt cdac_sw_3 VDDA CKI BI VCM VSSA DAC_OUT
+*.PININFO VDDA:I CKI:I BI:I VCM:I VSSA:I DAC_OUT:O
+x1 VDDA CKI VSSA clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 VDDA clkb1 clk1 VSSA VCM DAC_OUT tg_sw_3
+x3 VDDA BI clk0 clkb0 VSSA DAC_OUT dac_sw_3
+x4 VDDA clk1 clkb1 VSSA VCM VCM tg_sw_3
+x5 VDDA clk1 clkb1 VSSA DAC_OUT DAC_OUT tg_sw_3
+.ends
+
+
+* expanding   symbol:  cdac_sw_5.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_5.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_5.sch
+.subckt cdac_sw_5 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_5
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_5
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_5
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_5
+.ends
+
+
+* expanding   symbol:  cdac_sw_7.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_7.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_7.sch
+.subckt cdac_sw_7 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_7
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_7
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_7
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_7
+.ends
+
+
+* expanding   symbol:  cdac_sw_9.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_9.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_9.sch
+.subckt cdac_sw_9 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_8
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_8
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_8
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_8
+.ends
+
+
+* expanding   symbol:  cdac_sw_2.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_2.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_2.sch
+.subckt cdac_sw_2 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_2
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_2
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_2
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_2
+.ends
+
+
+* expanding   symbol:  cdac_sw_4.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_4.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_4.sch
+.subckt cdac_sw_4 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_4
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_4
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_4
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_4
+.ends
+
+
+* expanding   symbol:  cdac_sw_6.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_6.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_6.sch
+.subckt cdac_sw_6 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_5
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_5
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_5
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_5
+.ends
+
+
+* expanding   symbol:  cdac_sw_8.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_8.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_8.sch
+.subckt cdac_sw_8 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_8
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_8
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_8
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_8
+.ends
+
+
+* expanding   symbol:  cdac_sw_10.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_10.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_10.sch
+.subckt cdac_sw_10 vdda cki bi vcm vssa dac_out
+*.PININFO vdda:I cki:I bi:I vcm:I vssa:I dac_out:O
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_10
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_10
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_10
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_10
+.ends
+
+
+* expanding   symbol:  nooverlap_clk.sym # of pins=7
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/nooverlap_clk.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/nooverlap_clk.sch
+.subckt nooverlap_clk VDD IN VSS CLK0 CLKB0 CLK1 CLKB1
+*.PININFO VDD:I IN:I VSS:I CLK0:O CLKB0:O CLK1:O CLKB1:O
+x1 IN a vss vss vdd vdd net5 sky130_fd_sc_hs__nand2_1
+x2 b net1 vss vss vdd vdd net2 sky130_fd_sc_hs__nand2_1
+x3 IN vss vss vdd vdd net1 sky130_fd_sc_hs__inv_1
+x4 net5 vss vss vdd vdd net4 sky130_fd_sc_hs__inv_1
+x5 net2 vss vss vdd vdd net3 sky130_fd_sc_hs__inv_1
+x6 net4 vss vss vdd vdd b sky130_fd_sc_hs__inv_1
+x7 net3 vss vss vdd vdd a sky130_fd_sc_hs__inv_1
+x8 b vss vss vdd vdd net6 sky130_fd_sc_hs__inv_4
+x9 a vss vss vdd vdd net7 sky130_fd_sc_hs__inv_4
+x10 net6 vss vss vdd vdd CLKB0 sky130_fd_sc_hs__inv_8
+x11 net7 vss vss vdd vdd CLKB1 sky130_fd_sc_hs__inv_8
+x12 CLKB0 vss vss vdd vdd CLK0 sky130_fd_sc_hs__inv_8
+x13 CLKB1 vss vss vdd vdd CLK1 sky130_fd_sc_hs__inv_8
+**** begin user architecture code
+
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  tg_sw_1.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_1.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_1.sch
+.subckt tg_sw_1 vdd swp swn vss in out
+*.PININFO vdd:I swp:I swn:I vss:I in:B out:B
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=20
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=20
+.ends
+
+
+* expanding   symbol:  dac_sw_1.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_1.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_1.sch
+.subckt dac_sw_1 vdd in ck ckb vss out
+*.PININFO vdd:I in:I ck:I ckb:I vss:I out:O
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=20
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=20
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=20
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=20
+.ends
+
+
+* expanding   symbol:  tg_sw_3.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_3.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_3.sch
+.subckt tg_sw_3 vdd swp swn vss in out
+*.PININFO vdd:I swp:I swn:I vss:I in:B out:B
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=16
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=16
+.ends
+
+
+* expanding   symbol:  dac_sw_3.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_3.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_3.sch
+.subckt dac_sw_3 vdd in ck ckb vss out
+*.PININFO vdd:I in:I ck:I ckb:I vss:I out:O
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=16
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=16
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=16
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=16
+.ends
+
+
+* expanding   symbol:  tg_sw_5.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_5.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_5.sch
+.subckt tg_sw_5 vdd swp swn vss in out
+*.PININFO vdd:I swp:I swn:I vss:I in:B out:B
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=12
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=12
+.ends
+
+
+* expanding   symbol:  dac_sw_5.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_5.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_5.sch
+.subckt dac_sw_5 vdd in ck ckb vss out
+*.PININFO vdd:I in:I ck:I ckb:I vss:I out:O
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=12
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=12
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=12
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=12
+.ends
+
+
+* expanding   symbol:  tg_sw_7.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_7.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_7.sch
+.subckt tg_sw_7 vdd swp swn vss in out
+*.PININFO vdd:I swp:I swn:I vss:I in:B out:B
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=8
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=8
+.ends
+
+
+* expanding   symbol:  dac_sw_7.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_7.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_7.sch
+.subckt dac_sw_7 vdd in ck ckb vss out
+*.PININFO vdd:I in:I ck:I ckb:I vss:I out:O
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=8
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=8
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=8
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=8
+.ends
+
+
+* expanding   symbol:  tg_sw_8.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_8.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_8.sch
+.subckt tg_sw_8 vdd swp swn vss in out
+*.PININFO vdd:I swp:I swn:I vss:I in:B out:B
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=6
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=6
+.ends
+
+
+* expanding   symbol:  dac_sw_8.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_8.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_8.sch
+.subckt dac_sw_8 vdd in ck ckb vss out
+*.PININFO vdd:I in:I ck:I ckb:I vss:I out:O
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=6
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=6
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=6
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=6
+.ends
+
+
+* expanding   symbol:  tg_sw_2.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_2.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_2.sch
+.subckt tg_sw_2 vdd swp swn vss in out
+*.PININFO vdd:I swp:I swn:I vss:I in:B out:B
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=18
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=18
+.ends
+
+
+* expanding   symbol:  dac_sw_2.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_2.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_2.sch
+.subckt dac_sw_2 vdd in ck ckb vss out
+*.PININFO vdd:I in:I ck:I ckb:I vss:I out:O
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=18
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=18
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=18
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=18
+.ends
+
+
+* expanding   symbol:  tg_sw_4.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_4.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_4.sch
+.subckt tg_sw_4 vdd swp swn vss in out
+*.PININFO vdd:I swp:I swn:I vss:I in:B out:B
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=14
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=14
+.ends
+
+
+* expanding   symbol:  dac_sw_4.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_4.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_4.sch
+.subckt dac_sw_4 vdd in ck ckb vss out
+*.PININFO vdd:I in:I ck:I ckb:I vss:I out:O
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=14
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=14
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=14
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=14
+.ends
+
+
+* expanding   symbol:  tg_sw_10.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_10.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_10.sch
+.subckt tg_sw_10 vdd swp swn vss in out
+*.PININFO vdd:I swp:I swn:I vss:I in:B out:B
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=2
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=2
+.ends
+
+
+* expanding   symbol:  dac_sw_10.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_10.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_10.sch
+.subckt dac_sw_10 vdd in ck ckb vss out
+*.PININFO vdd:I in:I ck:I ckb:I vss:I out:O
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=2
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 m=2
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=2
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 m=2
+.ends
+
+.end
