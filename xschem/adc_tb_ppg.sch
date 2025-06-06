@@ -64,15 +64,6 @@ x2=3.1699016e-06
 
 y1=-520
 y2=520}
-C {devices/code.sym} 185 -565 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="
-** opencircuitdesign pdks install
-* .lib $::SKYWATER_MODELS/sky130.lib.spice tt
-.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
-"
-spice_ignore=false}
 C {devices/code.sym} 345 -565 0 0 {name=s2 only_toplevel=false value="
 ** PPG source
 VSS1 net2 net1 PWL(
@@ -103,7 +94,6 @@ wrdata adc10b_tb_ppg.txt out cko pow vip vin
 quit 1
 .endc
 "}
-C {sky130_fd_pr/corner.sym} 40 -570 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {devices/launcher.sym} 1360 -530 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/adc10b_tb_ppg.raw tran"
@@ -163,3 +153,15 @@ C {devices/lab_wire.sym} 1080 -210 0 0 {name=p38 sig_type=std_logic lab=bDOUT7}
 C {devices/lab_wire.sym} 1080 -170 0 0 {name=p39 sig_type=std_logic lab=bDOUT8}
 C {devices/lab_wire.sym} 1080 -130 0 0 {name=p40 sig_type=std_logic lab=bDOUT9}
 C {devices/lab_wire.sym} 870 -520 0 1 {name=p41 sig_type=std_logic lab=bDOUT[0..9]}
+C {devices/code.sym} 195 -565 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+** opencircuitdesign pdks install
+* .lib $::SKYWATER_MODELS/sky130.lib.spice tt
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hdll/spice/sky130_fd_sc_hdll.spice
+.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}
+C {sky130_fd_pr/corner.sym} 50 -570 0 0 {name=CORNER only_toplevel=false corner=tt}
