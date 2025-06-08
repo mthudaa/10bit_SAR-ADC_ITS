@@ -1,0 +1,150 @@
+Netgen 1.5.287 compiled on Tue May  6 02:39:06 AM WIB 2025
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/delay_gate_ori/delay_gate_ori.ext.spc
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__pfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8_lvt
+Creating placeholder cell definition.
+Reading netlist file /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/delay_gate_ori/delay_gate_ori.sch.spc
+Call to undefined subcircuit sky130_fd_sc_hs__and2_1
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__pfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8_lvt
+Creating placeholder cell definition.
+
+Reading setup file /usr/local/share/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+Model sky130_fd_pr__res_generic_po pin end_a == end_b
+No property mult found for device sky130_fd_pr__res_generic_po
+Model sky130_fd_pr__nfet_01v8 pin 1 == 3
+No property mult found for device sky130_fd_pr__nfet_01v8
+No property sa found for device sky130_fd_pr__nfet_01v8
+No property sb found for device sky130_fd_pr__nfet_01v8
+No property sd found for device sky130_fd_pr__nfet_01v8
+No property nf found for device sky130_fd_pr__nfet_01v8
+No property nrd found for device sky130_fd_pr__nfet_01v8
+No property nrs found for device sky130_fd_pr__nfet_01v8
+No property area found for device sky130_fd_pr__nfet_01v8
+No property perim found for device sky130_fd_pr__nfet_01v8
+No property topography found for device sky130_fd_pr__nfet_01v8
+Model sky130_fd_pr__nfet_01v8 pin 1 == 3
+No property as found for device sky130_fd_pr__nfet_01v8
+No property ad found for device sky130_fd_pr__nfet_01v8
+No property ps found for device sky130_fd_pr__nfet_01v8
+No property pd found for device sky130_fd_pr__nfet_01v8
+No property mult found for device sky130_fd_pr__nfet_01v8
+No property sa found for device sky130_fd_pr__nfet_01v8
+No property sb found for device sky130_fd_pr__nfet_01v8
+No property sd found for device sky130_fd_pr__nfet_01v8
+No property nrd found for device sky130_fd_pr__nfet_01v8
+No property nrs found for device sky130_fd_pr__nfet_01v8
+No property area found for device sky130_fd_pr__nfet_01v8
+No property perim found for device sky130_fd_pr__nfet_01v8
+No property topography found for device sky130_fd_pr__nfet_01v8
+Model sky130_fd_pr__nfet_01v8_lvt pin 1 == 3
+No property mult found for device sky130_fd_pr__nfet_01v8_lvt
+No property sa found for device sky130_fd_pr__nfet_01v8_lvt
+No property sb found for device sky130_fd_pr__nfet_01v8_lvt
+No property sd found for device sky130_fd_pr__nfet_01v8_lvt
+No property nf found for device sky130_fd_pr__nfet_01v8_lvt
+No property nrd found for device sky130_fd_pr__nfet_01v8_lvt
+No property nrs found for device sky130_fd_pr__nfet_01v8_lvt
+No property area found for device sky130_fd_pr__nfet_01v8_lvt
+No property perim found for device sky130_fd_pr__nfet_01v8_lvt
+No property topography found for device sky130_fd_pr__nfet_01v8_lvt
+Model sky130_fd_pr__nfet_01v8_lvt pin 1 == 3
+No property as found for device sky130_fd_pr__nfet_01v8_lvt
+No property ad found for device sky130_fd_pr__nfet_01v8_lvt
+No property ps found for device sky130_fd_pr__nfet_01v8_lvt
+No property pd found for device sky130_fd_pr__nfet_01v8_lvt
+No property mult found for device sky130_fd_pr__nfet_01v8_lvt
+No property sa found for device sky130_fd_pr__nfet_01v8_lvt
+No property sb found for device sky130_fd_pr__nfet_01v8_lvt
+No property sd found for device sky130_fd_pr__nfet_01v8_lvt
+No property nf found for device sky130_fd_pr__nfet_01v8_lvt
+No property nrd found for device sky130_fd_pr__nfet_01v8_lvt
+No property nrs found for device sky130_fd_pr__nfet_01v8_lvt
+No property area found for device sky130_fd_pr__nfet_01v8_lvt
+No property perim found for device sky130_fd_pr__nfet_01v8_lvt
+No property topography found for device sky130_fd_pr__nfet_01v8_lvt
+Model sky130_fd_pr__pfet_01v8 pin 1 == 3
+No property mult found for device sky130_fd_pr__pfet_01v8
+No property sa found for device sky130_fd_pr__pfet_01v8
+No property sb found for device sky130_fd_pr__pfet_01v8
+No property sd found for device sky130_fd_pr__pfet_01v8
+No property nf found for device sky130_fd_pr__pfet_01v8
+No property nrd found for device sky130_fd_pr__pfet_01v8
+No property nrs found for device sky130_fd_pr__pfet_01v8
+No property area found for device sky130_fd_pr__pfet_01v8
+No property perim found for device sky130_fd_pr__pfet_01v8
+No property topography found for device sky130_fd_pr__pfet_01v8
+Model sky130_fd_pr__pfet_01v8 pin 1 == 3
+No property as found for device sky130_fd_pr__pfet_01v8
+No property ad found for device sky130_fd_pr__pfet_01v8
+No property ps found for device sky130_fd_pr__pfet_01v8
+No property pd found for device sky130_fd_pr__pfet_01v8
+No property mult found for device sky130_fd_pr__pfet_01v8
+No property sa found for device sky130_fd_pr__pfet_01v8
+No property sb found for device sky130_fd_pr__pfet_01v8
+No property sd found for device sky130_fd_pr__pfet_01v8
+No property nrd found for device sky130_fd_pr__pfet_01v8
+No property nrs found for device sky130_fd_pr__pfet_01v8
+No property area found for device sky130_fd_pr__pfet_01v8
+No property perim found for device sky130_fd_pr__pfet_01v8
+No property topography found for device sky130_fd_pr__pfet_01v8
+No property value found for device sky130_fd_pr__diode_pw2nd_05v5
+No property mult found for device sky130_fd_pr__diode_pw2nd_05v5
+No property perim found for device sky130_fd_pr__diode_pw2nd_05v5
+Comparison output logged to file /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/delay_gate_ori/delay_gate_ori.lvs.out
+Logging to file "/home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/delay_gate_ori/delay_gate_ori.lvs.out" enabled
+Circuit sky130_fd_pr__nfet_01v8 contains no devices.
+Circuit sky130_fd_pr__pfet_01v8 contains no devices.
+Circuit sky130_fd_pr__nfet_01v8_lvt contains no devices.
+
+Contents of circuit 1:  Circuit: 'sky130_fd_sc_hs__and2_1'
+Circuit sky130_fd_sc_hs__and2_1 contains 6 device instances.
+  Class: sky130_fd_pr__nfet_01v8_lvt instances:   3
+  Class: sky130_fd_pr__pfet_01v8 instances:   3
+Circuit contains 9 nets.
+Contents of circuit 2:  Circuit: 'sky130_fd_sc_hs__and2_1'
+Circuit sky130_fd_sc_hs__and2_1 contains 6 device instances.
+  Class: sky130_fd_pr__nfet_01v8_lvt instances:   3
+  Class: sky130_fd_pr__pfet_01v8 instances:   3
+Circuit contains 9 nets.
+
+Circuit 1 contains 6 devices, Circuit 2 contains 6 devices.
+Circuit 1 contains 9 nets,    Circuit 2 contains 9 nets.
+
+
+Contents of circuit 1:  Circuit: 'delay_gate_ori'
+Circuit delay_gate_ori contains 7 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:   3
+  Class: sky130_fd_sc_hs__and2_1 instances:   1
+  Class: sky130_fd_pr__pfet_01v8 instances:   3
+Circuit contains 10 nets.
+Contents of circuit 2:  Circuit: 'delay_gate_ori'
+Circuit delay_gate_ori contains 7 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:   3
+  Class: sky130_fd_sc_hs__and2_1 instances:   1
+  Class: sky130_fd_pr__pfet_01v8 instances:   3
+Circuit contains 10 nets.
+
+Circuit 1 contains 7 devices, Circuit 2 contains 7 devices.
+Circuit 1 contains 10 nets,    Circuit 2 contains 10 nets.
+
+
+Final result: 
+Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ delay_gate_ori
+
+Logging to file "/home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/delay_gate_ori/delay_gate_ori.lvs.out" disabled
+LVS Done.

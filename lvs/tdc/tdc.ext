@@ -1,0 +1,54 @@
+timestamp 1749228151
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use phase_detector phase_detector_0 1 0 2324 0 1 -47
+use delay_gate_ori delay_gate_ori_1 1 0 1371 0 1 230
+use delay_gate_ori delay_gate_ori_0 1 0 1371 0 -1 2130
+port "OUTN" 8 5249 597 5289 637 m1
+port "OUTP" 6 5253 676 5293 716 m1
+port "RDY" 5 5245 888 5285 928 m1
+port "VINP" 3 -93 1271 -59 1305 m1
+port "CLK" 10 -103 1345 -69 1379 m1
+port "VINN" 4 -92 1055 -58 1089 m1
+port "VSS" 1 392 2748 422 2778 m1
+port "VDD" 0 412 2934 442 2964 m1
+node "m1_2095_406#" 0 0 2095 406 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "OUTN" 0 0 5249 597 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "OUTP" 0 0 5253 676 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "RDY" 0 0 5245 888 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_2210_1132#" 0 0 2210 1132 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VINP" 0 0 -93 1271 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CLK" 0 0 -103 1345 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_2095_1888#" 0 0 2095 1888 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VINN" 0 0 -92 1055 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 0 392 2748 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 412 2934 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delay_gate_ori_1/OUT" "phase_detector_0/pd_in_0/INN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "phase_detector_0/pd_in_0/INN" "m1_2095_406#"
+merge "phase_detector_0/pd_in_0/VSS" "delay_gate_ori_0/VSS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delay_gate_ori_0/VSS" "phase_detector_0/VSUBS"
+merge "phase_detector_0/VSUBS" "phase_detector_0/VSS"
+merge "phase_detector_0/VSS" "VSS"
+merge "VSS" "delay_gate_ori_1/VSS"
+merge "delay_gate_ori_1/VSS" "VSUBS"
+merge "phase_detector_0/RDY" "RDY" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "phase_detector_0/pd_out_0/x3/VPWR" "delay_gate_ori_0/sky130_fd_sc_hs__and2_1_0/VPB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delay_gate_ori_0/sky130_fd_sc_hs__and2_1_0/VPB" "delay_gate_ori_0/VDD"
+merge "delay_gate_ori_0/VDD" "phase_detector_0/VDD"
+merge "phase_detector_0/VDD" "m1_2210_1132#"
+merge "m1_2210_1132#" "delay_gate_ori_1/VDD"
+merge "delay_gate_ori_1/VDD" "VDD"
+merge "phase_detector_0/OUTN" "OUTN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delay_gate_ori_0/VINP" "delay_gate_ori_1/VINN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delay_gate_ori_1/VINN" "VINP"
+merge "delay_gate_ori_0/VINN" "delay_gate_ori_1/VINP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delay_gate_ori_1/VINP" "VINN"
+merge "phase_detector_0/OUTP" "OUTP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delay_gate_ori_0/OUT" "phase_detector_0/pd_in_0/INP" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "phase_detector_0/pd_in_0/INP" "m1_2095_1888#"
+merge "delay_gate_ori_0/IN" "delay_gate_ori_1/IN" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "delay_gate_ori_1/IN" "CLK"

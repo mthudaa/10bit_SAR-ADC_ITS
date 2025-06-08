@@ -1,0 +1,82 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1749313676
+<< error_p >>
+rect -29 -407 29 -401
+rect -29 -441 -17 -407
+rect -29 -447 29 -441
+<< pwell >>
+rect -211 -579 211 579
+<< nmos >>
+rect -15 -369 15 431
+<< ndiff >>
+rect -73 419 -15 431
+rect -73 -357 -61 419
+rect -27 -357 -15 419
+rect -73 -369 -15 -357
+rect 15 419 73 431
+rect 15 -357 27 419
+rect 61 -357 73 419
+rect 15 -369 73 -357
+<< ndiffc >>
+rect -61 -357 -27 419
+rect 27 -357 61 419
+<< psubdiff >>
+rect -175 509 -79 543
+rect 79 509 175 543
+rect -175 -509 -141 509
+rect 141 447 175 509
+rect 141 -509 175 -447
+rect -175 -543 -79 -509
+rect 79 -543 175 -509
+<< psubdiffcont >>
+rect -79 509 79 543
+rect 141 -447 175 447
+rect -79 -543 79 -509
+<< poly >>
+rect -15 431 15 457
+rect -15 -391 15 -369
+rect -33 -407 33 -391
+rect -33 -441 -17 -407
+rect 17 -441 33 -407
+rect -33 -457 33 -441
+<< polycont >>
+rect -17 -441 17 -407
+<< locali >>
+rect -175 509 -79 543
+rect 79 509 175 543
+rect -175 -509 -141 509
+rect 141 447 175 509
+rect -61 419 -27 435
+rect -61 -373 -27 -357
+rect 27 419 61 435
+rect 27 -373 61 -357
+rect -33 -441 -17 -407
+rect 17 -441 33 -407
+rect 141 -509 175 -447
+rect -175 -543 -79 -509
+rect 79 -543 175 -509
+<< viali >>
+rect -61 -357 -27 419
+rect 27 -357 61 419
+rect -17 -441 17 -407
+<< metal1 >>
+rect -67 419 -21 431
+rect -67 -357 -61 419
+rect -27 -357 -21 419
+rect -67 -369 -21 -357
+rect 21 419 67 431
+rect 21 -357 27 419
+rect 61 -357 67 419
+rect 21 -369 67 -357
+rect -29 -407 29 -401
+rect -29 -441 -17 -407
+rect 17 -441 29 -407
+rect -29 -447 29 -441
+<< properties >>
+string FIXED_BBOX -158 -526 158 526
+string gencell sky130_fd_pr__nfet_01v8
+string library sky130
+string parameters w 4.0 l 0.15 m 1 nf 1 diffcov 100 polycov 100 guard 1 glc 0 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 topc 0 botc 1 poverlap 0 doverlap 1 lmin 0.15 wmin 0.42 compatible {sky130_fd_pr__nfet_01v8 sky130_fd_pr__nfet_01v8_lvt  sky130_fd_bs_flash__special_sonosfet_star  sky130_fd_pr__nfet_g5v0d10v5 sky130_fd_pr__nfet_05v0_nvt  sky130_fd_pr__nfet_03v3_nvt} full_metal 1 viasrc 100 viadrn 100 viagate 100 viagb 0 viagr 0 viagl 0 viagt 0
+<< end >>

@@ -1,0 +1,191 @@
+timestamp 1748803925
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use cdac_sw_10 cdac_sw_10_0 1 0 1439 0 1 -39886
+use cdac_sw_9 cdac_sw_9_0 1 0 1439 0 1 -35084
+use cdac_sw_8 cdac_sw_8_0 1 0 1439 0 1 -30282
+use cdac_sw_7 cdac_sw_7_0 1 0 1439 0 1 -25480
+use cdac_sw_6 cdac_sw_6_0 1 0 1439 0 1 -20678
+use cdac_sw_5 cdac_sw_5_0 1 0 1439 0 1 -15876
+use cdac_sw_4 cdac_sw_4_0 1 0 1439 0 1 -11074
+use cdac_sw_3 cdac_sw_3_0 1 0 1439 0 1 -6272
+use cdac_sw_2 cdac_sw_2_0 1 0 1439 0 1 -1470
+use cdac_sw_1 cdac_sw_1_0 1 0 1439 0 1 3332
+port "VSS" 1 1249 4437 1289 4477 m2
+port "VDD" 0 1052 4651 1092 4691 m2
+port "VCM" 2 55 4351 95 4391 m2
+port "CF[9]" 22 -500 -43131 -460 -43091 m1
+port "SW_IN[9]" 12 -492 -42927 -452 -42887 m1
+port "SWN[9]" 32 3223 -40818 3263 -40778 m1
+port "CF[8]" 21 -495 -38323 -455 -38283 m1
+port "SW_IN[8]" 11 -496 -38127 -456 -38087 m1
+port "SWN[8]" 31 4504 -36010 4544 -35970 m1
+port "CF[7]" 20 -497 -33525 -457 -33485 m1
+port "SW_IN[7]" 10 -497 -33321 -457 -33281 m1
+port "SWN[7]" 30 5784 -31216 5824 -31176 m1
+port "CF[6]" 19 -500 -28722 -460 -28682 m1
+port "SW_IN[6]" 9 -500 -28521 -460 -28481 m1
+port "SWN[6]" 29 7065 -26418 7105 -26378 m1
+port "CF[5]" 18 -495 -23917 -455 -23877 m1
+port "SW_IN[5]" 8 -498 -23716 -458 -23676 m1
+port "SWN[5]" 28 8331 -21599 8371 -21559 m1
+port "CF[4]" 17 -497 -19117 -457 -19077 m1
+port "SW_IN[4]" 7 -503 -18914 -463 -18874 m1
+port "SWN[4]" 27 9616 -16801 9656 -16761 m1
+port "CF[3]" 16 -490 -14319 -450 -14279 m1
+port "SW_IN[3]" 6 -499 -14115 -459 -14075 m1
+port "SWN[3]" 26 10887 -11997 10927 -11957 m1
+port "CF[2]" 15 -500 -9513 -460 -9473 m1
+port "SW_IN[2]" 5 -503 -9309 -463 -9269 m1
+port "SWN[2]" 25 12158 -7204 12198 -7164 m1
+port "CF[1]" 14 -497 -4710 -457 -4670 m1
+port "SW_IN[1]" 4 -492 -4511 -452 -4471 m1
+port "SWN[1]" 24 13429 -2410 13469 -2370 m1
+port "CF[0]" 13 -496 88 -456 128 m1
+port "SW_IN[0]" 3 -501 281 -461 321 m1
+port "SWN[0]" 23 14719 2393 14759 2433 m1
+node "VSS" 0 0 1249 4437 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 1052 4651 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VCM" 0 0 55 4351 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[9]" 0 0 -500 -43131 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[9]" 0 0 -492 -42927 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[9]" 0 0 3223 -40818 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[8]" 0 0 -495 -38323 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[8]" 0 0 -496 -38127 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[8]" 0 0 4504 -36010 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[7]" 0 0 -497 -33525 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[7]" 0 0 -497 -33321 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[7]" 0 0 5784 -31216 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[6]" 0 0 -500 -28722 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[6]" 0 0 -500 -28521 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[6]" 0 0 7065 -26418 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[5]" 0 0 -495 -23917 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[5]" 0 0 -498 -23716 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[5]" 0 0 8331 -21599 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[4]" 0 0 -497 -19117 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[4]" 0 0 -503 -18914 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[4]" 0 0 9616 -16801 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[3]" 0 0 -490 -14319 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[3]" 0 0 -499 -14115 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[3]" 0 0 10887 -11997 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[2]" 0 0 -500 -9513 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[2]" 0 0 -503 -9309 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[2]" 0 0 12158 -7204 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[1]" 0 0 -497 -4710 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[1]" 0 0 -492 -4511 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[1]" 0 0 13429 -2410 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "CF[0]" 0 0 -496 88 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SW_IN[0]" 0 0 -501 281 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "SWN[0]" 0 0 14719 2393 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_1_0/VCM" "cdac_sw_2_0/VCM" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_2_0/VCM" "cdac_sw_3_0/VCM"
+merge "cdac_sw_3_0/VCM" "cdac_sw_4_0/VCM"
+merge "cdac_sw_4_0/VCM" "cdac_sw_5_0/VCM"
+merge "cdac_sw_5_0/VCM" "cdac_sw_6_0/VCM"
+merge "cdac_sw_6_0/VCM" "cdac_sw_7_0/VCM"
+merge "cdac_sw_7_0/VCM" "cdac_sw_8_0/VCM"
+merge "cdac_sw_8_0/VCM" "cdac_sw_9_0/VCM"
+merge "cdac_sw_9_0/VCM" "cdac_sw_10_0/VCM"
+merge "cdac_sw_10_0/VCM" "VCM"
+merge "cdac_sw_8_0/CKI" "CF[7]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_1_0/VSUBS" "cdac_sw_2_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_2_0/VSUBS" "cdac_sw_3_0/VSUBS"
+merge "cdac_sw_3_0/VSUBS" "cdac_sw_4_0/VSUBS"
+merge "cdac_sw_4_0/VSUBS" "cdac_sw_5_0/VSUBS"
+merge "cdac_sw_5_0/VSUBS" "cdac_sw_6_0/VSUBS"
+merge "cdac_sw_6_0/VSUBS" "cdac_sw_7_0/VSUBS"
+merge "cdac_sw_7_0/VSUBS" "cdac_sw_8_0/VSUBS"
+merge "cdac_sw_8_0/VSUBS" "cdac_sw_9_0/VSUBS"
+merge "cdac_sw_9_0/VSUBS" "cdac_sw_10_0/VSUBS"
+merge "cdac_sw_10_0/VSUBS" "VSUBS"
+merge "cdac_sw_6_0/DAC_OUT" "cdac_sw_6_0/dac_sw_6_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_6_0/dac_sw_6_0/OUT" "cdac_sw_6_0/dac_sw_6_0/sky130_fd_pr__pfet_01v8_D9QZ56_0/a_50_64#"
+merge "cdac_sw_6_0/dac_sw_6_0/sky130_fd_pr__pfet_01v8_D9QZ56_0/a_50_64#" "cdac_sw_6_0/dac_sw_6_0/XM3/a_n108_n365#"
+merge "cdac_sw_6_0/dac_sw_6_0/XM3/a_n108_n365#" "cdac_sw_6_0/dac_sw_6_0/XM3/a_n108_n995#"
+merge "cdac_sw_6_0/dac_sw_6_0/XM3/a_n108_n995#" "SWN[5]"
+merge "cdac_sw_8_0/BI" "SW_IN[7]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_1_0/VDDA" "cdac_sw_2_0/VDDA" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_2_0/VDDA" "cdac_sw_3_0/dac_sw_3_0/VDD"
+merge "cdac_sw_3_0/dac_sw_3_0/VDD" "cdac_sw_3_0/VDDA"
+merge "cdac_sw_3_0/VDDA" "cdac_sw_4_0/VDDA"
+merge "cdac_sw_4_0/VDDA" "cdac_sw_5_0/dac_sw_5_0/VDD"
+merge "cdac_sw_5_0/dac_sw_5_0/VDD" "cdac_sw_5_0/VDDA"
+merge "cdac_sw_5_0/VDDA" "cdac_sw_6_0/VDDA"
+merge "cdac_sw_6_0/VDDA" "cdac_sw_7_0/VDDA"
+merge "cdac_sw_7_0/VDDA" "cdac_sw_8_0/VDDA"
+merge "cdac_sw_8_0/VDDA" "cdac_sw_9_0/VDDA"
+merge "cdac_sw_9_0/VDDA" "cdac_sw_10_0/dac_sw_10_0/VDD"
+merge "cdac_sw_10_0/dac_sw_10_0/VDD" "cdac_sw_10_0/VDDA"
+merge "cdac_sw_10_0/VDDA" "VDD"
+merge "cdac_sw_7_0/BI" "SW_IN[6]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_7_0/CKI" "CF[6]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_3_0/BI" "SW_IN[2]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_6_0/BI" "SW_IN[5]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_6_0/CKI" "CF[5]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_5_0/BI" "SW_IN[4]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_9_0/DAC_OUT" "cdac_sw_9_0/dac_sw_9_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_9_0/dac_sw_9_0/OUT" "SWN[8]"
+merge "cdac_sw_5_0/CKI" "CF[4]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_3_0/DAC_OUT" "cdac_sw_3_0/dac_sw_3_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_3_0/dac_sw_3_0/OUT" "cdac_sw_3_0/dac_sw_3_0/sky130_fd_pr__pfet_01v8_D9Q5W2_0/a_50_1348#"
+merge "cdac_sw_3_0/dac_sw_3_0/sky130_fd_pr__pfet_01v8_D9Q5W2_0/a_50_1348#" "cdac_sw_3_0/dac_sw_3_0/sky130_fd_pr__pfet_01v8_D9Q5W2_0/a_50_64#"
+merge "cdac_sw_3_0/dac_sw_3_0/sky130_fd_pr__pfet_01v8_D9Q5W2_0/a_50_64#" "cdac_sw_3_0/dac_sw_3_0/XM3/a_n108_475#"
+merge "cdac_sw_3_0/dac_sw_3_0/XM3/a_n108_475#" "cdac_sw_3_0/dac_sw_3_0/XM3/a_n108_n995#"
+merge "cdac_sw_3_0/dac_sw_3_0/XM3/a_n108_n995#" "cdac_sw_3_0/dac_sw_3_0/XM3/a_n108_n1625#"
+merge "cdac_sw_3_0/dac_sw_3_0/XM3/a_n108_n1625#" "SWN[2]"
+merge "cdac_sw_4_0/BI" "SW_IN[3]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_4_0/CKI" "CF[3]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_5_0/DAC_OUT" "cdac_sw_5_0/dac_sw_5_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_5_0/dac_sw_5_0/OUT" "cdac_sw_5_0/dac_sw_5_0/sky130_fd_pr__pfet_01v8_D9QVK3_0/a_50_920#"
+merge "cdac_sw_5_0/dac_sw_5_0/sky130_fd_pr__pfet_01v8_D9QVK3_0/a_50_920#" "cdac_sw_5_0/dac_sw_5_0/XM3/a_n108_895#"
+merge "cdac_sw_5_0/dac_sw_5_0/XM3/a_n108_895#" "cdac_sw_5_0/dac_sw_5_0/XM3/a_n108_n575#"
+merge "cdac_sw_5_0/dac_sw_5_0/XM3/a_n108_n575#" "cdac_sw_5_0/dac_sw_5_0/XM3/a_n108_n1205#"
+merge "cdac_sw_5_0/dac_sw_5_0/XM3/a_n108_n1205#" "SWN[4]"
+merge "cdac_sw_1_0/DAC_OUT" "cdac_sw_1_0/dac_sw_1_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_1_0/dac_sw_1_0/OUT" "cdac_sw_1_0/dac_sw_1_0/sky130_fd_pr__pfet_01v8_C9QZQZ_0/a_50_1776#"
+merge "cdac_sw_1_0/dac_sw_1_0/sky130_fd_pr__pfet_01v8_C9QZQZ_0/a_50_1776#" "cdac_sw_1_0/dac_sw_1_0/sky130_fd_pr__pfet_01v8_C9QZQZ_0/a_50_492#"
+merge "cdac_sw_1_0/dac_sw_1_0/sky130_fd_pr__pfet_01v8_C9QZQZ_0/a_50_492#" "cdac_sw_1_0/dac_sw_1_0/XM3/a_n108_1525#"
+merge "cdac_sw_1_0/dac_sw_1_0/XM3/a_n108_1525#" "cdac_sw_1_0/dac_sw_1_0/XM3/a_n108_55#"
+merge "cdac_sw_1_0/dac_sw_1_0/XM3/a_n108_55#" "cdac_sw_1_0/dac_sw_1_0/XM3/a_n108_n1415#"
+merge "cdac_sw_1_0/dac_sw_1_0/XM3/a_n108_n1415#" "cdac_sw_1_0/dac_sw_1_0/XM3/a_n108_n2045#"
+merge "cdac_sw_1_0/dac_sw_1_0/XM3/a_n108_n2045#" "SWN[0]"
+merge "cdac_sw_10_0/DAC_OUT" "cdac_sw_10_0/dac_sw_10_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_10_0/dac_sw_10_0/OUT" "SWN[9]"
+merge "cdac_sw_1_0/VSSA" "cdac_sw_2_0/VSSA" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_2_0/VSSA" "cdac_sw_3_0/VSSA"
+merge "cdac_sw_3_0/VSSA" "cdac_sw_4_0/VSSA"
+merge "cdac_sw_4_0/VSSA" "cdac_sw_5_0/VSSA"
+merge "cdac_sw_5_0/VSSA" "cdac_sw_6_0/VSSA"
+merge "cdac_sw_6_0/VSSA" "cdac_sw_7_0/VSSA"
+merge "cdac_sw_7_0/VSSA" "cdac_sw_8_0/VSSA"
+merge "cdac_sw_8_0/VSSA" "cdac_sw_9_0/VSSA"
+merge "cdac_sw_9_0/VSSA" "cdac_sw_10_0/VSSA"
+merge "cdac_sw_10_0/VSSA" "VSS"
+merge "cdac_sw_2_0/BI" "SW_IN[1]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_3_0/CKI" "CF[2]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_1_0/BI" "SW_IN[0]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_9_0/BI" "SW_IN[8]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_2_0/CKI" "CF[1]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_10_0/CKI" "CF[9]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_8_0/DAC_OUT" "cdac_sw_8_0/dac_sw_8_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_8_0/dac_sw_8_0/OUT" "cdac_sw_8_0/dac_sw_8_0/XM3/a_n108_55#"
+merge "cdac_sw_8_0/dac_sw_8_0/XM3/a_n108_55#" "cdac_sw_8_0/dac_sw_8_0/XM3/a_n108_n575#"
+merge "cdac_sw_8_0/dac_sw_8_0/XM3/a_n108_n575#" "SWN[7]"
+merge "cdac_sw_1_0/CKI" "CF[0]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_4_0/DAC_OUT" "cdac_sw_4_0/dac_sw_4_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_4_0/dac_sw_4_0/OUT" "cdac_sw_4_0/dac_sw_4_0/sky130_fd_pr__pfet_01v8_D9Q956_0/a_50_492#"
+merge "cdac_sw_4_0/dac_sw_4_0/sky130_fd_pr__pfet_01v8_D9Q956_0/a_50_492#" "cdac_sw_4_0/dac_sw_4_0/XM3/a_n108_685#"
+merge "cdac_sw_4_0/dac_sw_4_0/XM3/a_n108_685#" "cdac_sw_4_0/dac_sw_4_0/XM3/a_n108_n785#"
+merge "cdac_sw_4_0/dac_sw_4_0/XM3/a_n108_n785#" "cdac_sw_4_0/dac_sw_4_0/XM3/a_n108_n1415#"
+merge "cdac_sw_4_0/dac_sw_4_0/XM3/a_n108_n1415#" "SWN[3]"
+merge "cdac_sw_7_0/DAC_OUT" "cdac_sw_7_0/dac_sw_7_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_7_0/dac_sw_7_0/OUT" "SWN[6]"
+merge "cdac_sw_2_0/DAC_OUT" "cdac_sw_2_0/dac_sw_2_0/OUT" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_2_0/dac_sw_2_0/OUT" "cdac_sw_2_0/dac_sw_2_0/sky130_fd_pr__pfet_01v8_D9QHA6_0/a_50_3060#"
+merge "cdac_sw_2_0/dac_sw_2_0/sky130_fd_pr__pfet_01v8_D9QHA6_0/a_50_3060#" "SWN[1]"
+merge "cdac_sw_9_0/CKI" "CF[8]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "cdac_sw_10_0/BI" "SW_IN[9]" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

@@ -64,7 +64,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 240 -380 0 0 {name=p11 sig_type=std_logic lab=VDD}
 C {devices/ipin.sym} 240 -360 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 240 -340 0 0 {name=p13 sig_type=std_logic lab=CK}
 C {devices/ipin.sym} 240 -320 0 0 {name=p14 sig_type=std_logic lab=VGS}

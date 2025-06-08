@@ -1,0 +1,21 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1749411235
+use cdac  cdac_0
+timestamp 1749411235
+transform 1 0 -1274 0 1 2329
+box -1098 -705 50472 115443
+use sar10b  sar10b_0
+timestamp 1749411235
+transform 1 0 56915 0 1 44953
+box 0 0 11722 28874
+use tdc  tdc_0
+timestamp 1749411235
+transform 1 0 50373 0 1 57778
+box -224 -646 5424 3006
+use th_dif_sw  th_dif_sw_0
+timestamp 1749411235
+transform 0 -1 -3362 1 0 43965
+box -1 -413 31660 6384
+<< end >>

@@ -1,0 +1,921 @@
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/adc_tb_ppg.sch
+**.subckt adc_tb_ppg
+A1 [ bDOUT0 ] [ DOUT0 ] adc_buff
+A2 [ bDOUT1 ] [ DOUT1 ] adc_buff
+A3 [ bDOUT2 ] [ DOUT2 ] adc_buff
+A4 [ bDOUT3 ] [ DOUT3 ] adc_buff
+A5 [ bDOUT4 ] [ DOUT4 ] adc_buff
+A6 [ bDOUT5 ] [ DOUT5 ] adc_buff
+A7 [ bDOUT6 ] [ DOUT6 ] adc_buff
+A8 [ bDOUT7 ] [ DOUT7 ] adc_buff
+A9 [ bDOUT8 ] [ DOUT8 ] adc_buff
+A10 [ bDOUT9 ] [ DOUT9 ] adc_buff
+VS VSSR GND 0
+VD VDDR VSSR 1.8
+VCLK CLK VSSD PULSE(0 1.8 0 0 0 10n 20n)
+x1 VDDA VSSA VDDD VSSD VDDR VSSR VCM CLK VIP VIN EN bDOUT0 bDOUT1 bDOUT2 bDOUT3 bDOUT4 bDOUT5 bDOUT6 bDOUT7 bDOUT8 bDOUT9 CKO
++ 8b_adc
+VC VCM VSSR 0.9
+VDA2 EN VSSD PWL(0 0 10n 1.8)
+VS1 VSSA GND 0
+VD1 VDDA VSSA 1.8
+VS2 VSSD GND 0
+VD2 VDDD VSSD 1.8
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+* .lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+*.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hdll/spice/sky130_fd_sc_hdll.spice
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+*.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /usr/local/share/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /usr/local/share/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /usr/local/share/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /usr/local/share/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+VSS1 net2 net1 PWL(
++ 0.000000000 -0.686914 0.000001040 -0.677148 0.000002080 -0.679590 0.000003120 -0.682031 0.000004160 -0.691797 0.000005200 -0.684473 0.000006240 -0.684473 0.000007280 -0.691797 0.000008320 -0.699121 0.000009360 -0.696680 0.000010400 -0.696680 0.000011440 -0.704004 0.000012480 -0.711328 0.000013520 -0.711328 0.000014560 -0.711328 0.000015600 -0.718652 0.000016640 -0.721094 0.000017680 -0.721094 0.000018720 -0.721094 0.000019760 -0.728418 0.000020800 -0.733301 0.000021840 -0.733301 0.000022880 -0.730859 0.000023920 -0.735742 0.000024960 -0.740625 0.000026000 -0.740625 0.000027040 -0.735742 0.000028080 -0.740625 0.000029120 -0.743066 0.000030160 -0.743066 0.000031200 -0.738184 0.000032240 -0.740625 0.000033280 -0.743066 0.000034320 -0.745508 0.000035360 -0.733301 0.000036400 -0.738184 0.000037440 -0.738184 0.000038480 -0.740625 0.000039520 -0.733301 0.000040560 -0.733301 0.000041600 -0.733301 0.000042640 -0.738184 0.000043680 -0.728418 0.000044720 -0.728418 0.000045760 -0.728418 0.000046800 -0.733301 0.000047840 -0.723535 0.000048880 -0.723535 0.000049920 -0.725977 0.000050960 -0.730859 0.000052000 -0.721094 0.000053040 -0.721094 0.000054080 -0.721094 0.000055120 -0.725977 0.000056160 -0.718652 0.000057200 -0.716211 0.000058240 -0.718652 0.000059280 -0.721094 0.000060320 -0.718652 0.000061360 -0.713770 0.000062400 -0.718652 0.000063440 -0.721094 0.000064480 -0.718652 0.000065520 -0.713770 0.000066560 -0.716211 0.000067600 -0.721094 0.000068640 -0.718652 0.000069680 -0.711328 0.000070720 -0.716211 0.000071760 -0.718652 0.000072800 -0.718652 0.000073840 -0.713770 0.000074880 -0.716211 0.000075920 -0.718652 0.000076960 -0.718652 0.000078000 -0.711328 0.000079040 -0.716211 0.000080080 -0.718652 0.000081120 -0.721094 0.000082160 -0.711328 0.000083200 -0.713770 0.000084240 -0.716211 0.000085280 -0.721094 0.000086320 -0.711328 0.000087360 -0.716211 0.000088400 -0.718652 0.000089440 -0.723535 0.000090480 -0.713770 0.000091520 -0.718652 0.000092560 -0.721094 0.000093600 -0.728418 0.000094640 -0.723535 0.000095680 -0.725977 0.000096720 -0.733301 0.000097760 -0.745508 0.000098800 -0.740625 0.000099840 -0.747949 0.000100880 -0.755273 0.000101920 -0.769922 0.000102960 -0.769922 0.000104000 -0.777246 0.000105040 -0.789453 0.000106080 -0.801660 0.000107120 -0.804102 0.000108160 -0.806543 0.000109200 -0.816309 0.000110240 -0.826074 0.000111280 -0.826074 0.000112320 -0.823633 0.000113360 -0.828516 0.000114400 -0.833398 0.000115440 -0.833398 0.000116480 -0.826074 0.000117520 -0.826074 0.000118560 -0.826074 0.000119600 -0.821191 0.000120640 -0.811426 0.000121680 -0.808984 0.000122720 -0.806543 0.000123760 -0.801660 0.000124800 -0.787012 0.000125840 -0.784570 0.000126880 -0.777246 0.000127920 -0.772363 0.000128960 -0.755273 0.000130000 -0.752832 0.000131040 -0.745508 0.000132080 -0.743066 0.000133120 -0.728418 0.000134160 -0.723535 0.000135200 -0.721094 0.000136240 -0.718652 0.000137280 -0.706445 0.000138320 -0.704004 0.000139360 -0.701562 0.000140400 -0.701562 0.000141440 -0.689355 0.000142480 -0.686914 0.000143520 -0.686914 0.000144560 -0.691797 0.000145600 -0.682031 0.000146640 -0.682031 0.000147680 -0.682031)
+VSS2 net3 net1 PWL(
++ 0.000000000 0.686914 0.000001040 0.677148 0.000002080 0.679590 0.000003120 0.682031 0.000004160 0.691797 0.000005200 0.684473 0.000006240 0.684473 0.000007280 0.691797 0.000008320 0.699121 0.000009360 0.696680 0.000010400 0.696680 0.000011440 0.704004 0.000012480 0.711328 0.000013520 0.711328 0.000014560 0.711328 0.000015600 0.718652 0.000016640 0.721094 0.000017680 0.721094 0.000018720 0.721094 0.000019760 0.728418 0.000020800 0.733301 0.000021840 0.733301 0.000022880 0.730859 0.000023920 0.735742 0.000024960 0.740625 0.000026000 0.740625 0.000027040 0.735742 0.000028080 0.740625 0.000029120 0.743066 0.000030160 0.743066 0.000031200 0.738184 0.000032240 0.740625 0.000033280 0.743066 0.000034320 0.745508 0.000035360 0.733301 0.000036400 0.738184 0.000037440 0.738184 0.000038480 0.740625 0.000039520 0.733301 0.000040560 0.733301 0.000041600 0.733301 0.000042640 0.738184 0.000043680 0.728418 0.000044720 0.728418 0.000045760 0.728418 0.000046800 0.733301 0.000047840 0.723535 0.000048880 0.723535 0.000049920 0.725977 0.000050960 0.730859 0.000052000 0.721094 0.000053040 0.721094 0.000054080 0.721094 0.000055120 0.725977 0.000056160 0.718652 0.000057200 0.716211 0.000058240 0.718652 0.000059280 0.721094 0.000060320 0.718652 0.000061360 0.713770 0.000062400 0.718652 0.000063440 0.721094 0.000064480 0.718652 0.000065520 0.713770 0.000066560 0.716211 0.000067600 0.721094 0.000068640 0.718652 0.000069680 0.711328 0.000070720 0.716211 0.000071760 0.718652 0.000072800 0.718652 0.000073840 0.713770 0.000074880 0.716211 0.000075920 0.718652 0.000076960 0.718652 0.000078000 0.711328 0.000079040 0.716211 0.000080080 0.718652 0.000081120 0.721094 0.000082160 0.711328 0.000083200 0.713770 0.000084240 0.716211 0.000085280 0.721094 0.000086320 0.711328 0.000087360 0.716211 0.000088400 0.718652 0.000089440 0.723535 0.000090480 0.713770 0.000091520 0.718652 0.000092560 0.721094 0.000093600 0.728418 0.000094640 0.723535 0.000095680 0.725977 0.000096720 0.733301 0.000097760 0.745508 0.000098800 0.740625 0.000099840 0.747949 0.000100880 0.755273 0.000101920 0.769922 0.000102960 0.769922 0.000104000 0.777246 0.000105040 0.789453 0.000106080 0.801660 0.000107120 0.804102 0.000108160 0.806543 0.000109200 0.816309 0.000110240 0.826074 0.000111280 0.826074 0.000112320 0.823633 0.000113360 0.828516 0.000114400 0.833398 0.000115440 0.833398 0.000116480 0.826074 0.000117520 0.826074 0.000118560 0.826074 0.000119600 0.821191 0.000120640 0.811426 0.000121680 0.808984 0.000122720 0.806543 0.000123760 0.801660 0.000124800 0.787012 0.000125840 0.784570 0.000126880 0.777246 0.000127920 0.772363 0.000128960 0.755273 0.000130000 0.752832 0.000131040 0.745508 0.000132080 0.743066 0.000133120 0.728418 0.000134160 0.723535 0.000135200 0.721094 0.000136240 0.718652 0.000137280 0.706445 0.000138320 0.704004 0.000139360 0.701562 0.000140400 0.701562 0.000141440 0.689355 0.000142480 0.686914 0.000143520 0.686914 0.000144560 0.691797 0.000145600 0.682031 0.000146640 0.682031 0.000147680 0.682031)
+VSS3 net1 VSSR 0.9
+R1 VIN net2 50 m=1
+R2 VIP net3 50 m=1
+
+.option wnflag=0 bypass=1
+.options method=trap rawfile=binary
+.options solver=klu nomod
+Eout out 0 VALUE = { ((V(dout0)*512 + V(dout1)*256 + V(dout2)*128 + V(dout3)*64 + V(dout4)*32 + V(dout5)*16 + V(dout6)*8 + V(dout7)*4 + V(dout8)*2 + V(dout9)*1)/3.3) - 512 }
+Epowa pow_a 0 VALUE = { V(vdda)*(-i(vd1)) }
+Epowd pow_d 0 VALUE = { V(vddd)*(-i(vd2)) }
+Epowr pow_r 0 VALUE = { V(vddr)*(-i(vd)) }
+.model adc_buff adc_bridge(in_low=0.18 in_high=1.62 rise_delay=100p fall_delay=100p)
+.control
+global netlist_dir .
+set num_threads=16
+save cko out pow_a pow_d pow_r vip vin x1.vcp x1.vcn
+tran 1n 148u 0 ; Mengubah start time menjadi 10n
+rusage traniter trantime
+meas tran avg_pow  AVG pow_a from=1n to=148u
+meas tran avg_pow  AVG pow_d from=1n to=148u
+meas tran avg_pow  AVG pow_r from=1n to=148u
+remzerovec
+write adc10b_tb_ppg.raw
+wrdata adc10b_tb_ppg.txt out cko pow_a pow_d pow_r vip vin
+quit 1
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  8b_adc.sym # of pins=13
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/8b_adc.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/8b_adc.sch
+.subckt 8b_adc VDDA VSSA VDDD VSSD VDDR VSSR VCM CLK VINP VINN EN DOUT[0] DOUT[1] DOUT[2] DOUT[3] DOUT[4] DOUT[5] DOUT[6] DOUT[7]
++ DOUT[8] DOUT[9] CKO
+*.ipin VDDA
+*.ipin VSSA
+*.ipin CLK
+*.ipin VINP
+*.ipin VINN
+*.opin DOUT[0],DOUT[1],DOUT[2],DOUT[3],DOUT[4],DOUT[5],DOUT[6],DOUT[7],DOUT[8],DOUT[9]
+*.opin CKO
+*.ipin VCM
+*.ipin EN
+*.ipin VDDD
+*.ipin VSSD
+*.ipin VDDR
+*.ipin VSSR
+x2 VDDR VSSR VCM CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] SWP[0] SWP[1] SWP[2] SWP[3] SWP[4] SWP[5] SWP[6]
++ SWP[7] SWP[8] SWP[9] SWN[0] SWN[1] SWN[2] SWN[3] SWN[4] SWN[5] SWN[6] SWN[7] SWN[8] SWN[9] VCP VCN cdac
+x3 VDDA VSSA CKS CKSB VINP VINN VCP VCN th_dif_sw
+x1 CLK VDDA VSSA VCP VCN CMP_P CMP_N RDY tdc
+x4 CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] CKO CKS CKSB CLK CMP_N CMP_P DOUT[0] DOUT[1] DOUT[2] DOUT[3]
++ DOUT[4] DOUT[5] DOUT[6] DOUT[7] DOUT[8] DOUT[9] EN RDY SWN[0] SWN[1] SWN[2] SWN[3] SWN[4] SWN[5] SWN[6] SWN[7] SWN[8] SWN[9] SWP[0]
++ SWP[1] SWP[2] SWP[3] SWP[4] SWP[5] SWP[6] SWP[7] SWP[8] SWP[9] VSSD VDDD sar10b
+.ends
+
+
+* expanding   symbol:  cdac.sym # of pins=8
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac.sch
+.subckt cdac VDD VSS VCM CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] SWP_IN[0] SWP_IN[1] SWP_IN[2] SWP_IN[3]
++ SWP_IN[4] SWP_IN[5] SWP_IN[6] SWP_IN[7] SWP_IN[8] SWP_IN[9] SWN_IN[0] SWN_IN[1] SWN_IN[2] SWN_IN[3] SWN_IN[4] SWN_IN[5] SWN_IN[6] SWN_IN[7]
++ SWN_IN[8] SWN_IN[9] VCP VCN
+*.ipin VDD
+*.ipin VCM
+*.ipin VSS
+*.ipin CF[0],CF[1],CF[2],CF[3],CF[4],CF[5],CF[6],CF[7],CF[8],CF[9]
+*.ipin SWP_IN[0],SWP_IN[1],SWP_IN[2],SWP_IN[3],SWP_IN[4],SWP_IN[5],SWP_IN[6],SWP_IN[7],SWP_IN[8],SWP_IN[9]
+*.ipin SWN_IN[0],SWN_IN[1],SWN_IN[2],SWN_IN[3],SWN_IN[4],SWN_IN[5],SWN_IN[6],SWN_IN[7],SWN_IN[8],SWN_IN[9]
+*.opin VCP
+*.opin VCN
+x3 VDD CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] SWP_IN[0] SWP_IN[1] SWP_IN[2] SWP_IN[3] SWP_IN[4] SWP_IN[5]
++ SWP_IN[6] SWP_IN[7] SWP_IN[8] SWP_IN[9] VCM VSS VCP single_10b_cdac
+x4 VDD CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] SWN_IN[0] SWN_IN[1] SWN_IN[2] SWN_IN[3] SWN_IN[4] SWN_IN[5]
++ SWN_IN[6] SWN_IN[7] SWN_IN[8] SWN_IN[9] VCM VSS VCN single_10b_cdac
+.ends
+
+
+* expanding   symbol:  th_dif_sw.sym # of pins=8
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/th_dif_sw.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/th_dif_sw.sch
+.subckt th_dif_sw VDD VSS CK CKB VIP VIN VCP VCN
+*.ipin VDD
+*.ipin VSS
+*.ipin CK
+*.ipin CKB
+*.ipin VIP
+*.ipin VIN
+*.opin VCP
+*.opin VCN
+x1 VDD VSS CK_BUFF CKB_BUFF VIP VCP th_sw
+x2 VDD VSS CK_BUFF CKB_BUFF VIN VCN th_sw
+x3 CK VSS VSS VDD VDD CK_BUFF sky130_fd_sc_hs__buf_16
+x4 CKB VSS VSS VDD VDD CKB_BUFF sky130_fd_sc_hs__buf_16
+**** begin user architecture code
+
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  tdc.sym # of pins=8
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tdc.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tdc.sch
+.subckt tdc CLK VDD VSS VINP VINN OUTP OUTN RDY
+*.ipin VDD
+*.ipin VSS
+*.ipin VINP
+*.ipin VINN
+*.ipin CLK
+*.opin OUTP
+*.opin OUTN
+*.opin RDY
+x2 CLK VDD VSS VINP VINN INP delay_gate_ori
+x3 CLK VDD VSS VINN VINP INN delay_gate_ori
+x1 VDD VSS INP INN OUTP OUTN RDY phase_detector
+**** begin user architecture code
+
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  sar10b.sym # of pins=14
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/sar10b.sym
+.include /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/sar10b.spice
+
+* expanding   symbol:  single_10b_cdac.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/single_10b_cdac.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/single_10b_cdac.sch
+.subckt single_10b_cdac VDD CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] SW_IN[0] SW_IN[1] SW_IN[2] SW_IN[3]
++ SW_IN[4] SW_IN[5] SW_IN[6] SW_IN[7] SW_IN[8] SW_IN[9] VCM VSS VC
+*.ipin VDD
+*.ipin CF[0],CF[1],CF[2],CF[3],CF[4],CF[5],CF[6],CF[7],CF[8],CF[9]
+*.ipin SW_IN[0],SW_IN[1],SW_IN[2],SW_IN[3],SW_IN[4],SW_IN[5],SW_IN[6],SW_IN[7],SW_IN[8],SW_IN[9]
+*.ipin VCM
+*.ipin VSS
+*.iopin VC
+x2 VCM SWN[0] SWN[1] SWN[2] SWN[3] SWN[4] SWN[5] SWN[6] SWN[7] SWN[8] SWN[9] VC x10b_cap_array
+x1 VDD CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] SW_IN[0] SW_IN[1] SW_IN[2] SW_IN[3] SW_IN[4] SW_IN[5] SW_IN[6]
++ SW_IN[7] SW_IN[8] SW_IN[9] VCM VSS SWN[0] SWN[1] SWN[2] SWN[3] SWN[4] SWN[5] SWN[6] SWN[7] SWN[8] SWN[9] cdac_sw_10b
+.ends
+
+
+* expanding   symbol:  th_sw.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/th_sw.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/th_sw.sch
+.subckt th_sw VDD VSS CK CKB IN OUT
+*.ipin VDD
+*.ipin VSS
+*.ipin CK
+*.ipin CKB
+*.ipin IN
+*.opin OUT
+x1 VDD VSS CK VGS IN OUT th_sw_main
+x2 VDD VSS CK CKB IN VGS bootstrap
+.ends
+
+
+* expanding   symbol:  delay_gate_ori.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/delay_gate_ori.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/delay_gate_ori.sch
+.subckt delay_gate_ori IN VDD VSS VINP VINN OUT
+*.ipin VINP
+*.ipin VINN
+*.ipin IN
+*.ipin VSS
+*.ipin VDD
+*.opin OUT
+x1 net2 IN VSS VSS VDD VDD OUT sky130_fd_sc_hs__and2_1
+XM1 net1 IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net3 VINP VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net2 net1 net3 VDD sky130_fd_pr__pfet_01v8 L=0.5 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net1 IN net4 VSS sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 net4 VINN VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM6 net2 net1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  phase_detector.sym # of pins=7
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/phase_detector.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/phase_detector.sch
+.subckt phase_detector VDD VSS INP INN OUTP OUTN RDY
+*.ipin VDD
+*.ipin INP
+*.ipin INN
+*.ipin VSS
+*.opin OUTP
+*.opin OUTN
+*.opin RDY
+x1 VDD VSS INP INN A B pd_in
+x2 VDD VSS A B OUTP OUTN RDY pd_out
+.ends
+
+
+* expanding   symbol:  x10b_cap_array.sym # of pins=3
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/x10b_cap_array.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/x10b_cap_array.sch
+.subckt x10b_cap_array vcm sw[0] sw[1] sw[2] sw[3] sw[4] sw[5] sw[6] sw[7] sw[8] sw[9] vc
+*.ipin sw[0],sw[1],sw[2],sw[3],sw[4],sw[5],sw[6],sw[7],sw[8],sw[9]
+*.ipin vcm
+*.iopin vc
+XC3 vc sw[2] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=128 m=128
+XC4 vc sw[3] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=64 m=64
+XC5 vc sw[4] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=32 m=32
+XC6 vc sw[5] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=16 m=16
+XC7 vc sw[6] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=8 m=8
+XC8 vc sw[7] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=4 m=4
+XC9 vc sw[8] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=2 m=2
+XC10 vc sw[9] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=1 m=1
+XC11 vc vcm sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=1 m=1
+XC1 vc sw[0] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=512 m=512
+XC2 vc sw[1] sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=256 m=256
+XC12 net1 net2 sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=64 m=64
+* noconn #net1
+* noconn #net2
+.ends
+
+
+* expanding   symbol:  cdac_sw_10b.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_10b.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_10b.sch
+.subckt cdac_sw_10b VDD CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7] CF[8] CF[9] SW_IN[0] SW_IN[1] SW_IN[2] SW_IN[3] SW_IN[4]
++ SW_IN[5] SW_IN[6] SW_IN[7] SW_IN[8] SW_IN[9] VCM VSS SWN[0] SWN[1] SWN[2] SWN[3] SWN[4] SWN[5] SWN[6] SWN[7] SWN[8] SWN[9]
+*.ipin VDD
+*.ipin CF[0],CF[1],CF[2],CF[3],CF[4],CF[5],CF[6],CF[7],CF[8],CF[9]
+*.ipin SW_IN[0],SW_IN[1],SW_IN[2],SW_IN[3],SW_IN[4],SW_IN[5],SW_IN[6],SW_IN[7],SW_IN[8],SW_IN[9]
+*.ipin VCM
+*.ipin VSS
+*.iopin SWN[0],SWN[1],SWN[2],SWN[3],SWN[4],SWN[5],SWN[6],SWN[7],SWN[8],SWN[9]
+x1 VDD CF[0] SW_IN[0] VCM VSS SWN[0] cdac_sw_1
+x3 VDD CF[2] SW_IN[2] VCM VSS SWN[2] cdac_sw_3
+x4 VDD CF[4] SW_IN[4] VCM VSS SWN[4] cdac_sw_5
+x5 VDD CF[6] SW_IN[6] VCM VSS SWN[6] cdac_sw_7
+x6 VDD CF[8] SW_IN[8] VCM VSS SWN[8] cdac_sw_9
+x7 VDD CF[1] SW_IN[1] VCM VSS SWN[1] cdac_sw_2
+x8 VDD CF[3] SW_IN[3] VCM VSS SWN[3] cdac_sw_4
+x9 VDD CF[5] SW_IN[5] VCM VSS SWN[5] cdac_sw_6
+x10 VDD CF[7] SW_IN[7] VCM VSS SWN[7] cdac_sw_8
+x11 VDD CF[9] SW_IN[9] VCM VSS SWN[9] cdac_sw_10
+.ends
+
+
+* expanding   symbol:  th_sw_main.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/th_sw_main.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/th_sw_main.sch
+.subckt th_sw_main VDD VSS CK VGS IN OUT
+*.ipin VDD
+*.ipin VSS
+*.ipin CK
+*.ipin VGS
+*.ipin IN
+*.opin OUT
+XM10 IN CK IN VSS sky130_fd_pr__nfet_01v8 L=0.15 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM11 OUT VGS IN VSS sky130_fd_pr__nfet_01v8 L=0.15 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM12 OUT CK OUT VSS sky130_fd_pr__nfet_01v8 L=0.15 W=20 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  bootstrap.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/bootstrap.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/bootstrap.sch
+.subckt bootstrap VDD VSS CK CKB IN VGS
+*.ipin VDD
+*.ipin VSS
+*.ipin CK
+*.ipin CKB
+*.ipin IN
+*.opin VGS
+XM1 net1 CKB VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.75 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net2 VGS VDD net2 sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 VGS net1 net2 net2 sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 CKB net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 net4 CK VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM6 net1 VGS net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM7 IN VGS net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM8 VGS VDD net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=7.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM9 net3 CK VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=7.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XC1 net2 net4 sky130_fd_pr__cap_mim_m3_1 W=4 L=4 MF=32 m=32
+.ends
+
+
+* expanding   symbol:  pd_in.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/pd_in.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/pd_in.sch
+.subckt pd_in VDD VSS INP INN A B
+*.ipin VDD
+*.ipin INP
+*.ipin INN
+*.ipin VSS
+*.opin A
+*.opin B
+x1 VDD VSS INP INN B A pd_in_half
+x2 VDD VSS INN INP A B pd_in_half
+.ends
+
+
+* expanding   symbol:  pd_out.sym # of pins=7
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/pd_out.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/pd_out.sch
+.subckt pd_out VDD VSS A B OUTP OUTN RDY
+*.opin OUTN
+*.opin OUTP
+*.opin RDY
+*.ipin A
+*.ipin B
+*.ipin VSS
+*.ipin VDD
+x1 OUTP A VSS VSS VDD VDD OUTN sky130_fd_sc_hs__nand2_1
+x2 B OUTN VSS VSS VDD VDD OUTP sky130_fd_sc_hs__nand2_1
+x3 A B VSS VSS VDD VDD RDY sky130_fd_sc_hs__xor2_1
+.ends
+
+
+* expanding   symbol:  cdac_sw_1.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_1.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_1.sch
+.subckt cdac_sw_1 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_1
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_1
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_1
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_1
+.ends
+
+
+* expanding   symbol:  cdac_sw_3.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_3.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_3.sch
+.subckt cdac_sw_3 VDDA CKI BI VCM VSSA DAC_OUT
+*.ipin VDDA
+*.ipin CKI
+*.ipin BI
+*.ipin VCM
+*.ipin VSSA
+*.opin DAC_OUT
+x1 VDDA CKI VSSA clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 VDDA clkb1 clk1 VSSA VCM DAC_OUT tg_sw_3
+x3 VDDA BI clk0 clkb0 VSSA DAC_OUT dac_sw_3
+x4 VDDA clk1 clkb1 VSSA VCM VCM tg_sw_3
+x5 VDDA clk1 clkb1 VSSA DAC_OUT DAC_OUT tg_sw_3
+.ends
+
+
+* expanding   symbol:  cdac_sw_5.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_5.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_5.sch
+.subckt cdac_sw_5 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_5
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_5
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_5
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_5
+.ends
+
+
+* expanding   symbol:  cdac_sw_7.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_7.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_7.sch
+.subckt cdac_sw_7 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_7
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_7
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_7
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_7
+.ends
+
+
+* expanding   symbol:  cdac_sw_9.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_9.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_9.sch
+.subckt cdac_sw_9 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_8
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_8
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_8
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_8
+.ends
+
+
+* expanding   symbol:  cdac_sw_2.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_2.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_2.sch
+.subckt cdac_sw_2 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_2
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_2
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_2
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_2
+.ends
+
+
+* expanding   symbol:  cdac_sw_4.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_4.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_4.sch
+.subckt cdac_sw_4 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_4
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_4
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_4
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_4
+.ends
+
+
+* expanding   symbol:  cdac_sw_6.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_6.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_6.sch
+.subckt cdac_sw_6 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_5
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_5
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_5
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_5
+.ends
+
+
+* expanding   symbol:  cdac_sw_8.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_8.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_8.sch
+.subckt cdac_sw_8 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_8
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_8
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_8
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_8
+.ends
+
+
+* expanding   symbol:  cdac_sw_10.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_10.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/cdac_sw_10.sch
+.subckt cdac_sw_10 vdda cki bi vcm vssa dac_out
+*.ipin vdda
+*.ipin cki
+*.ipin bi
+*.ipin vcm
+*.ipin vssa
+*.opin dac_out
+x1 vdda cki vssa clk0 clkb0 clk1 clkb1 nooverlap_clk
+x2 vdda clkb1 clk1 vssa vcm dac_out tg_sw_10
+x3 vdda bi clk0 clkb0 vssa dac_out dac_sw_10
+x4 vdda clk1 clkb1 vssa vcm vcm tg_sw_10
+x5 vdda clk1 clkb1 vssa dac_out dac_out tg_sw_10
+.ends
+
+
+* expanding   symbol:  pd_in_half.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/pd_in_half.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/pd_in_half.sch
+.subckt pd_in_half VDD VSS IN INB OUTB OUT
+*.ipin VDD
+*.ipin IN
+*.ipin INB
+*.ipin VSS
+*.opin OUT
+*.ipin OUTB
+XM7 net2 IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM6 OUT OUTB net2 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 net1 INB VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 OUT IN net1 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 OUT OUTB VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=3 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  nooverlap_clk.sym # of pins=7
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/nooverlap_clk.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/nooverlap_clk.sch
+.subckt nooverlap_clk VDD IN VSS CLK0 CLKB0 CLK1 CLKB1
+*.ipin VDD
+*.ipin IN
+*.ipin VSS
+*.opin CLK0
+*.opin CLKB0
+*.opin CLK1
+*.opin CLKB1
+x1 IN a vss vss vdd vdd net5 sky130_fd_sc_hs__nand2_1
+x2 b net1 vss vss vdd vdd net2 sky130_fd_sc_hs__nand2_1
+x3 IN vss vss vdd vdd net1 sky130_fd_sc_hs__inv_1
+x4 net5 vss vss vdd vdd net4 sky130_fd_sc_hs__inv_1
+x5 net2 vss vss vdd vdd net3 sky130_fd_sc_hs__inv_1
+x6 net4 vss vss vdd vdd b sky130_fd_sc_hs__inv_1
+x7 net3 vss vss vdd vdd a sky130_fd_sc_hs__inv_1
+x8 b vss vss vdd vdd net6 sky130_fd_sc_hs__inv_4
+x9 a vss vss vdd vdd net7 sky130_fd_sc_hs__inv_4
+x10 net6 vss vss vdd vdd CLKB0 sky130_fd_sc_hs__inv_8
+x11 net7 vss vss vdd vdd CLKB1 sky130_fd_sc_hs__inv_8
+x12 CLKB0 vss vss vdd vdd CLK0 sky130_fd_sc_hs__inv_8
+x13 CLKB1 vss vss vdd vdd CLK1 sky130_fd_sc_hs__inv_8
+**** begin user architecture code
+
+.include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  tg_sw_1.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_1.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_1.sch
+.subckt tg_sw_1 vdd swp swn vss in out
+*.ipin vdd
+*.ipin swp
+*.ipin swn
+*.ipin vss
+*.iopin in
+*.iopin out
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=20 m=20
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=20 m=20
+.ends
+
+
+* expanding   symbol:  dac_sw_1.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_1.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_1.sch
+.subckt dac_sw_1 vdd in ck ckb vss out
+*.ipin vdd
+*.ipin in
+*.ipin ck
+*.ipin ckb
+*.ipin vss
+*.opin out
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=20 m=20
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=20 m=20
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=20 m=20
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=20 m=20
+.ends
+
+
+* expanding   symbol:  tg_sw_3.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_3.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_3.sch
+.subckt tg_sw_3 vdd swp swn vss in out
+*.ipin vdd
+*.ipin swp
+*.ipin swn
+*.ipin vss
+*.iopin in
+*.iopin out
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=16 m=16
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=16 m=16
+.ends
+
+
+* expanding   symbol:  dac_sw_3.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_3.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_3.sch
+.subckt dac_sw_3 vdd in ck ckb vss out
+*.ipin vdd
+*.ipin in
+*.ipin ck
+*.ipin ckb
+*.ipin vss
+*.opin out
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=16 m=16
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=16 m=16
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=16 m=16
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=16 m=16
+.ends
+
+
+* expanding   symbol:  tg_sw_5.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_5.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_5.sch
+.subckt tg_sw_5 vdd swp swn vss in out
+*.ipin vdd
+*.ipin swp
+*.ipin swn
+*.ipin vss
+*.iopin in
+*.iopin out
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=12 m=12
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=12 m=12
+.ends
+
+
+* expanding   symbol:  dac_sw_5.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_5.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_5.sch
+.subckt dac_sw_5 vdd in ck ckb vss out
+*.ipin vdd
+*.ipin in
+*.ipin ck
+*.ipin ckb
+*.ipin vss
+*.opin out
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=12 m=12
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=12 m=12
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=12 m=12
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=12 m=12
+.ends
+
+
+* expanding   symbol:  tg_sw_7.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_7.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_7.sch
+.subckt tg_sw_7 vdd swp swn vss in out
+*.ipin vdd
+*.ipin swp
+*.ipin swn
+*.ipin vss
+*.iopin in
+*.iopin out
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=8 m=8
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=8 m=8
+.ends
+
+
+* expanding   symbol:  dac_sw_7.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_7.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_7.sch
+.subckt dac_sw_7 vdd in ck ckb vss out
+*.ipin vdd
+*.ipin in
+*.ipin ck
+*.ipin ckb
+*.ipin vss
+*.opin out
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=8 m=8
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=8 m=8
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=8 m=8
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=8 m=8
+.ends
+
+
+* expanding   symbol:  tg_sw_8.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_8.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_8.sch
+.subckt tg_sw_8 vdd swp swn vss in out
+*.ipin vdd
+*.ipin swp
+*.ipin swn
+*.ipin vss
+*.iopin in
+*.iopin out
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6
+.ends
+
+
+* expanding   symbol:  dac_sw_8.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_8.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_8.sch
+.subckt dac_sw_8 vdd in ck ckb vss out
+*.ipin vdd
+*.ipin in
+*.ipin ck
+*.ipin ckb
+*.ipin vss
+*.opin out
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=6 m=6
+.ends
+
+
+* expanding   symbol:  tg_sw_2.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_2.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_2.sch
+.subckt tg_sw_2 vdd swp swn vss in out
+*.ipin vdd
+*.ipin swp
+*.ipin swn
+*.ipin vss
+*.iopin in
+*.iopin out
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=18 m=18
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=18 m=18
+.ends
+
+
+* expanding   symbol:  dac_sw_2.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_2.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_2.sch
+.subckt dac_sw_2 vdd in ck ckb vss out
+*.ipin vdd
+*.ipin in
+*.ipin ck
+*.ipin ckb
+*.ipin vss
+*.opin out
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=18 m=18
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=18 m=18
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=18 m=18
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=18 m=18
+.ends
+
+
+* expanding   symbol:  tg_sw_4.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_4.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_4.sch
+.subckt tg_sw_4 vdd swp swn vss in out
+*.ipin vdd
+*.ipin swp
+*.ipin swn
+*.ipin vss
+*.iopin in
+*.iopin out
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=14 m=14
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=14 m=14
+.ends
+
+
+* expanding   symbol:  dac_sw_4.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_4.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_4.sch
+.subckt dac_sw_4 vdd in ck ckb vss out
+*.ipin vdd
+*.ipin in
+*.ipin ck
+*.ipin ckb
+*.ipin vss
+*.opin out
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=14 m=14
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=14 m=14
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=14 m=14
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=14 m=14
+.ends
+
+
+* expanding   symbol:  tg_sw_10.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_10.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/tg_sw_10.sch
+.subckt tg_sw_10 vdd swp swn vss in out
+*.ipin vdd
+*.ipin swp
+*.ipin swn
+*.ipin vss
+*.iopin in
+*.iopin out
+XM1 in swp out vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM2 in swn out vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+.ends
+
+
+* expanding   symbol:  dac_sw_10.sym # of pins=6
+** sym_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_10.sym
+** sch_path: /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/dac_sw_10.sch
+.subckt dac_sw_10 vdd in ck ckb vss out
+*.ipin vdd
+*.ipin in
+*.ipin ck
+*.ipin ckb
+*.ipin vss
+*.opin out
+XM1 net1 in vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM2 out ckb net1 vdd sky130_fd_pr__pfet_01v8 L=0.5 W=1.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM3 out ck net2 vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+XM4 net2 in vss vss sky130_fd_pr__nfet_01v8 L=0.5 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=2 m=2
+.ends
+
+.GLOBAL GND
+.end

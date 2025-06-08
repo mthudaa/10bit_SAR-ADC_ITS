@@ -32,4 +32,3 @@ C {devices/lab_wire.sym} 280 -330 0 0 {name=p21 sig_type=std_logic lab=CK}
 C {devices/lab_wire.sym} 480 -330 0 0 {name=p22 sig_type=std_logic lab=CKB}
 C {devices/lab_wire.sym} 360 -330 0 1 {name=p23 sig_type=std_logic lab=CK_BUFF}
 C {devices/lab_wire.sym} 560 -330 0 1 {name=p24 sig_type=std_logic lab=CKB_BUFF}
-C {devices/code_shown.sym} 180 20 0 0 {name=s1 only_toplevel=false value=".include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice"}

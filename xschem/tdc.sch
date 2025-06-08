@@ -6,9 +6,9 @@ S {}
 E {}
 C {devices/lab_wire.sym} 540 -220 0 1 {name=p27 sig_type=std_logic lab=OUTN}
 C {devices/lab_wire.sym} 540 -240 0 1 {name=p28 sig_type=std_logic lab=OUTP}
-C {delay_gate_ori.sym} 390 -470 0 0 {name=x9}
+C {delay_gate_ori.sym} 390 -470 0 0 {name=x2}
 C {devices/lab_wire.sym} 540 -510 0 1 {name=p19 sig_type=std_logic lab=INP}
-C {delay_gate_ori.sym} 390 -330 0 0 {name=x10}
+C {delay_gate_ori.sym} 390 -330 0 0 {name=x3}
 C {devices/lab_wire.sym} 540 -370 0 1 {name=p20 sig_type=std_logic lab=INN}
 C {devices/lab_wire.sym} 240 -490 0 0 {name=p23 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 240 -350 0 0 {name=p24 sig_type=std_logic lab=VDD}

@@ -1,0 +1,44 @@
+timestamp 1749043030
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_pr__pfet_01v8_5EUKDE sky130_fd_pr__pfet_01v8_5EUKDE_2 1 0 428 0 1 367
+use sky130_fd_pr__pfet_01v8_5EUKDE sky130_fd_pr__pfet_01v8_5EUKDE_1 1 0 516 0 1 367
+use sky130_fd_pr__pfet_01v8_5EUKDE sky130_fd_pr__pfet_01v8_5EUKDE_0 1 0 604 0 1 367
+use sky130_fd_pr__nfet_01v8_QQ7V57 sky130_fd_pr__nfet_01v8_QQ7V57_1 1 0 604 0 1 -181
+use sky130_fd_pr__nfet_01v8_QQ7V57 sky130_fd_pr__nfet_01v8_QQ7V57_0 1 0 516 0 1 -181
+port "OUT" 3 729 -85 763 -51 v0
+port "OUTB" 10 729 20 763 54 m1
+port "IN" 9 179 -129 213 -95 m1
+port "INB" 8 179 20 213 54 m1
+port "VDD" 4 96 729 158 827 m1
+port "VSS" 5 96 -441 158 -343 m1
+node "OUT" 0 0 729 -85 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "OUTB" 0 0 729 20 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IN" 0 0 179 -129 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "INB" 0 0 179 20 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 96 729 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSS" 0 0 96 -441 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__nfet_01v8_QQ7V57_0/a_n15_n126#" "sky130_fd_pr__pfet_01v8_5EUKDE_1/a_n15_n326#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_1/a_n15_n326#" "IN"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_0/a_15_n300#" "sky130_fd_pr__pfet_01v8_5EUKDE_0/w_n109_n362#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_0/w_n109_n362#" "sky130_fd_pr__pfet_01v8_5EUKDE_1/w_n109_n362#"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_1/w_n109_n362#" "sky130_fd_pr__pfet_01v8_5EUKDE_2/a_n73_n300#"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_2/a_n73_n300#" "sky130_fd_pr__pfet_01v8_5EUKDE_2/w_n109_n362#"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_2/w_n109_n362#" "VDD"
+merge "sky130_fd_pr__nfet_01v8_QQ7V57_1/a_n15_n126#" "sky130_fd_pr__pfet_01v8_5EUKDE_0/a_n15_n326#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_0/a_n15_n326#" "OUTB"
+merge "sky130_fd_pr__nfet_01v8_QQ7V57_0/a_15_n100#" "sky130_fd_pr__nfet_01v8_QQ7V57_1/a_n73_n100#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__nfet_01v8_QQ7V57_0/VSUBS" "sky130_fd_pr__nfet_01v8_QQ7V57_0/a_n73_n100#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__nfet_01v8_QQ7V57_0/a_n73_n100#" "sky130_fd_pr__nfet_01v8_QQ7V57_1/VSUBS"
+merge "sky130_fd_pr__nfet_01v8_QQ7V57_1/VSUBS" "sky130_fd_pr__pfet_01v8_5EUKDE_0/VSUBS"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_0/VSUBS" "sky130_fd_pr__pfet_01v8_5EUKDE_1/VSUBS"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_1/VSUBS" "sky130_fd_pr__pfet_01v8_5EUKDE_2/VSUBS"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_2/VSUBS" "VSS"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_1/a_n73_n300#" "sky130_fd_pr__pfet_01v8_5EUKDE_2/a_15_n300#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__nfet_01v8_QQ7V57_1/a_15_n100#" "sky130_fd_pr__pfet_01v8_5EUKDE_0/a_n73_n300#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_0/a_n73_n300#" "sky130_fd_pr__pfet_01v8_5EUKDE_1/a_15_n300#"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_1/a_15_n300#" "OUT"
+merge "sky130_fd_pr__pfet_01v8_5EUKDE_2/a_n15_n326#" "INB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

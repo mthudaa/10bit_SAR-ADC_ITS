@@ -63,4 +63,3 @@ C {devices/opin.sym} 200 -570 0 0 {name=p13 lab=CLK0}
 C {devices/opin.sym} 200 -540 0 0 {name=p14 lab=CLKB0}
 C {devices/opin.sym} 200 -510 0 0 {name=p15 lab=CLK1}
 C {devices/opin.sym} 200 -480 0 0 {name=p16 lab=CLKB1}
-C {devices/code_shown.sym} 340 -350 0 0 {name=s1 only_toplevel=false value=".include /usr/local/share/pdk/sky130A/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice"}

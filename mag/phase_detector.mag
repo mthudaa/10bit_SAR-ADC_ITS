@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1749226371
+timestamp 1749411235
 << metal1 >>
 rect -18 1178 2668 1276
 rect 966 1061 976 1121
@@ -35,7 +35,7 @@ timestamp 1749046477
 transform 1 0 590 0 1 1212
 box -618 -1214 552 1244
 use pd_out  pd_out_0
-timestamp 1749226129
+timestamp 1749411235
 transform 1 0 1190 0 1 610
 box 0 -98 1516 666
 << labels >>
