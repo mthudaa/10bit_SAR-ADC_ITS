@@ -2415,9 +2415,9 @@ Xcdac_sw_1_0 VDD VCM CF[0] SW_IN[0] SWN[0] VSS cdac_sw_1
 Xcdac_sw_8_0 VDD VCM CF[7] SW_IN[7] SWN[7] VSS cdac_sw_8
 .ends
 
-.subckt single_10b_cdac VDD VCM VC SW_IN[0] SW_IN[1] SW_IN[2] SW_IN[3] SW_IN[4] SW_IN[5]
-+ SW_IN[6] SW_IN[7] SW_IN[8] SW_IN[9] CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6] CF[7]
-+ CF[8] CF[9] VSS
+.subckt single_10b_cdac VDD VCM SW_IN[0] SW_IN[1] SW_IN[2] SW_IN[3] SW_IN[4] SW_IN[5]
++ SW_IN[6] SW_IN[7] SW_IN[8] SW_IN[9] VC CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6]
++ CF[7] CF[8] CF[9] VSS
 Xx10b_cap_array_0 VCM cdac_sw_10b_0/SWN[9] cdac_sw_10b_0/SWN[8] cdac_sw_10b_0/SWN[7]
 + cdac_sw_10b_0/SWN[6] cdac_sw_10b_0/SWN[5] cdac_sw_10b_0/SWN[4] cdac_sw_10b_0/SWN[3]
 + cdac_sw_10b_0/SWN[2] cdac_sw_10b_0/SWN[1] cdac_sw_10b_0/SWN[0] VC x10b_cap_array
@@ -2432,11 +2432,11 @@ Xcdac_sw_10b_0 VDD SW_IN[0] SW_IN[1] SW_IN[2] SW_IN[3] SW_IN[4] SW_IN[5] SW_IN[6
 + SWP_IN[7] SWP_IN[8] SWP_IN[9] SWN_IN[0] SWN_IN[1] SWN_IN[2] SWN_IN[3] SWN_IN[4]
 + SWN_IN[5] SWN_IN[6] SWN_IN[7] SWN_IN[8] SWN_IN[9] CF[0] CF[1] CF[2] CF[3] CF[4]
 + CF[5] CF[6] CF[7] CF[8] CF[9] VCM VDD VSS VCP VCN
-Xsingle_10b_cdac_0 VDD VCM VCN SWN_IN[0] SWN_IN[1] SWN_IN[2] SWN_IN[3] SWN_IN[4] SWN_IN[5]
-+ SWN_IN[6] SWN_IN[7] SWN_IN[8] SWN_IN[9] CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6]
-+ CF[7] CF[8] CF[9] VSS single_10b_cdac
-Xsingle_10b_cdac_1 VDD VCM VCP SWP_IN[0] SWP_IN[1] SWP_IN[2] SWP_IN[3] SWP_IN[4] SWP_IN[5]
-+ SWP_IN[6] SWP_IN[7] SWP_IN[8] SWP_IN[9] CF[0] CF[1] CF[2] CF[3] CF[4] CF[5] CF[6]
-+ CF[7] CF[8] CF[9] VSS single_10b_cdac
+Xsingle_10b_cdac_0 VDD VCM SWN_IN[0] SWN_IN[1] SWN_IN[2] SWN_IN[3] SWN_IN[4] SWN_IN[5]
++ SWN_IN[6] SWN_IN[7] SWN_IN[8] SWN_IN[9] VCN CF[0] CF[1] CF[2] CF[3] CF[4] CF[5]
++ CF[6] CF[7] CF[8] CF[9] VSS single_10b_cdac
+Xsingle_10b_cdac_1 VDD VCM SWP_IN[0] SWP_IN[1] SWP_IN[2] SWP_IN[3] SWP_IN[4] SWP_IN[5]
++ SWP_IN[6] SWP_IN[7] SWP_IN[8] SWP_IN[9] VCP CF[0] CF[1] CF[2] CF[3] CF[4] CF[5]
++ CF[6] CF[7] CF[8] CF[9] VSS single_10b_cdac
 .ends
 

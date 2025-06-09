@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1749411235
+timestamp 1749497323
 << metal1 >>
 rect -1094 -22194 -1084 -22090
 rect -944 -22194 -38 -22090
@@ -96,15 +96,15 @@ rect 48336 -39295 48476 -22194
 rect -1084 -39395 -129 -39295
 rect 47347 -39395 48476 -39295
 << metal4 >>
-rect 1308 15053 45802 15775
+rect 1621 14830 45489 14926
 use cdac_sw_10b  cdac_sw_10b_0
 timestamp 1749411235
 transform 0 -1 4488 1 0 -39416
 box -519 -43168 15012 4742
 use x10b_cap_array  x10b_cap_array_0
-timestamp 1748849030
+timestamp 1749497323
 transform 1 0 44991 0 1 13844
-box -45174 -38128 2594 1931
+box -45174 -38128 2594 1082
 << labels >>
 flabel metal2 -471 -38074 -431 -38034 0 FreeSans 800 0 0 0 VSS
 port 0 nsew
@@ -112,8 +112,6 @@ flabel metal2 -756 -38069 -716 -38029 0 FreeSans 800 0 0 0 VDD
 port 1 nsew
 flabel metal2 -1044 -38074 -1004 -38034 0 FreeSans 800 0 0 0 VCM
 port 2 nsew
-flabel metal4 21449 15318 21489 15358 0 FreeSans 800 0 0 0 VC
-port 3 nsew
 flabel metal1 4160 -39905 4200 -39865 0 FreeSans 800 0 0 0 SW_IN[0]
 port 4 nsew
 flabel metal1 8957 -39902 8997 -39862 0 FreeSans 800 0 0 0 SW_IN[1]
@@ -154,4 +152,6 @@ flabel metal1 42769 -39670 42809 -39630 0 FreeSans 800 0 0 0 CF[8]
 port 22 nsew
 flabel metal1 47575 -39663 47615 -39623 0 FreeSans 800 0 0 0 CF[9]
 port 24 nsew
+flabel metal4 1621 14830 1717 14926 0 FreeSans 800 0 0 0 VC
+port 25 nsew
 << end >>
