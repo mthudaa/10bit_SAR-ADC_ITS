@@ -1,0 +1,55 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+spice_sym_def=".include /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/xschem/x10b_adc_pex.spice"
+}
+V {}
+S {}
+E {}
+L 4 -130 -110 130 -110 {}
+L 4 -130 110 130 110 {}
+L 4 -130 -110 -130 110 {}
+L 4 130 -110 130 110 {}
+L 4 -150 -100 -130 -100 {}
+L 4 -150 -80 -130 -80 {}
+L 4 -150 -60 -130 -60 {}
+L 4 -150 -40 -130 -40 {}
+L 4 -150 -20 -130 -20 {}
+L 4 -150 0 -130 0 {}
+L 4 -150 20 -130 20 {}
+L 4 -150 40 -130 40 {}
+L 4 -150 60 -130 60 {}
+L 4 -150 80 -130 80 {}
+L 4 -150 100 -130 100 {}
+L 4 130 -100 150 -100 {}
+L 4 130 -80 150 -80 {}
+B 5 -152.5 -102.5 -147.5 -97.5 {name=VDDA sig_type=std_logic dir=in}
+B 5 -152.5 -82.5 -147.5 -77.5 {name=VSSA sig_type=std_logic dir=in}
+B 5 -152.5 -62.5 -147.5 -57.5 {name=VDDD sig_type=std_logic dir=in}
+B 5 -152.5 -42.5 -147.5 -37.5 {name=VSSD sig_type=std_logic dir=in}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=VDDR sig_type=std_logic dir=in}
+B 5 -152.5 -2.5 -147.5 2.5 {name=VSSR sig_type=std_logic dir=in}
+B 5 -152.5 17.5 -147.5 22.5 {name=VCM sig_type=std_logic dir=in}
+B 5 -152.5 37.5 -147.5 42.5 {name=CLK sig_type=std_logic dir=in}
+B 5 -152.5 57.5 -147.5 62.5 {name=VINP sig_type=std_logic dir=in}
+B 5 -152.5 77.5 -147.5 82.5 {name=VINN sig_type=std_logic dir=in}
+B 5 -152.5 97.5 -147.5 102.5 {name=EN sig_type=std_logic dir=in}
+B 5 147.5 -102.5 152.5 -97.5 {name=DATA[0:9] sig_type=std_logic dir=out}
+B 5 147.5 -82.5 152.5 -77.5 {name=CKO sig_type=std_logic dir=out}
+T {@symname} -54 -6 0 0 0.3 0.3 {}
+T {@name} 135 -122 0 0 0.2 0.2 {}
+T {VDDA} -125 -104 0 0 0.2 0.2 {}
+T {VSSA} -125 -84 0 0 0.2 0.2 {}
+T {VDDD} -125 -64 0 0 0.2 0.2 {}
+T {VSSD} -125 -44 0 0 0.2 0.2 {}
+T {VDDR} -125 -24 0 0 0.2 0.2 {}
+T {VSSR} -125 -4 0 0 0.2 0.2 {}
+T {VCM} -125 16 0 0 0.2 0.2 {}
+T {CLK} -125 36 0 0 0.2 0.2 {}
+T {VINP} -125 56 0 0 0.2 0.2 {}
+T {VINN} -125 76 0 0 0.2 0.2 {}
+T {EN} -125 96 0 0 0.2 0.2 {}
+T {DATA[0:9]} 125 -104 0 1 0.2 0.2 {}
+T {CKO} 125 -84 0 1 0.2 0.2 {}
