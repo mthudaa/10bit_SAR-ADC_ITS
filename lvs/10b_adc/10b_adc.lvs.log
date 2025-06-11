@@ -1,0 +1,155 @@
+Netgen 1.5.287 compiled on Tue May  6 02:39:06 AM WIB 2025
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/10b_adc/10b_adc.ext.spc
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__pfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8_lvt
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__cap_mim_m3_1
+Creating placeholder cell definition.
+Reading netlist file /home/mthudaa/vlsi/8bit_SAR-ADC_ITS/lvs/10b_adc/10b_adc.sch.spc
+Call to undefined subcircuit cdac
+Creating placeholder cell definition.
+Call to undefined subcircuit th_dif_sw
+Creating placeholder cell definition.
+Call to undefined subcircuit tdc
+Creating placeholder cell definition.
+Call to undefined subcircuit sar10b
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__pfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8_lvt
+Creating placeholder cell definition.
+Call to undefined subcircuit single_10b_cdac
+Creating placeholder cell definition.
+Call to undefined subcircuit th_sw
+Creating placeholder cell definition.
+Call to undefined subcircuit delay_gate_ori
+Creating placeholder cell definition.
+Call to undefined subcircuit phase_detector
+Creating placeholder cell definition.
+Duplicate cell sky130_fd_sc_hs__fill_8 in file
+Renaming original cell to sky130_fd_sc_hs__fill_8[[0]]
+Duplicate cell sky130_fd_sc_hs__dfrtp_1 in file
+Renaming original cell to sky130_fd_sc_hs__dfrtp_1[[0]]
+Duplicate cell sky130_fd_sc_hs__fill_2 in file
+Renaming original cell to sky130_fd_sc_hs__fill_2[[0]]
+Duplicate cell sky130_fd_sc_hs__dfrtp_2 in file
+Renaming original cell to sky130_fd_sc_hs__dfrtp_2[[0]]
+Duplicate cell sky130_fd_sc_hs__decap_4 in file
+Renaming original cell to sky130_fd_sc_hs__decap_4[[0]]
+Duplicate cell sky130_fd_sc_hs__fill_1 in file
+Renaming original cell to sky130_fd_sc_hs__fill_1[[0]]
+Duplicate cell sky130_fd_sc_hs__clkbuf_1 in file
+Renaming original cell to sky130_fd_sc_hs__clkbuf_1[[0]]
+Duplicate cell sky130_fd_sc_hs__tapvpwrvgnd_1 in file
+Renaming original cell to sky130_fd_sc_hs__tapvpwrvgnd_1[[0]]
+Duplicate cell sky130_fd_sc_hs__and2_1 in file
+Renaming original cell to sky130_fd_sc_hs__and2_1[[0]]
+Duplicate cell sky130_fd_sc_hs__xor2_1 in file
+Renaming original cell to sky130_fd_sc_hs__xor2_1[[0]]
+Duplicate cell sky130_fd_sc_hs__clkbuf_16 in file
+Renaming original cell to sky130_fd_sc_hs__clkbuf_16[[0]]
+Duplicate cell sky130_fd_sc_hs__nor2_1 in file
+Renaming original cell to sky130_fd_sc_hs__nor2_1[[0]]
+Duplicate cell sky130_fd_sc_hs__a21bo_1 in file
+Renaming original cell to sky130_fd_sc_hs__a21bo_1[[0]]
+Duplicate cell sky130_fd_sc_hs__o21a_1 in file
+Renaming original cell to sky130_fd_sc_hs__o21a_1[[0]]
+Duplicate cell sky130_fd_sc_hs__or3b_1 in file
+Renaming original cell to sky130_fd_sc_hs__or3b_1[[0]]
+Duplicate cell sky130_fd_sc_hs__nand2_1 in file
+Renaming original cell to sky130_fd_sc_hs__nand2_1[[0]]
+Duplicate cell sky130_fd_sc_hs__or4bb_1 in file
+Renaming original cell to sky130_fd_sc_hs__or4bb_1[[0]]
+Duplicate cell sky130_fd_sc_hs__clkbuf_2 in file
+Renaming original cell to sky130_fd_sc_hs__clkbuf_2[[0]]
+Duplicate cell sky130_fd_sc_hs__buf_8 in file
+Renaming original cell to sky130_fd_sc_hs__buf_8[[0]]
+Duplicate cell sky130_fd_sc_hs__clkbuf_4 in file
+Renaming original cell to sky130_fd_sc_hs__clkbuf_4[[0]]
+Duplicate cell sky130_fd_sc_hs__dfxtp_4 in file
+Renaming original cell to sky130_fd_sc_hs__dfxtp_4[[0]]
+Duplicate cell sky130_fd_sc_hs__dfxtp_1 in file
+Renaming original cell to sky130_fd_sc_hs__dfxtp_1[[0]]
+Duplicate cell sky130_fd_sc_hs__nor3_1 in file
+Renaming original cell to sky130_fd_sc_hs__nor3_1[[0]]
+Duplicate cell sky130_fd_sc_hs__a21oi_1 in file
+Renaming original cell to sky130_fd_sc_hs__a21oi_1[[0]]
+Duplicate cell sky130_fd_sc_hs__and3_1 in file
+Renaming original cell to sky130_fd_sc_hs__and3_1[[0]]
+Call to undefined subcircuit x10b_cap_array
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_10b
+Creating placeholder cell definition.
+Call to undefined subcircuit th_sw_main
+Creating placeholder cell definition.
+Call to undefined subcircuit bootstrap
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit pd_in
+Creating placeholder cell definition.
+Call to undefined subcircuit pd_out
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__cap_mim_m3_1
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_1
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_3
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_5
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_7
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_9
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_2
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_4
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_6
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_8
+Creating placeholder cell definition.
+Call to undefined subcircuit cdac_sw_10
+Creating placeholder cell definition.
+Call to undefined subcircuit pd_in_half
+Creating placeholder cell definition.
+Call to undefined subcircuit nooverlap_clk
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_sw_1
+Creating placeholder cell definition.
+Call to undefined subcircuit dac_sw_1
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_sw_3
+Creating placeholder cell definition.
+Call to undefined subcircuit dac_sw_3
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_sw_5
+Creating placeholder cell definition.
+Call to undefined subcircuit dac_sw_5
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_sw_7
+Creating placeholder cell definition.
+Call to undefined subcircuit dac_sw_7
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_sw_8
+Creating placeholder cell definition.
+Call to undefined subcircuit dac_sw_8
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_sw_2
+Creating placeholder cell definition.
+Call to undefined subcircuit dac_sw_2
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_sw_4
+Creating placeholder cell definition.
+Call to undefined subcircuit dac_sw_4
+Creating placeholder cell definition.
+Call to undefined subcircuit tg_sw_10
+Creating placeholder cell definition.
+Call to undefined subcircuit dac_sw_10
+Creating placeholder cell definition.

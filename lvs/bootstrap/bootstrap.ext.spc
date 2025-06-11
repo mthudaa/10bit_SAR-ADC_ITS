@@ -74,15 +74,15 @@ X0 a_15_n431# a_n33_391# a_n73_n431# a_n175_n543# sky130_fd_pr__nfet_01v8 ad=1.1
 
 .subckt bootstrap VDD VSS IN VGS CK CKB
 XXM1 m1_215_n425# VDD VDD CKB sky130_fd_pr__pfet_01v8_27QFPY
-XXM2 w_623_n115# VGS w_623_n115# VDD sky130_fd_pr__pfet_01v8_MGASDN
-XXM3 w_623_n115# w_623_n115# m1_215_n425# VGS sky130_fd_pr__pfet_01v8_LGMQDL
+XXM2 w_2369_n115# VGS w_2369_n115# VDD sky130_fd_pr__pfet_01v8_MGASDN
+XXM3 w_2369_n115# w_2369_n115# m1_215_n425# VGS sky130_fd_pr__pfet_01v8_LGMQDL
 XXM4 m1_29_n3515# VSS CKB m1_215_n425# sky130_fd_pr__nfet_01v8_CQKS6Z
 XXM5 CK m1_29_n3515# VSS VSS sky130_fd_pr__nfet_01v8_46WN23
 XXM6 m1_215_n425# VSS VGS m1_29_n3515# sky130_fd_pr__nfet_01v8_J47Z3J
 XXM9 VSS CK m1_345_n3515# VSS sky130_fd_pr__nfet_01v8_D47ZC5
 XXM8 m1_345_n3515# VDD VGS VSS sky130_fd_pr__nfet_01v8_D4Y996
-XXC1 w_623_n115# w_623_n115# w_623_n115# m1_29_n3515# m1_29_n3515# m1_29_n3515# m1_29_n3515#
-+ w_623_n115# sky130_fd_pr__cap_mim_m3_1_9XU9T9
+XXC1 w_2369_n115# w_2369_n115# w_2369_n115# m1_29_n3515# m1_29_n3515# m1_29_n3515#
++ m1_29_n3515# w_2369_n115# sky130_fd_pr__cap_mim_m3_1_9XU9T9
 Xsky130_fd_pr__nfet_01v8_J4Y94J_0 IN VSS VGS m1_29_n3515# sky130_fd_pr__nfet_01v8_J4Y94J
 .ends
 

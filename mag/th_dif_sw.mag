@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1749411235
+timestamp 1749656470
 << viali >>
 rect 8835 -8 8869 26
 rect 10702 21 10736 55
@@ -138,11 +138,11 @@ timestamp 1749010377
 transform -1 0 23020 0 -1 312
 box -38 -49 134 715
 use th_sw  th_sw_0
-timestamp 1749388026
+timestamp 1749656470
 transform 1 0 369 0 1 132
 box -369 -132 15509 6243
 use th_sw  th_sw_1
-timestamp 1749388026
+timestamp 1749656470
 transform -1 0 31291 0 1 132
 box -369 -132 15509 6243
 << labels >>

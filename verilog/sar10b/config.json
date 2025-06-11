@@ -1,0 +1,34 @@
+{
+    "//": "Basics",
+    "DESIGN_NAME": "sar10b",
+    "VERILOG_FILES": "dir::src/*.v",
+    "CLOCK_PERIOD": 10,
+    "CLOCK_PORT": "CLK",
+    "PNR_SDC_FILE": "dir::src/sar10b.sdc",
+    "SIGNOFF_SDC_FILE": "dir::src/sar10b.sdc",
+    "//": "PDN",
+    "FP_PDN_VOFFSET": 5,
+    "FP_PDN_HOFFSET": 5,
+    "FP_PDN_VWIDTH": 2,
+    "FP_PDN_HWIDTH": 2,
+    "FP_PDN_VPITCH": 30,
+    "FP_PDN_HPITCH": 30,
+    "FP_PDN_SKIPTRIM": true,
+    "DESIGN_IS_CORE": false,
+    "FP_ASPECT_RATIO": 2.5,
+    "FP_SIZING": "absolute",
+    "FP_SIZING": "0 0 200 400",
+    "//": "Pin Order",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+    "//": "Technology-Specific Configs",
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 35,
+        "CLOCK_PERIOD": 10,
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_hs": {
+            "MAX_FANOUT_CONSTRAINT": 5
+        }
+    }
+}

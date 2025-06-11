@@ -47,8 +47,8 @@ Flattening unmatched subcell sky130_fd_pr__pfet_01v8_LGMQDL in circuit bootstrap
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_CQKS6Z in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_46WN23 in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_J47Z3J in circuit bootstrap (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_D4Y996 in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_D47ZC5 in circuit bootstrap (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_D4Y996 in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_9XU9T9 in circuit bootstrap (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_J4Y94J in circuit bootstrap (0)(1 instance)
 

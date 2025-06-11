@@ -24,12 +24,12 @@ X0 a_15_n169# a_n33_n257# a_n73_n169# a_n175_n343# sky130_fd_pr__nfet_01v8 ad=0.
 X0 a_15_n369# a_n33_n457# a_n73_n369# a_n175_n543# sky130_fd_pr__nfet_01v8 ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=0.15
 .ends
 
-.subckt sky130_fd_pr__nfet_01v8_D4Y996 a_n73_n781# a_n33_741# a_15_n781# a_n175_n893#
-X0 a_15_n781# a_n33_741# a_n73_n781# a_n175_n893# sky130_fd_pr__nfet_01v8 ad=2.175 pd=15.58 as=2.175 ps=15.58 w=7.5 l=0.15
-.ends
-
 .subckt sky130_fd_pr__nfet_01v8_D47ZC5 a_15_n719# a_n33_n807# a_n73_n719# a_n175_n893#
 X0 a_15_n719# a_n33_n807# a_n73_n719# a_n175_n893# sky130_fd_pr__nfet_01v8 ad=2.175 pd=15.58 as=2.175 ps=15.58 w=7.5 l=0.15
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_D4Y996 a_n73_n781# a_n33_741# a_15_n781# a_n175_n893#
+X0 a_15_n781# a_n33_741# a_n73_n781# a_n175_n893# sky130_fd_pr__nfet_01v8 ad=2.175 pd=15.58 as=2.175 ps=15.58 w=7.5 l=0.15
 .ends
 
 .subckt sky130_fd_pr__cap_mim_m3_1_9XU9T9 c1_1572_n4320# c1_n2664_n4320# c1_160_n4320#
@@ -74,15 +74,15 @@ X0 a_15_n431# a_n33_391# a_n73_n431# a_n175_n543# sky130_fd_pr__nfet_01v8 ad=1.1
 
 .subckt bootstrap VDD IN VGS CK CKB VSS
 XXM1 m1_215_n425# VDD VDD CKB sky130_fd_pr__pfet_01v8_27QFPY
-XXM2 w_623_n115# VGS w_623_n115# VDD sky130_fd_pr__pfet_01v8_MGASDN
-XXM3 w_623_n115# w_623_n115# m1_215_n425# VGS sky130_fd_pr__pfet_01v8_LGMQDL
+XXM2 w_2369_n115# VGS w_2369_n115# VDD sky130_fd_pr__pfet_01v8_MGASDN
+XXM3 w_2369_n115# w_2369_n115# m1_215_n425# VGS sky130_fd_pr__pfet_01v8_LGMQDL
 XXM4 m1_29_n3515# VSS CKB m1_215_n425# sky130_fd_pr__nfet_01v8_CQKS6Z
 XXM5 CK m1_29_n3515# VSS VSS sky130_fd_pr__nfet_01v8_46WN23
 XXM6 m1_215_n425# VSS VGS m1_29_n3515# sky130_fd_pr__nfet_01v8_J47Z3J
-XXM8 m1_345_n3515# VDD VGS VSS sky130_fd_pr__nfet_01v8_D4Y996
 XXM9 VSS CK m1_345_n3515# VSS sky130_fd_pr__nfet_01v8_D47ZC5
-XXC1 w_623_n115# w_623_n115# w_623_n115# m1_29_n3515# m1_29_n3515# m1_29_n3515# m1_29_n3515#
-+ w_623_n115# sky130_fd_pr__cap_mim_m3_1_9XU9T9
+XXM8 m1_345_n3515# VDD VGS VSS sky130_fd_pr__nfet_01v8_D4Y996
+XXC1 w_2369_n115# w_2369_n115# w_2369_n115# m1_29_n3515# m1_29_n3515# m1_29_n3515#
++ m1_29_n3515# w_2369_n115# sky130_fd_pr__cap_mim_m3_1_9XU9T9
 Xsky130_fd_pr__nfet_01v8_J4Y94J_0 IN VSS VGS m1_29_n3515# sky130_fd_pr__nfet_01v8_J4Y94J
 .ends
 

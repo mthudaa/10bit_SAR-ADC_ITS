@@ -141,7 +141,7 @@ value=50
 footprint=1206
 device=resistor
 m=1}
-C {10b_adc.sym} 720 -460 0 0 {name=x1}
+C {x10b_adc.sym} 720 -460 0 0 {name=x1}
 C {devices/lab_wire.sym} 180 -150 2 1 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 570 -440 0 0 {name=p4 sig_type=std_logic lab=VCM}
 C {devices/vsource.sym} 750 -130 0 0 {name=VC value=0.9 savecurrent=false}
