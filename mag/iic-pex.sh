@@ -243,7 +243,7 @@ if [ "$EXT_MODE" -eq 3 ]; then
 fi
 
 {
-	[ "$SUBCIRCUIT" -eq 0 ] && echo "ext2spice subcircuit top off"
+	[ "$SUBCIRCUIT" -eq 1 ] && echo "ext2spice subcircuit top on"
 	echo "ext2spice format ngspice"	
 	echo "ext2spice -p $RESDIR -o $NETLIST_PEX.tmp"
 	echo "quit -noprompt"
