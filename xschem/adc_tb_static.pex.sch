@@ -72,8 +72,8 @@ N 300 -160 300 -140 {
 lab=#net1}
 N 40 -170 40 -140 {lab=#net1}
 N 40 -140 180 -140 {lab=#net1}
-C {devices/vsource.sym} 40 -200 0 0 {name=VSS1 value="PWL(0 0.9 2.6u 0.9 10652.2u -0.9 10654.8u -0.9)" savecurrent=false}
-C {devices/vsource.sym} 300 -190 0 0 {name=VSS2 value="PWL(0 -0.9 2.6u -0.9 10652.2u 0.9 10654.8u 0.9)" savecurrent=false}
+C {devices/vsource.sym} 40 -200 0 0 {name=VSS1 value="PWL(0 0.9 2.6u 0.9 5327.4u -0.9 5330u -0.9)" savecurrent=false}
+C {devices/vsource.sym} 300 -190 0 0 {name=VSS2 value="PWL(0 -0.9 2.6u -0.9 5327.4u 0.9 5330u 0.9)" savecurrent=false}
 C {devices/vsource.sym} 160 -110 0 0 {name=VSS3 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 300 -280 0 0 {name=p15 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 40 -290 0 0 {name=p16 sig_type=std_logic lab=VIN}

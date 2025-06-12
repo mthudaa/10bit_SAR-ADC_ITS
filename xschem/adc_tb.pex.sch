@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 2160 -480 2960 -80 {flags=graph
-y1=-0.31824261
-y2=2.4500117
+y1=-0.040592604
+y2=1.4395133
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-1.1485827e-05
-x2=2.6257417e-05
+x1=-3.4725862e-07
+x2=1.9684655e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -60,51 +60,11 @@ autoload=0
 
 color=4
 node=out
-x1=-1.1485827e-05
-x2=2.6257417e-05
+x1=-3.4725862e-07
+x2=1.9684655e-06
 
 y1=-520
 y2=520}
-B 2 1320 -60 2120 340 {flags=graph
-y1=0.14989053
-y2=1.8144647
-ypos1=0.1
-ypos2=2.1
-divy=5
-subdivy=1
-unity=1
-x1=-1.1485827e-05
-x2=2.6257417e-05
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=0
-logy=0
-
-
-hilight_wave=0
-
-
-
-
-color="4 4 4 4 4 4 4 4 4 4 4"
-node="x1.sar10b_0.cf[9]
-x1.sar10b_0.cf[8]
-x1.sar10b_0.cf[7]
-x1.sar10b_0.cf[6]
-x1.sar10b_0.cf[5]
-x1.sar10b_0.cf[4]
-x1.sar10b_0.cf[3]
-x1.sar10b_0.cf[2]
-x1.sar10b_0.cf[1]
-x1.sar10b_0.cf[0]
-x1.tdc_0.rdy"
-digital=1}
 N 200 -210 320 -210 {
 lab=#net1}
 N 320 -230 320 -210 {
@@ -120,8 +80,8 @@ C {devices/lab_wire.sym} 570 -540 0 0 {name=p6 sig_type=std_logic lab=VSSA}
 C {devices/lab_wire.sym} 540 -280 0 0 {name=p7 sig_type=std_logic lab=VDDR}
 C {devices/lab_wire.sym} 570 -560 0 0 {name=p8 sig_type=std_logic lab=VDDA}
 C {devices/lab_wire.sym} 570 -420 0 0 {name=p12 sig_type=std_logic lab=CLK}
-C {devices/vsource.sym} 60 -270 0 0 {name=VSS1 value="SIN(0 -0.9 19343.44951923077)" savecurrent=false}
-C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 0.9 19343.44951923077)" savecurrent=false}
+C {devices/vsource.sym} 60 -270 0 0 {name=VSS1 value="SIN(0 -0.9 17277.64423)" savecurrent=false}
+C {devices/vsource.sym} 320 -260 0 0 {name=VSS2 value="SIN(0 0.9 17277.64423)" savecurrent=false}
 C {devices/vsource.sym} 180 -180 0 0 {name=VSS3 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 320 -350 0 0 {name=p15 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 60 -360 0 0 {name=p16 sig_type=std_logic lab=VIN}
@@ -153,7 +113,7 @@ Epowr pow_r 0 VALUE = \{ V(vddr)*(-i(vd)) \}
 global netlist_dir .  
 set num_threads=16
 save cko out pow_a pow_d pow_r vip vin x1.th_dif_sw_0.VCP x1.th_dif_sw_0.VCN
-tran 1n 5350u 0 uic; Mengubah start time menjadi 10n
+tran 10n 1340u 0 1n uic; Mengubah start time menjadi 10n
 rusage traniter trantime
 meas tran avg_pow  AVG pow_a from=1n to=535u
 meas tran avg_pow  AVG pow_d from=1n to=535u
