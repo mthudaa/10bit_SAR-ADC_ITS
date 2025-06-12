@@ -72,8 +72,6 @@ N 300 -160 300 -140 {
 lab=#net1}
 N 40 -170 40 -140 {lab=#net1}
 N 40 -140 180 -140 {lab=#net1}
-C {devices/vsource.sym} 40 -200 0 0 {name=VSS1 value="PWL(0 0.9 0.26u 0.9 1065.22u -0.9 1065.48u -0.9)" savecurrent=false}
-C {devices/vsource.sym} 300 -190 0 0 {name=VSS2 value="PWL(0 -0.9 0.26u -0.9 1065.22u 0.9 1065.48u 0.9)" savecurrent=false}
 C {devices/vsource.sym} 160 -110 0 0 {name=VSS3 value=0.9 savecurrent=false}
 C {devices/lab_wire.sym} 300 -280 0 0 {name=p15 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 40 -290 0 0 {name=p16 sig_type=std_logic lab=VIN}
@@ -146,7 +144,7 @@ C {devices/lab_wire.sym} 570 -420 0 0 {name=p12 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 570 -400 0 0 {name=p18 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 570 -380 0 0 {name=p19 sig_type=std_logic lab=VIN}
 C {devices/lab_wire.sym} 870 -540 0 1 {name=p22 sig_type=std_logic lab=CKO}
-C {devices/vsource.sym} 750 -250 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 10n 20n)" savecurrent=false}
+C {devices/vsource.sym} 750 -250 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 100n 200n)" savecurrent=false}
 C {devices/lab_wire.sym} 750 -280 0 0 {name=p23 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 750 -220 2 1 {name=p24 sig_type=std_logic lab=VSSD}
 C {x10b_adc.sym} 720 -460 0 0 {name=x1}
@@ -188,7 +186,7 @@ Epowr pow_r 0 VALUE = \{ V(vddr)*(-i(vd)) \}
 global netlist_dir .  
 set num_threads=16
 save cko out pow_a pow_d pow_r vip vin x1.vcp x1.vcn
-tran 1n 535u 0 ; Mengubah start time menjadi 10n
+tran 10n 5350u 0 ; Mengubah start time menjadi 10n
 rusage traniter trantime
 meas tran avg_pow  AVG pow_a from=1n to=535u
 meas tran avg_pow  AVG pow_d from=1n to=535u
@@ -199,3 +197,5 @@ wrdata adc10b_tb_static.txt out cko pow_a pow_d pow_r vip vin
 quit 1
 .endc
 "}
+C {devices/vsource.sym} 40 -200 0 0 {name=VSS1 value="PWL(0 0.9 2.6u 0.9 5327.4u -0.9 5330u -0.9)" savecurrent=false}
+C {devices/vsource.sym} 300 -190 0 0 {name=VSS2 value="PWL(0 -0.9 2.6u -0.9 5327.4u 0.9 5330u 0.9)" savecurrent=false}
