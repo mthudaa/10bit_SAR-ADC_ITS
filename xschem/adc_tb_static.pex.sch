@@ -188,7 +188,7 @@ Epowr pow_r 0 VALUE = \{ V(vddr)*(-i(vd)) \}
 global netlist_dir .  
 set num_threads=16
 save cko out pow_a pow_d pow_r vip vin x1.th_dif_sw_0.VCP x1.th_dif_sw_0.VCN
-tran 1n 5350u 0 ; Mengubah start time menjadi 10n
+tran 1n 5350u 0 uic; Mengubah start time menjadi 10n
 rusage traniter trantime
 meas tran avg_pow  AVG pow_a from=1n to=535u
 meas tran avg_pow  AVG pow_d from=1n to=535u
