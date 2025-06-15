@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 2160 -480 2960 -80 {flags=graph
-y1=-0.040592604
-y2=1.4395133
+y1=0.65022096
+y2=1.2564724
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-3.4725862e-07
-x2=1.9684655e-06
+x1=4.6839876e-07
+x2=1.6540495e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -30,9 +30,11 @@ hilight_wave=0
 
 
 
-color="7 4"
+color="7 4 4 4"
 node="x1.th_dif_sw_0.vcn
-x1.th_dif_sw_0.vcp"}
+x1.th_dif_sw_0.vcp
+vip
+vin"}
 B 2 1320 -480 2120 -80 {flags=graph
 
 
@@ -60,8 +62,8 @@ autoload=0
 
 color=4
 node=out
-x1=-3.4725862e-07
-x2=1.9684655e-06
+x1=4.6839876e-07
+x2=1.6540495e-06
 
 y1=-520
 y2=520}

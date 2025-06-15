@@ -122,7 +122,7 @@ C {devices/lab_wire.sym} 600 -400 0 0 {name=p12 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 600 -380 0 0 {name=p18 sig_type=std_logic lab=VIP}
 C {devices/lab_wire.sym} 600 -360 0 0 {name=p19 sig_type=std_logic lab=VIN}
 C {devices/lab_wire.sym} 900 -520 0 1 {name=p22 sig_type=std_logic lab=CKO}
-C {devices/vsource.sym} 780 -230 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 10n 20n)" savecurrent=false}
+C {devices/vsource.sym} 780 -230 0 0 {name=VCLK value="PULSE(0 1.8 0 0 0 100n 200n)" savecurrent=false}
 C {devices/lab_wire.sym} 780 -260 0 0 {name=p23 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 780 -200 2 1 {name=p24 sig_type=std_logic lab=VSSD}
 C {x10b_adc_pex.sym} 750 -440 0 0 {name=x1}
