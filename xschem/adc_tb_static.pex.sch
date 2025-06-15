@@ -87,7 +87,7 @@ value=50
 footprint=1206
 device=resistor
 m=1}
-C {devices/lab_wire.sym} 160 -80 2 1 {name=p3 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 160 -80 2 1 {name=p3 sig_type=std_logic lab=VSSR}
 C {devices/lab_wire.sym} 1140 -480 0 1 {name=p21 sig_type=std_logic lab=DOUT0}
 C {devices/code.sym} 185 -555 0 0 {name=TT_MODELS
 only_toplevel=true

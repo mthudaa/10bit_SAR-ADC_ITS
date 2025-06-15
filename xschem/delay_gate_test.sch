@@ -17,12 +17,6 @@ C {devices/lab_wire.sym} 80 -50 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 280 -230 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 80 -110 0 0 {name=p7 sig_type=std_logic lab=VCM}
 C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/code.sym} 40 -420 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval(@value )"
-value=".include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice"
-spice_ignore=false
-place=header}
 C {devices/lab_wire.sym} 400 -570 0 0 {name=p10 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 400 -510 0 0 {name=p11 sig_type=std_logic lab=VINP}
 C {devices/lab_wire.sym} 400 -490 0 0 {name=p12 sig_type=std_logic lab=VINN}
@@ -30,7 +24,7 @@ C {devices/lab_wire.sym} 400 -530 0 0 {name=p15 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 400 -550 0 0 {name=p16 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 700 -570 0 1 {name=p17 sig_type=std_logic lab=OUT_P}
 C {devices/noconn.sym} 700 -570 1 0 {name=l2}
-C {delay_gate.sym} 550 -530 0 0 {name=x1}
+C {delay_gate_ori_pex.sym} 550 -530 0 0 {name=x1}
 C {devices/simulator_commands_shown.sym} 780 -350 0 0 {name=COMMANDS2
 simulator=ngspice
 only_toplevel=false 
@@ -46,7 +40,7 @@ value=".option wnflag=0 bypass=1
 	alter VP dc -\{$&vin\}
     	alter VN dc \{$&vin\}
   	save VINP VINN IN OUT_P OUT_N
-  	tran 10p 500n 0 100p uic
+  	tran 100p 250n 0
   	* Hitung delay antara rising edge IN dan RDY (contoh: threshold 50% VDD)
   	meas tran del_p
   	+ TRIG v(IN) TD=5n VAL=0.9 RISE=1
@@ -60,8 +54,6 @@ value=".option wnflag=0 bypass=1
   end
 .endc
 "}
-C {devices/vsource.sym} 180 -80 0 0 {name=VP value=0.0017578125 savecurrent=false}
-C {devices/vsource.sym} 360 -80 0 0 {name=VN value=-0.0017578125 savecurrent=false}
 C {devices/lab_wire.sym} 180 -50 2 1 {name=p8 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 360 -50 2 1 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 180 -110 0 0 {name=p13 sig_type=std_logic lab=VINP}
@@ -73,4 +65,17 @@ C {devices/lab_wire.sym} 400 -410 0 0 {name=p21 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 400 -430 0 0 {name=p22 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 700 -450 0 1 {name=p23 sig_type=std_logic lab=OUT_N}
 C {devices/noconn.sym} 700 -450 1 0 {name=l3}
-C {delay_gate.sym} 550 -410 0 0 {name=x2}
+C {delay_gate_ori_pex.sym} 550 -410 0 0 {name=x2}
+C {devices/vsource.sym} 180 -80 0 0 {name=VP value=0.0008789 savecurrent=false}
+C {devices/vsource.sym} 360 -80 0 0 {name=VN value=-0.0008789 savecurrent=false}
+C {devices/code.sym} 35 -425 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+** opencircuitdesign pdks install
+* .lib $::SKYWATER_MODELS/sky130.lib.spice tt
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hdll/spice/sky130_fd_sc_hdll.spice
+.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}

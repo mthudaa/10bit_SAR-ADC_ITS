@@ -1,0 +1,178 @@
+* PEX produced on Fri Jun 13 02:40:00 PM WIB 2025 using ./iic-pex.sh with m=2 and s=1
+* NGSPICE file created from tdc_pex.ext - technology: sky130A
+
+.subckt tdc_pex VDD VSS VINP VINN RDY OUTP OUTN CLK
+X0 VDD CLK a_1714_1950# VDD sky130_fd_pr__pfet_01v8 ad=0.1988 pd=1.505 as=0.147 ps=1.19 w=0.84 l=0.15
+X1 phase_detector_0.pd_out_0.B phase_detector_0.INN a_2861_1291# VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.435 ps=3.29 w=3 l=0.15
+X2 OUTP phase_detector_0.pd_out_0.B a_3669_588# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.2109 pd=2.05 as=0.0888 ps=0.98 w=0.74 l=0.15
+X3 phase_detector_0.INN a_1714_282# VSS VSS sky130_fd_pr__nfet_01v8_lvt ad=0.2109 pd=2.05 as=0.15535 ps=1.17 w=0.74 l=0.15
+X4 delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A a_642_1426# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
+X5 a_1714_282# delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.19 as=0.252 ps=2.28 w=0.84 l=0.15
+X6 VDD phase_detector_0.pd_out_0.A a_4579_882# VDD sky130_fd_pr__pfet_01v8 ad=0.2352 pd=1.54 as=0.3752 ps=2.91 w=1.12 l=0.15
+X7 VSS VINN a_900_2194# VSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
+X8 phase_detector_0.INP a_1714_1950# VSS VSS sky130_fd_pr__nfet_01v8_lvt ad=0.2109 pd=2.05 as=0.15535 ps=1.17 w=0.74 l=0.15
+X9 VDD CLK a_642_n34# VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.87 ps=6.58 w=3 l=1
+X10 a_900_2194# CLK a_642_1426# VSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
+X11 phase_detector_0.pd_out_0.A phase_detector_0.pd_out_0.B a_2949_121# VSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.15
+X12 phase_detector_0.pd_out_0.A phase_detector_0.INP a_2861_469# VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.435 ps=3.29 w=3 l=0.15
+X13 a_4579_882# phase_detector_0.pd_out_0.B VDD VDD sky130_fd_pr__pfet_01v8 ad=0.196 pd=1.47 as=0.2352 ps=1.54 w=1.12 l=0.15
+X14 a_3669_588# OUTN VSS VSS sky130_fd_pr__nfet_01v8_lvt ad=0.0888 pd=0.98 as=0.2109 ps=2.05 w=0.74 l=0.15
+X15 a_3957_588# phase_detector_0.pd_out_0.A VSS VSS sky130_fd_pr__nfet_01v8_lvt ad=0.0888 pd=0.98 as=0.2109 ps=2.05 w=0.74 l=0.15
+X16 VSS phase_detector_0.pd_out_0.B a_4418_639# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.12607 pd=1.1 as=0.17738 ps=1.195 w=0.55 l=0.15
+X17 delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A a_642_n34# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
+X18 a_1714_1950# delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.19 as=0.252 ps=2.28 w=0.84 l=0.15
+X19 phase_detector_0.pd_out_0.B phase_detector_0.pd_out_0.A a_2949_2039# VSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.15
+X20 VDD OUTP OUTN VDD sky130_fd_pr__pfet_01v8 ad=0.3192 pd=2.81 as=0.168 ps=1.42 w=1.12 l=0.15
+X21 RDY phase_detector_0.pd_out_0.B a_4679_601# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.1554 pd=1.16 as=0.0888 ps=0.98 w=0.74 l=0.15
+X22 a_2949_2039# phase_detector_0.INN VSS VSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.15
+X23 VSS VINP a_900_n34# VSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
+X24 VSS a_4418_639# RDY VSS sky130_fd_pr__nfet_01v8_lvt ad=0.2997 pd=2.29 as=0.1554 ps=1.16 w=0.74 l=0.15
+X25 a_4418_639# phase_detector_0.pd_out_0.B a_4382_906# VDD sky130_fd_pr__pfet_01v8 ad=0.295 pd=2.59 as=0.135 ps=1.27 w=1 l=0.15
+X26 a_4679_601# phase_detector_0.pd_out_0.A VSS VSS sky130_fd_pr__nfet_01v8_lvt ad=0.0888 pd=0.98 as=0.12607 ps=1.1 w=0.74 l=0.15
+X27 a_4382_906# phase_detector_0.pd_out_0.A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.135 pd=1.27 as=0.295 ps=2.59 w=1 l=0.15
+X28 delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A a_642_n34# a_1158_334# VDD sky130_fd_pr__pfet_01v8 ad=0.87 pd=6.58 as=0.435 ps=3.29 w=3 l=1
+X29 a_2861_469# phase_detector_0.INN VDD VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.87 ps=6.58 w=3 l=0.15
+X30 VDD phase_detector_0.pd_out_0.B phase_detector_0.pd_out_0.A VDD sky130_fd_pr__pfet_01v8 ad=0.87 pd=6.58 as=0.435 ps=3.29 w=3 l=0.15
+X31 VDD phase_detector_0.pd_out_0.B OUTP VDD sky130_fd_pr__pfet_01v8 ad=0.3192 pd=2.81 as=0.168 ps=1.42 w=1.12 l=0.15
+X32 OUTP OUTN VDD VDD sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.42 as=0.3192 ps=2.81 w=1.12 l=0.15
+X33 OUTN phase_detector_0.pd_out_0.A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.168 pd=1.42 as=0.3192 ps=2.81 w=1.12 l=0.15
+X34 a_1158_334# VINN VDD VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.435 ps=3.29 w=3 l=1
+X35 a_1801_1950# delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A a_1714_1950# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.1376 pd=1.14 as=0.1824 ps=1.85 w=0.64 l=0.15
+X36 a_2861_1291# phase_detector_0.INP VDD VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.87 ps=6.58 w=3 l=0.15
+X37 VDD CLK a_1714_282# VDD sky130_fd_pr__pfet_01v8 ad=0.1988 pd=1.505 as=0.147 ps=1.19 w=0.84 l=0.15
+X38 OUTN OUTP a_3957_588# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.2109 pd=2.05 as=0.0888 ps=0.98 w=0.74 l=0.15
+X39 delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A a_642_1426# a_1158_1426# VDD sky130_fd_pr__pfet_01v8 ad=0.87 pd=6.58 as=0.435 ps=3.29 w=3 l=1
+X40 a_1801_282# delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A a_1714_282# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.1376 pd=1.14 as=0.1824 ps=1.85 w=0.64 l=0.15
+X41 a_900_n34# CLK a_642_n34# VSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
+X42 a_2949_121# phase_detector_0.INP VSS VSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.15
+X43 a_1158_1426# VINP VDD VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.435 ps=3.29 w=3 l=1
+X44 VSS CLK a_1801_1950# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.15535 pd=1.17 as=0.1376 ps=1.14 w=0.64 l=0.15
+X45 RDY a_4418_639# a_4579_882# VDD sky130_fd_pr__pfet_01v8 ad=0.3864 pd=2.93 as=0.196 ps=1.47 w=1.12 l=0.15
+X46 VDD CLK a_642_1426# VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.87 ps=6.58 w=3 l=1
+X47 phase_detector_0.INN a_1714_282# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.3304 pd=2.83 as=0.1988 ps=1.505 w=1.12 l=0.15
+X48 VDD phase_detector_0.pd_out_0.A phase_detector_0.pd_out_0.B VDD sky130_fd_pr__pfet_01v8 ad=0.87 pd=6.58 as=0.435 ps=3.29 w=3 l=0.15
+X49 a_4418_639# phase_detector_0.pd_out_0.A VSS VSS sky130_fd_pr__nfet_01v8_lvt ad=0.17738 pd=1.195 as=0.33275 ps=2.31 w=0.55 l=0.15
+X50 VSS CLK a_1801_282# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.15535 pd=1.17 as=0.1376 ps=1.14 w=0.64 l=0.15
+X51 phase_detector_0.INP a_1714_1950# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.3304 pd=2.83 as=0.1988 ps=1.505 w=1.12 l=0.15
+C0 OUTP a_3669_588# 0.01017f
+C1 a_1714_282# phase_detector_0.INN 0.10585f
+C2 a_642_1426# delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A 0.14814f
+C3 a_642_1426# a_1158_1426# 0.08876f
+C4 a_4418_639# a_4579_882# 0.19021f
+C5 VDD a_642_n34# 0.65568f
+C6 VDD a_1158_334# 0.18641f
+C7 delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A a_1714_1950# 0.09051f
+C8 phase_detector_0.INN CLK 0.03583f
+C9 RDY a_4579_882# 0.06067f
+C10 VINP a_642_n34# 0.1027f
+C11 a_1158_1426# delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A 0.16495f
+C12 a_1714_282# VDD 0.37887f
+C13 a_4579_882# VDD 0.19332f
+C14 a_4579_882# phase_detector_0.pd_out_0.B 0.01666f
+C15 phase_detector_0.INP CLK 0.18399f
+C16 VDD CLK 1.88983f
+C17 VDD a_900_n34# 0.01057f
+C18 VINN VDD 1.26366f
+C19 phase_detector_0.INN a_2861_1291# 0.01732f
+C20 a_900_2194# CLK 0.02753f
+C21 CLK VINP 1.05482f
+C22 a_2861_469# phase_detector_0.pd_out_0.A 0.48002f
+C23 a_642_n34# a_1158_334# 0.08876f
+C24 VINN a_900_2194# 0.05296f
+C25 OUTN a_3957_588# 0.01287f
+C26 VINP a_900_n34# 0.05272f
+C27 VINN VINP 0.30631f
+C28 a_642_1426# VDD 0.65568f
+C29 phase_detector_0.INN phase_detector_0.pd_out_0.A 0.06563f
+C30 delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A VDD 0.44525f
+C31 phase_detector_0.pd_out_0.A a_4418_639# 0.09615f
+C32 phase_detector_0.INP a_1714_1950# 0.10793f
+C33 phase_detector_0.INP a_2861_1291# 0.01369f
+C34 VDD a_1714_1950# 0.37887f
+C35 VDD a_2861_1291# 0.51472f
+C36 a_642_1426# a_900_2194# 0.06738f
+C37 phase_detector_0.pd_out_0.B a_2861_1291# 0.47998f
+C38 a_642_1426# VINP 0.0647f
+C39 VDD delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A 0.44525f
+C40 VDD a_1158_1426# 0.18641f
+C41 phase_detector_0.INN a_2861_469# 0.01369f
+C42 CLK a_642_n34# 0.32634f
+C43 CLK a_1158_334# 0.01174f
+C44 phase_detector_0.pd_out_0.A phase_detector_0.INP 0.03298f
+C45 OUTN phase_detector_0.pd_out_0.A 0.11713f
+C46 phase_detector_0.pd_out_0.A VDD 1.7275f
+C47 a_642_n34# a_900_n34# 0.06738f
+C48 VINN a_642_n34# 0.0647f
+C49 phase_detector_0.pd_out_0.A phase_detector_0.pd_out_0.B 2.26706f
+C50 VINN a_1158_334# 0.06955f
+C51 OUTP phase_detector_0.pd_out_0.A 0.25963f
+C52 a_2949_2039# phase_detector_0.pd_out_0.B 0.18921f
+C53 VINP a_1158_1426# 0.06955f
+C54 a_1714_282# CLK 0.19115f
+C55 a_4418_639# a_4382_906# 0.01114f
+C56 a_2861_469# phase_detector_0.INP 0.01732f
+C57 a_2861_469# VDD 0.51472f
+C58 delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A a_642_n34# 0.14814f
+C59 delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A a_1158_334# 0.16495f
+C60 RDY a_4418_639# 0.14294f
+C61 phase_detector_0.INN phase_detector_0.INP 1.21226f
+C62 phase_detector_0.INN VDD 0.49684f
+C63 phase_detector_0.pd_out_0.A a_2949_121# 0.18921f
+C64 OUTN a_4418_639# 0.01817f
+C65 phase_detector_0.INN phase_detector_0.pd_out_0.B 0.03294f
+C66 VINN CLK 0.73666f
+C67 CLK a_900_n34# 0.02753f
+C68 a_4418_639# VDD 0.22342f
+C69 a_4418_639# phase_detector_0.pd_out_0.B 0.36537f
+C70 OUTP a_4418_639# 0.05224f
+C71 a_1714_282# delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A 0.09051f
+C72 OUTN RDY 0.02595f
+C73 RDY VDD 0.21718f
+C74 RDY phase_detector_0.pd_out_0.B 0.04711f
+C75 OUTP RDY 0.16034f
+C76 a_642_1426# CLK 0.32634f
+C77 delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A CLK 0.09504f
+C78 phase_detector_0.INP VDD 0.58279f
+C79 OUTN VDD 0.39699f
+C80 phase_detector_0.INP phase_detector_0.pd_out_0.B 0.06558f
+C81 a_642_1426# VINN 0.11478f
+C82 OUTN phase_detector_0.pd_out_0.B 0.19033f
+C83 OUTN OUTP 1.09602f
+C84 VDD phase_detector_0.pd_out_0.B 1.23572f
+C85 OUTP VDD 0.40902f
+C86 CLK a_1714_1950# 0.19115f
+C87 OUTP phase_detector_0.pd_out_0.B 0.3649f
+C88 phase_detector_0.pd_out_0.A a_4579_882# 0.01858f
+C89 a_900_2194# VDD 0.01057f
+C90 VDD VINP 1.20034f
+C91 CLK delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A 0.09504f
+C92 CLK a_1158_1426# 0.01174f
+C93 RDY VSS 0.38267f
+C94 OUTP VSS 0.53095f
+C95 OUTN VSS 1.48834f
+C96 VINP VSS 1.46401f
+C97 CLK VSS 2.03551f
+C98 VINN VSS 1.46142f
+C99 VDD VSS 26.8844f
+C100 a_2949_121# VSS 0.20716f $ **FLOATING
+C101 a_900_n34# VSS 0.09177f $ **FLOATING
+C102 a_1801_282# VSS 0.01123f $ **FLOATING
+C103 a_4418_639# VSS 0.26136f $ **FLOATING
+C104 a_2861_469# VSS 0.0507f $ **FLOATING
+C105 a_1714_282# VSS 0.18094f $ **FLOATING
+C106 delay_gate_ori_1.sky130_fd_sc_hs__and2_1_0.A VSS 0.68206f $ **FLOATING
+C107 a_1158_334# VSS 0.08942f $ **FLOATING
+C108 a_642_n34# VSS 0.84751f $ **FLOATING
+C109 a_2861_1291# VSS 0.0507f $ **FLOATING
+C110 phase_detector_0.pd_out_0.B VSS 1.70383f $ **FLOATING
+C111 a_2949_2039# VSS 0.20716f $ **FLOATING
+C112 phase_detector_0.INP VSS 1.24531f $ **FLOATING
+C113 a_1158_1426# VSS 0.08942f $ **FLOATING
+C114 a_1801_1950# VSS 0.01123f $ **FLOATING
+C115 a_1714_1950# VSS 0.18102f $ **FLOATING
+C116 phase_detector_0.pd_out_0.A VSS 2.45852f $ **FLOATING
+C117 phase_detector_0.INN VSS 1.87653f $ **FLOATING
+C118 delay_gate_ori_0.sky130_fd_sc_hs__and2_1_0.A VSS 0.68247f $ **FLOATING
+C119 a_900_2194# VSS 0.09177f $ **FLOATING
+C120 a_642_1426# VSS 0.84787f $ **FLOATING
+.ends

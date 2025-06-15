@@ -12,8 +12,8 @@ ypos2=1.531649
 divy=5
 subdivy=1
 unity=1
-x1=-1.4904995e-07
-x2=4.1225094e-07
+x1=1.7724258e-06
+x2=7.7779582e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -38,8 +38,8 @@ ypos2=1.3822222
 divy=5
 subdivy=1
 unity=1
-x1=-1.4904995e-07
-x2=4.1225094e-07
+x1=1.7724258e-06
+x2=7.7779582e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -56,7 +56,7 @@ node="vinn
 vinp"}
 C {devices/vsource.sym} 80 -200 0 0 {name=V1 value=0 savecurrent=false}
 C {devices/vsource.sym} 180 -200 0 0 {name=VD value=1.8 savecurrent=false}
-C {devices/vsource.sym} 280 -200 0 0 {name=V3 value="PULSE(0 1.8 1n 50p 50p 10n 20n)" savecurrent=false}
+C {devices/vsource.sym} 280 -200 0 0 {name=V3 value="PULSE(0 1.8 100n 0 0 100n 200n)" savecurrent=false}
 C {devices/vsource.sym} 80 -80 0 0 {name=V4 value=0.9 savecurrent=false}
 C {devices/gnd.sym} 80 -170 0 0 {name=l1 lab=GND}
 C {devices/lab_wire.sym} 80 -230 0 0 {name=p1 sig_type=std_logic lab=VSS}
@@ -66,20 +66,14 @@ C {devices/lab_wire.sym} 280 -170 2 1 {name=p4 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 80 -50 2 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 280 -230 0 0 {name=p6 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 80 -110 0 0 {name=p7 sig_type=std_logic lab=VCM}
-C {devices/vsource.sym} 180 -80 0 0 {name=V5 value="PWL(0 0.001, 1u -0.001)" savecurrent=false}
-C {devices/vsource.sym} 360 -80 0 0 {name=V6 value="PWL(0 -0.001, 1u 0.001)" savecurrent=false}
+C {devices/vsource.sym} 180 -80 0 0 {name=V5 value="PWL(0 0.0008789, 10u -0.0008789)" savecurrent=false}
+C {devices/vsource.sym} 360 -80 0 0 {name=V6 value="PWL(0 -0.0008789, 10u 0.0008789)" savecurrent=false}
 C {devices/lab_wire.sym} 180 -50 2 1 {name=p8 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 360 -50 2 1 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 180 -110 0 0 {name=p13 sig_type=std_logic lab=VINP}
 C {devices/lab_wire.sym} 360 -110 0 0 {name=p14 sig_type=std_logic lab=VINN}
-C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/code.sym} 40 -420 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval(@value )"
-value=".include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice"
-spice_ignore=false
-place=header}
-C {tdc.sym} 590 -430 0 0 {name=x1}
+C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=ff}
+C {tdc_pex.sym} 590 -430 0 0 {name=x1}
 C {devices/lab_wire.sym} 440 -470 0 0 {name=p10 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 440 -410 0 0 {name=p11 sig_type=std_logic lab=VINP}
 C {devices/lab_wire.sym} 440 -390 0 0 {name=p12 sig_type=std_logic lab=VINN}
@@ -100,14 +94,26 @@ value=".option wnflag=0 bypass=1
 .control
   set num_threads=36
   save IN VINP VINN I(VD) VDD COMP_P COMP_N RDY X1.X1.A X1.X1.B
-  tran 10p 1u 0 100p uic
+  tran 100p 10u 0
   let pow = -i(vd)*vdd
-  meas tran inst_pow MAX pow from=1n to=1u
-  meas tran avg_pow  AVG pow from=1n to=1u
+  meas tran inst_pow MAX pow from=1n to=10u
+  meas tran avg_pow  AVG pow from=1n to=10u
   write tdc_tb_ori.raw
+  wrdata tdc_tb_ff.txt COMP_P COMP_N VINP VINN IN RDY
 .endc
 "}
 C {devices/launcher.sym} 540 -270 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tdc_tb_ori.raw tran"
 }
+C {devices/code.sym} 45 -425 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="
+** opencircuitdesign pdks install
+* .lib $::SKYWATER_MODELS/sky130.lib.spice tt
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hdll/spice/sky130_fd_sc_hdll.spice
+.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hs/spice/sky130_fd_sc_hs.spice
+*.include $PDK_ROOT/$PDK/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}

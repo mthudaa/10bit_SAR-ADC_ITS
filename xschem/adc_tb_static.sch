@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 2160 -470 2960 -70 {flags=graph
-y1=-0.51463758
-y2=3.3150774
+y1=-0.34070462
+y2=3.4670094
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-3.0231611e-07
-x2=1.1853909e-06
+x1=2.569e-06
+x2=2.6585086e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,11 +26,13 @@ logx=0
 logy=0
 
 
-hilight_wave=0
+hilight_wave=3
 
-color="4 7"
+color="4 7 6 5"
 node="x1.vcp
-x1.vcn"}
+x1.vcn
+vip
+vin"}
 B 2 1320 -470 2120 -70 {flags=graph
 
 
@@ -58,8 +60,8 @@ autoload=0
 
 
 
-x1=-3.0231611e-07
-x2=1.1853909e-06
+x1=2.569e-06
+x2=2.6585086e-06
 
 
 color=4
@@ -85,7 +87,7 @@ value=50
 footprint=1206
 device=resistor
 m=1}
-C {devices/lab_wire.sym} 160 -80 2 1 {name=p3 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 160 -80 2 1 {name=p3 sig_type=std_logic lab=VSSR}
 C {devices/lab_wire.sym} 1140 -480 0 1 {name=p21 sig_type=std_logic lab=DOUT0}
 C {devices/code.sym} 185 -555 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -186,7 +188,7 @@ Epowr pow_r 0 VALUE = \{ V(vddr)*(-i(vd)) \}
 global netlist_dir .  
 set num_threads=16
 save cko out pow_a pow_d pow_r vip vin x1.vcp x1.vcn
-tran 10n 5350u 0 ; Mengubah start time menjadi 10n
+tran 1n 5350u 0 ; Mengubah start time menjadi 10n
 rusage traniter trantime
 meas tran avg_pow  AVG pow_a from=1n to=535u
 meas tran avg_pow  AVG pow_d from=1n to=535u

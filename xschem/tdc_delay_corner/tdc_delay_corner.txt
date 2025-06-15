@@ -1,5 +1,50 @@
-Corner: ss | Delay: 8.66748E-08
-Corner: sf | Delay: 8.69048E-08
-Corner: tt | Delay: 4.28111E-08
-Corner: fs | Delay: 2.61175E-08
-Corner: ff | Delay: 2.29202E-08
+PVT simulation 'tt' corner
+VDD: 1.71 | Temperature: 10 | Delay: 2.57836E-07 | Power: 1.51627E-05
+VDD: 1.71 | Temperature: 36 | Delay: 1.03295E-07 | Power: 9.17251E-06
+VDD: 1.71 | Temperature: 45 | Delay: 7.79922E-08 | Power: 7.66395E-06
+VDD: 1.8 | Temperature: 10 | Delay: 1.21923E-07 | Power: 1.63788E-05
+VDD: 1.8 | Temperature: 36 | Delay: 5.21132E-08 | Power: 7.13709E-06
+VDD: 1.8 | Temperature: 45 | Delay: 4.0272E-08 | Power: 5.96507E-06
+VDD: 1.98 | Temperature: 10 | Delay: 2.77467E-08 | Power: 6.5068E-06
+VDD: 1.98 | Temperature: 36 | Delay: 1.44029E-08 | Power: 3.98002E-06
+VDD: 1.98 | Temperature: 45 | Delay: 1.20182E-08 | Power: 3.50137E-06
+PVT simulation 'ss' corner
+VDD: 1.71 | Temperature: 10 | Delay: 5.53821E-07 | Power: 3.82358E-06
+VDD: 1.71 | Temperature: 36 | Delay: 2.0862E-07 | Power: 2.33203E-06
+VDD: 1.71 | Temperature: 45 | Delay: 1.54612E-07 | Power: 2.01195E-06
+VDD: 1.8 | Temperature: 10 | Delay: 2.4481E-07 | Power: 3.24808E-06
+VDD: 1.8 | Temperature: 36 | Delay: 9.99514E-08 | Power: 1.9705E-06
+VDD: 1.8 | Temperature: 45 | Delay: 7.59847E-08 | Power: 1.69494E-06
+VDD: 1.98 | Temperature: 10 | Delay: 5.26763E-08 | Power: 2.00366E-06
+VDD: 1.98 | Temperature: 36 | Delay: 2.54207E-08 | Power: 1.27603E-06
+VDD: 1.98 | Temperature: 45 | Delay: 2.06224E-08 | Power: 1.1266E-06
+PVT simulation 'ff' corner
+VDD: 1.71 | Temperature: 10 | Delay: 1.28147E-07 | Power: 1.52889E-05
+VDD: 1.71 | Temperature: 36 | Delay: 5.39763E-08 | Power: 7.89331E-06
+VDD: 1.71 | Temperature: 45 | Delay: 4.1465E-08 | Power: 6.49045E-06
+VDD: 1.8 | Temperature: 10 | Delay: 6.20525E-08 | Power: 1.07526E-05
+VDD: 1.8 | Temperature: 36 | Delay: 2.80162E-08 | Power: 5.77188E-06
+VDD: 1.8 | Temperature: 45 | Delay: 2.21321E-08 | Power: 4.87325E-06
+VDD: 1.98 | Temperature: 10 | Delay: 1.50117E-08 | Power: 5.17817E-06
+VDD: 1.98 | Temperature: 36 | Delay: 8.60635E-09 | Power: 4.39087E-06
+VDD: 1.98 | Temperature: 45 | Delay: 7.42777E-09 | Power: 4.6092E-06
+PVT simulation 'sf' corner
+VDD: 1.71 | Temperature: 10 | Delay: 6.1865E-07 | Power: 1.74267E-05
+VDD: 1.71 | Temperature: 36 | Delay: 2.20343E-07 | Power: 8.1272E-06
+VDD: 1.71 | Temperature: 45 | Delay: 1.60917E-07 | Power: 6.41969E-06
+VDD: 1.8 | Temperature: 10 | Delay: 2.52249E-07 | Power: 1.28955E-05
+VDD: 1.8 | Temperature: 36 | Delay: 9.99874E-08 | Power: 5.50246E-06
+VDD: 1.8 | Temperature: 45 | Delay: 7.53036E-08 | Power: 4.42054E-06
+VDD: 1.98 | Temperature: 10 | Delay: 5.06999E-08 | Power: 4.69651E-06
+VDD: 1.98 | Temperature: 36 | Delay: 2.38425E-08 | Power: 2.56542E-06
+VDD: 1.98 | Temperature: 45 | Delay: 1.91083E-08 | Power: 2.15279E-06
+PVT simulation 'fs' corner
+VDD: 1.71 | Temperature: 10 | Delay: 1.25688E-07 | Power: 1.03647E-05
+VDD: 1.71 | Temperature: 36 | Delay: 5.54598E-08 | Power: 5.89735E-06
+VDD: 1.71 | Temperature: 45 | Delay: 4.35431E-08 | Power: 5.11215E-06
+VDD: 1.8 | Temperature: 10 | Delay: 6.15617E-08 | Power: 7.73718E-06
+VDD: 1.8 | Temperature: 36 | Delay: 2.94692E-08 | Power: 4.81082E-06
+VDD: 1.8 | Temperature: 45 | Delay: 2.39213E-08 | Power: 4.43468E-06
+VDD: 1.98 | Temperature: 10 | Delay: 1.58293E-08 | Power: 5.75971E-06
+VDD: 1.98 | Temperature: 36 | Delay: 9.95069E-09 | Power: 7.30629E-06
+VDD: 1.98 | Temperature: 45 | Delay: 8.87164E-09 | Power: 8.43044E-06

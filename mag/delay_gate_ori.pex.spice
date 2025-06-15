@@ -1,0 +1,56 @@
+* PEX produced on Sun Jun 15 12:39:18 AM WIB 2025 using ./iic-pex.sh with m=2 and s=1
+* NGSPICE file created from delay_gate_ori_pex.ext - technology: sky130A
+
+.subckt delay_gate_ori_pex VDD VSS VINP VINN OUT IN
+X0 a_343_52# sky130_fd_sc_hs__and2_1_0.A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.147 pd=1.19 as=0.252 ps=2.28 w=0.84 l=0.15
+X1 OUT a_343_52# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.3304 pd=2.83 as=0.1988 ps=1.505 w=1.12 l=0.15
+X2 VDD IN a_n729_n264# VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.87 ps=6.58 w=3 l=1
+X3 OUT a_343_52# VSS VSS sky130_fd_pr__nfet_01v8_lvt ad=0.2109 pd=2.05 as=0.15535 ps=1.17 w=0.74 l=0.15
+X4 VSS IN a_430_52# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.15535 pd=1.17 as=0.1376 ps=1.14 w=0.64 l=0.15
+X5 VSS VINN a_n471_n264# VSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=1
+X6 sky130_fd_sc_hs__and2_1_0.A a_n729_n264# VSS VSS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=1
+X7 a_430_52# sky130_fd_sc_hs__and2_1_0.A a_343_52# VSS sky130_fd_pr__nfet_01v8_lvt ad=0.1376 pd=1.14 as=0.1824 ps=1.85 w=0.64 l=0.15
+X8 a_n471_n264# IN a_n729_n264# VSS sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=1
+X9 a_n213_104# VINP VDD VDD sky130_fd_pr__pfet_01v8 ad=0.435 pd=3.29 as=0.435 ps=3.29 w=3 l=1
+X10 VDD IN a_343_52# VDD sky130_fd_pr__pfet_01v8 ad=0.1988 pd=1.505 as=0.147 ps=1.19 w=0.84 l=0.15
+X11 sky130_fd_sc_hs__and2_1_0.A a_n729_n264# a_n213_104# VDD sky130_fd_pr__pfet_01v8 ad=0.87 pd=6.58 as=0.435 ps=3.29 w=3 l=1
+C0 IN a_n213_104# 0.01174f
+C1 VDD a_n729_n264# 0.64869f
+C2 a_n213_104# VINP 0.06955f
+C3 IN VDD 0.85502f
+C4 IN a_343_52# 0.19112f
+C5 VDD a_n471_n264# 0.01057f
+C6 IN OUT 0.02858f
+C7 VDD VINP 0.70368f
+C8 VDD VINN 0.0287f
+C9 IN a_n729_n264# 0.32591f
+C10 a_n213_104# sky130_fd_sc_hs__and2_1_0.A 0.16495f
+C11 a_n729_n264# a_n471_n264# 0.06738f
+C12 a_n729_n264# VINP 0.0647f
+C13 VDD sky130_fd_sc_hs__and2_1_0.A 0.43312f
+C14 IN a_n471_n264# 0.02753f
+C15 sky130_fd_sc_hs__and2_1_0.A a_343_52# 0.09051f
+C16 IN VINP 0.32594f
+C17 a_n729_n264# VINN 0.07934f
+C18 VDD a_n213_104# 0.18641f
+C19 IN VINN 0.07408f
+C20 a_n471_n264# VINN 0.05205f
+C21 a_n729_n264# sky130_fd_sc_hs__and2_1_0.A 0.14814f
+C22 VINP VINN 0.04439f
+C23 VDD a_343_52# 0.37596f
+C24 IN sky130_fd_sc_hs__and2_1_0.A 0.0949f
+C25 VDD OUT 0.14469f
+C26 OUT a_343_52# 0.0997f
+C27 a_n729_n264# a_n213_104# 0.08876f
+C28 VINN VSS 0.7455f
+C29 OUT VSS 0.25157f
+C30 VINP VSS 0.16159f
+C31 IN VSS 1.16915f
+C32 VDD VSS 5.73975f
+C33 a_n471_n264# VSS 0.09173f $ **FLOATING
+C34 a_430_52# VSS 0.01123f $ **FLOATING
+C35 a_343_52# VSS 0.18537f $ **FLOATING
+C36 sky130_fd_sc_hs__and2_1_0.A VSS 0.69541f $ **FLOATING
+C37 a_n213_104# VSS 0.08942f $ **FLOATING
+C38 a_n729_n264# VSS 0.85608f $ **FLOATING
+.ends
