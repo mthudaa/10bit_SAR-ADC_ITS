@@ -1896,7 +1896,7 @@ Xsky130_fd_pr__pfet_01v8_D9Q956_0 m1_325_1061# m1_325_1061# OUT OUT VDD OUT m1_3
 + m1_325_1061# OUT m1_325_1061# sky130_fd_pr__pfet_01v8_D9Q956
 .ends
 
-.subckt cdac_sw_4 VCM CKI BI DAC_OUT VSSA VDDA
+.subckt cdac_sw_4 VCM CKI BI DAC_OUT VDDA VSSA
 Xtg_sw_4_1 VDDA VSSA VCM tg_sw_4_4/SWN tg_sw_4_4/SWP DAC_OUT tg_sw_4
 Xtg_sw_4_4 VDDA VSSA VCM tg_sw_4_4/SWP tg_sw_4_4/SWN VCM tg_sw_4
 Xdac_sw_4_0 VDDA BI dac_sw_4_0/CKB dac_sw_4_0/CK DAC_OUT VSSA dac_sw_4
@@ -2497,7 +2497,7 @@ Xtg_sw_8_1 VSSA VCM tg_sw_8_8/SWN tg_sw_8_8/SWP DAC_OUT VDDA tg_sw_8
 + CF[9] SWN[1] SWN[5] SWN[6] SWN[2] SWN[7] SWN[3] SWN[8] SWN[4] VCM SWN[0] SWN[9]
 + VDD VSS
 Xcdac_sw_6_0 VCM CF[5] SW_IN[5] SWN[5] VSS VDD cdac_sw_6
-Xcdac_sw_4_0 VCM CF[3] SW_IN[3] SWN[3] VSS VDD cdac_sw_4
+Xcdac_sw_4_0 VCM CF[3] SW_IN[3] SWN[3] VDD VSS cdac_sw_4
 Xcdac_sw_2_0 SWN[1] VCM CF[1] SW_IN[1] VSS VDD cdac_sw_2
 Xcdac_sw_9_0 VCM CF[8] SW_IN[8] SWN[8] VSS VDD cdac_sw_9
 Xcdac_sw_7_0 VCM CF[6] SW_IN[6] SWN[6] VSS VDD cdac_sw_7
@@ -2524,7 +2524,7 @@ Xcdac_sw_10b_0 SW_IN[0] SW_IN[1] SW_IN[2] SW_IN[3] SW_IN[4] SW_IN[5] SW_IN[6] SW
 .subckt cdac SWP_IN[0] SWP_IN[1] SWP_IN[2] SWP_IN[3] SWP_IN[4] SWP_IN[5] SWP_IN[6]
 + SWP_IN[7] SWP_IN[8] SWP_IN[9] SWN_IN[0] SWN_IN[1] SWN_IN[2] SWN_IN[3] SWN_IN[4]
 + SWN_IN[5] SWN_IN[6] SWN_IN[7] SWN_IN[8] SWN_IN[9] CF[0] CF[1] CF[2] CF[3] CF[4]
-+ CF[5] CF[6] CF[7] CF[8] CF[9] VCN VCP VCM VDD VSS
++ CF[5] CF[6] CF[7] CF[8] CF[9] VCP VCN VCM VDD VSS
 Xsingle_10b_cdac_0 VCM SWN_IN[0] SWN_IN[1] SWN_IN[2] SWN_IN[3] SWN_IN[4] SWN_IN[5]
 + SWN_IN[6] SWN_IN[7] SWN_IN[8] SWN_IN[9] VCN CF[0] CF[1] CF[2] CF[3] CF[4] CF[5]
 + CF[6] CF[7] CF[8] CF[9] VDD VSS single_10b_cdac
@@ -3184,15 +3184,15 @@ X0 a_15_n431# a_n33_391# a_n73_n431# a_n175_n543# sky130_fd_pr__nfet_01v8 ad=1.1
 
 .subckt bootstrap VDD IN VGS CK CKB VSS
 XXM1 m1_215_n425# VDD VDD CKB sky130_fd_pr__pfet_01v8_27QFPY
-XXM2 w_2369_n115# VGS w_2369_n115# VDD sky130_fd_pr__pfet_01v8_MGASDN
-XXM3 w_2369_n115# w_2369_n115# m1_215_n425# VGS sky130_fd_pr__pfet_01v8_LGMQDL
+XXM2 w_3369_n115# VGS w_3369_n115# VDD sky130_fd_pr__pfet_01v8_MGASDN
+XXM3 w_3369_n115# w_3369_n115# m1_215_n425# VGS sky130_fd_pr__pfet_01v8_LGMQDL
 XXM4 m1_29_n3515# VSS CKB m1_215_n425# sky130_fd_pr__nfet_01v8_CQKS6Z
 XXM5 CK m1_29_n3515# VSS VSS sky130_fd_pr__nfet_01v8_46WN23
 XXM6 m1_215_n425# VSS VGS m1_29_n3515# sky130_fd_pr__nfet_01v8_J47Z3J
 XXM9 VSS CK m1_345_n3515# VSS sky130_fd_pr__nfet_01v8_D47ZC5
 XXM8 m1_345_n3515# VDD VGS VSS sky130_fd_pr__nfet_01v8_D4Y996
-XXC1 w_2369_n115# w_2369_n115# w_2369_n115# m1_29_n3515# m1_29_n3515# m1_29_n3515#
-+ m1_29_n3515# w_2369_n115# sky130_fd_pr__cap_mim_m3_1_9XU9T9
+XXC1 w_3369_n115# w_3369_n115# w_3369_n115# m1_29_n3515# m1_29_n3515# m1_29_n3515#
++ m1_29_n3515# w_3369_n115# sky130_fd_pr__cap_mim_m3_1_9XU9T9
 Xsky130_fd_pr__nfet_01v8_J4Y94J_0 IN VSS VGS m1_29_n3515# sky130_fd_pr__nfet_01v8_J4Y94J
 .ends
 
@@ -3266,22 +3266,22 @@ X42 X a_83_260# VGND VNB sky130_fd_pr__nfet_01v8_lvt ad=0.1036 pd=1.02 as=0.1554
 X43 VGND A a_83_260# VNB sky130_fd_pr__nfet_01v8_lvt ad=0.1036 pd=1.02 as=0.1036 ps=1.02 w=0.74 l=0.15
 .ends
 
-.subckt th_dif_sw CKB VIN VIP VCN VCP CK VDD VSS
+.subckt th_dif_sw CKB VCN VCP VIN VIP CK VDD VSS
 Xth_sw_0 VIN VCN th_sw_1/CK th_sw_1/CKB VDD VSS th_sw
 Xth_sw_1 VIP VCP th_sw_1/CK th_sw_1/CKB VDD VSS th_sw
 Xsky130_fd_sc_hs__buf_16_0 CKB VSS VSS VDD VDD th_sw_1/CKB sky130_fd_sc_hs__buf_16
 Xsky130_fd_sc_hs__buf_16_1 CK VSS VSS VDD VDD th_sw_1/CK sky130_fd_sc_hs__buf_16
 .ends
 
-.subckt x10b_adc VCM EN VDDA VDDR CLK CKO DATA[8] DATA[7] DATA[6] DATA[5] DATA[4]
-+ DATA[3] DATA[2] DATA[1] DATA[0] VINP VINN VSSR VSSA VSSD VDDD DATA[9]
+.subckt x10b_adc VCM EN VDDA VDDR CLK CKO VINP DATA[8] DATA[7] DATA[6] DATA[5] DATA[4]
++ DATA[3] DATA[2] DATA[1] DATA[0] VSSR VSSA VSSD VDDD DATA[9] VINN
 Xtdc_0 tdc_0/VINP tdc_0/VINN tdc_0/RDY tdc_0/OUTP tdc_0/OUTN CLK VDDA VSSA tdc
 Xcdac_0 sar10b_0/SWP[0] sar10b_0/SWP[1] sar10b_0/SWP[2] sar10b_0/SWP[3] sar10b_0/SWP[4]
 + sar10b_0/SWP[5] sar10b_0/SWP[6] sar10b_0/SWP[7] sar10b_0/SWP[8] sar10b_0/SWP[9]
 + sar10b_0/SWN[0] sar10b_0/SWN[1] sar10b_0/SWN[2] sar10b_0/SWN[3] sar10b_0/SWN[4]
 + sar10b_0/SWN[5] sar10b_0/SWN[6] sar10b_0/SWN[7] sar10b_0/SWN[8] sar10b_0/SWN[9]
 + cdac_0/CF[0] cdac_0/CF[1] cdac_0/CF[2] cdac_0/CF[3] cdac_0/CF[4] cdac_0/CF[5] cdac_0/CF[6]
-+ cdac_0/CF[7] cdac_0/CF[8] cdac_0/CF[9] tdc_0/VINN tdc_0/VINP VCM VDDR VSSR cdac
++ cdac_0/CF[7] cdac_0/CF[8] cdac_0/CF[9] tdc_0/VINP tdc_0/VINN VCM VDDR VSSR cdac
 Xsar10b_0 cdac_0/CF[0] cdac_0/CF[1] cdac_0/CF[2] cdac_0/CF[3] cdac_0/CF[4] cdac_0/CF[5]
 + cdac_0/CF[6] cdac_0/CF[7] cdac_0/CF[8] cdac_0/CF[9] CKO sar10b_0/CKS sar10b_0/CKSB
 + CLK tdc_0/OUTN tdc_0/OUTP DATA[0] DATA[1] DATA[2] DATA[4] DATA[6] DATA[8] EN tdc_0/RDY
@@ -3290,7 +3290,7 @@ Xsar10b_0 cdac_0/CF[0] cdac_0/CF[1] cdac_0/CF[2] cdac_0/CF[3] cdac_0/CF[4] cdac_
 + sar10b_0/SWP[0] sar10b_0/SWP[1] sar10b_0/SWP[2] sar10b_0/SWP[3] sar10b_0/SWP[4]
 + sar10b_0/SWP[5] sar10b_0/SWP[6] sar10b_0/SWP[7] sar10b_0/SWP[8] sar10b_0/SWP[9]
 + DATA[3] DATA[5] DATA[7] DATA[9] VDDD VSSD sar10b
-Xth_dif_sw_0 sar10b_0/CKSB VINN VINP tdc_0/VINN tdc_0/VINP sar10b_0/CKS VDDA VSSA
+Xth_dif_sw_0 sar10b_0/CKSB tdc_0/VINN tdc_0/VINP VINN VINP sar10b_0/CKS VDDA VSSA
 + th_dif_sw
 .ends
 

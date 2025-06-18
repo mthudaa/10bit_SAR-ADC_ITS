@@ -1,0 +1,68 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1750100919
+<< metal1 >>
+rect -18 1178 2668 1276
+rect 966 1117 1260 1121
+rect 966 1065 976 1117
+rect 1028 1065 1260 1117
+rect 966 1061 1260 1065
+rect 1070 997 1264 1001
+rect 1070 945 1080 997
+rect 1132 945 1264 997
+rect 1070 941 1264 945
+rect 2623 935 2706 975
+rect 1471 723 2706 763
+rect 1759 644 2706 684
+rect 1218 586 1334 608
+rect 1218 534 1250 586
+rect 1302 534 1334 586
+rect 1218 512 1334 534
+rect -18 83 1334 106
+rect -18 31 1250 83
+rect 1302 31 1334 83
+rect -18 8 1334 31
+<< via1 >>
+rect 976 1065 1028 1117
+rect 1080 945 1132 997
+rect 1250 534 1302 586
+rect 1250 31 1302 83
+<< metal2 >>
+rect -18 356 34 1935
+rect 86 505 138 2084
+rect 976 1117 1028 1131
+rect 976 1051 1028 1065
+rect 1080 997 1132 1011
+rect 1080 931 1132 945
+rect 1228 586 1324 618
+rect 1228 534 1250 586
+rect 1302 534 1324 586
+rect 1228 83 1324 534
+rect 1228 31 1250 83
+rect 1302 31 1324 83
+rect 1228 -2 1324 31
+use pd_in  pd_in_0
+timestamp 1750100919
+transform 1 0 590 0 1 1212
+box -618 -1214 552 1244
+use pd_out  pd_out_0
+timestamp 1750100919
+transform 1 0 1190 0 1 610
+box 0 -98 1516 666
+<< labels >>
+flabel metal1 s 401 1208 431 1238 0 FreeSans 500 0 0 0 VDD
+port 1 nsew
+flabel metal1 s 392 43 422 73 0 FreeSans 500 0 0 0 VSS
+port 2 nsew
+flabel metal2 s -5 829 25 859 0 FreeSans 500 0 0 0 INP
+port 3 nsew
+flabel metal2 s 100 829 130 859 0 FreeSans 500 0 0 0 INN
+port 4 nsew
+flabel metal1 s 2672 941 2702 971 0 FreeSans 500 0 0 0 RDY
+port 5 nsew
+flabel metal1 s 2669 730 2699 760 0 FreeSans 500 0 0 0 OUTP
+port 6 nsew
+flabel metal1 s 2670 648 2700 678 0 FreeSans 500 0 0 0 OUTN
+port 7 nsew
+<< end >>
