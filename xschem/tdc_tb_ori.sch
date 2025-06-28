@@ -1,19 +1,19 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
 S {}
 E {}
-B 2 1280 -480 2080 -80 {flags=graph
+B 2 1220 -410 2020 -10 {flags=graph
 y1=0
 y2=2
-ypos1=0.037380621
-ypos2=1.531649
+ypos1=0.11209404
+ypos2=1.6063624
 divy=5
 subdivy=1
 unity=1
-x1=1.7724258e-06
-x2=7.7779582e-06
+x1=2.0501185e-06
+x2=8.0556486e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -30,7 +30,7 @@ unitx=1
 logx=0
 logy=0
 digital=1}
-B 2 1280 -900 2080 -500 {flags=graph
+B 2 1220 -830 2020 -430 {flags=graph
 y1=0.89986889
 y2=0.90011388
 ypos1=-0.11204623
@@ -38,8 +38,8 @@ ypos2=1.3822222
 divy=5
 subdivy=1
 unity=1
-x1=1.7724258e-06
-x2=7.7779582e-06
+x1=2.0501185e-06
+x2=8.0556486e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -72,8 +72,8 @@ C {devices/lab_wire.sym} 180 -50 2 1 {name=p8 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 360 -50 2 1 {name=p9 sig_type=std_logic lab=VCM}
 C {devices/lab_wire.sym} 180 -110 0 0 {name=p13 sig_type=std_logic lab=VINP}
 C {devices/lab_wire.sym} 360 -110 0 0 {name=p14 sig_type=std_logic lab=VINN}
-C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=ff}
-C {tdc_pex.sym} 590 -430 0 0 {name=x1}
+C {sky130_fd_pr/corner.sym} 190 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {tdc.sym} 590 -430 0 0 {name=x1}
 C {devices/lab_wire.sym} 440 -470 0 0 {name=p10 sig_type=std_logic lab=IN}
 C {devices/lab_wire.sym} 440 -410 0 0 {name=p11 sig_type=std_logic lab=VINP}
 C {devices/lab_wire.sym} 440 -390 0 0 {name=p12 sig_type=std_logic lab=VINN}
@@ -85,7 +85,7 @@ C {devices/lab_wire.sym} 740 -430 0 1 {name=p19 sig_type=std_logic lab=RDY}
 C {devices/noconn.sym} 740 -470 1 0 {name=l2}
 C {devices/noconn.sym} 740 -450 1 0 {name=l3}
 C {devices/noconn.sym} 740 -430 1 0 {name=l4}
-C {devices/simulator_commands_shown.sym} 680 -300 0 0 {name=COMMANDS2
+C {devices/simulator_commands_shown.sym} 570 -260 0 0 {name=COMMANDS2
 simulator=ngspice
 only_toplevel=false 
 value=".option wnflag=0 bypass=1
@@ -102,7 +102,7 @@ value=".option wnflag=0 bypass=1
   wrdata tdc_tb_ff.txt COMP_P COMP_N VINP VINN IN RDY
 .endc
 "}
-C {devices/launcher.sym} 540 -270 0 0 {name=h5
+C {devices/launcher.sym} 640 -340 0 0 {name=h5
 descr="load waves" 
 tclcommand="xschem raw_read $netlist_dir/tdc_tb_ori.raw tran"
 }
