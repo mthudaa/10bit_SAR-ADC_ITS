@@ -1,35 +1,61 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
+[![](https://img.shields.io/badge/Technology-CMOS%20130nm-blue.svg)](.) [![](https://img.shields.io/badge/Type-Analog%20Mixed--Signal-lightgrey.svg)](.) [![](https://img.shields.io/badge/Status-Post--Layout-brightgreen.svg)](.)
 
-# Tiny Tapeout Analog Project Template
+# Low-Power SAR-ADC for PPG Signal Acquisition
 
-- [Read the documentation for project](docs/info.md)
+This repository contains the design files and simulation results for a 10-bit SAR-ADC in 180nm CMOS, optimized for low-power biomedical applications like Photoplethysmogram (PPG) signal acquisition.
 
-## What is Tiny Tapeout?
+- [Project Overview](#-project-overview)
+- [Key Specifications](#-key-specifications)
+- [Architecture Details](#️-architecture-details)
+- [How to Cite](#-how-to-cite)
+- [Resources](#-resources)
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+---
 
-To learn more and get started, visit https://tinytapeout.com.
+## Project Overview
 
-## Analog projects
+The primary goal of this project is to design an efficient and accurate ADC for low-power wearable devices. The design focuses on a 10-bit monotonic SAR-ADC architecture utilizing a **time-domain comparator** to achieve power consumption in the microwatt range.
 
-For specifications and instructions, see the [analog specs page](https://tinytapeout.com/specs/analog/).
+The final post-layout design is ready for fabrication, achieving a power consumption of **23.25 µW** and an Effective Number of Bits (ENOB) of **6.44 bits**. The design has been verified to accurately acquire PPG signals, making it suitable for biomedical applications.
 
-## Enable GitHub actions to build the results page
+## Key Specifications
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+The final specifications from the post-layout simulation are as follows:
+
+| Parameter | Tipikal | Unit |
+| :--- | :---: | :---: |
+| **Technology** | CMOS 180nm | - |
+| **Supply Voltage** | 1.80 | V |
+| **Resolution** | 10 | bits |
+| **Input Voltage Range** | 0 - 1.8 | V |
+| **Conversion Time** | 5.2 | µs |
+| **Power Consumption** | **23.25** | **µW** |
+| **ENOB** | **6.44** | **bits** |
+| **SNR** | 41.03 | dB |
+| **THD** | -50.11 | dB |
+| **INL** | -3 / +3 | LSB |
+| **DNL** | -1 / +4 | LSB |
+
+## Architecture Details
+
+The design is based on the **Monotonic Switching SAR-ADC** architecture, which is known for its power efficiency and smaller capacitor array requirements.
+
+The core innovation lies in the **Time Domain Comparator**, which is based on a Voltage-Controlled Delay Line (VCDL). This approach significantly reduces power consumption compared to traditional dynamic comparators.
+
+**Key Components:**
+1.  **Track/Hold (T/H) Switch**: A Bootstrapped Switch for input signal sampling.
+2.  **Capacitive DAC (CDAC)**: Generates the reference voltage for comparison.
+3.  **Time Domain Comparator**: The low-power VCDL-based comparator.
+4.  **SAR Logic**: Controls the successive approximation algorithm.
+
+## ✍️ How to Cite
+
+If you use this design or information from this project, please cite the original proceedings:
+
+```
+M. T. Huda, A. N. Irfansyah, and Tasripan, "Desain SAR-ADC Berbasis Time Domain Comparator Rendah Daya Untuk Perekaman Sinyal Photoplethysmogram Menggunakan Teknologi CMOS," Departemen Teknik Elektro, Institut Teknologi Sepuluh Nopember, Surabaya, 2025.
+```
 
 ## Resources
 
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@matthewvenn](https://twitter.com/matthewvenn)
+This project is based on the research and findings presented in the paper above. For further technical details on the implementation and simulation results, please refer to the full document.
